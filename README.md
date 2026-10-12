@@ -1,88 +1,195 @@
-# Cloud4All Brasil — v1 (GH Pages)
+# Cloud4All — a nuvem ideal por regra aberta, sem IA
 
-Primeira versão navegável do projeto: um **arquivo HTML único** (`index.html`),
-sem build, sem IA. A recomendação é 100% determinística: filtro
-`área ∩ preço → menor custo → mais simples`, com a conta aberta em
-“Como chegamos aqui”.
+![HTML5](https://img.shields.io/badge/HTML5-e34f26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572b6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-f7df1e?style=flat-square&logo=javascript&logoColor=black)
+![GitHub Pages](https://img.shields.io/badge/Live-GitHub_Pages-121013?style=flat-square&logo=githubpages&logoColor=white)
 
-## Abrir local
+**Cloud4All** traduz necessidade simples em recomendação de nuvem: a pessoa
+escolhe a **área** e a **faixa de preço**, e o site aponta o serviço ideal entre
+**124 opções de 8 marcas** — AWS, Azure, Google Cloud, Oracle Cloud, Cloudflare,
+DigitalOcean, Firebase e Google. A recomendação é **100% determinística**:
+filtro `área ∩ preço → menor custo → mais simples`, com a conta aberta em
+"Como chegamos aqui". Nenhum modelo de IA decide nada. É um arquivo HTML único,
+sem build, sem backend — a regra inteira roda no navegador e pode ser auditada
+linha por linha.
+
+**Ver o site:** https://kelvinoliveiracode.github.io/cloud4all/
+
+---
+
+## 🇧🇷 Português
+
+### O que é
+
+Plataforma para traduzir necessidade simples em configuração real de nuvem, para
+estudantes e pequenos negócios. Resumo aceito no **Connepi 2026 (IFPA)**.
+
+O fluxo é direto: aba **Filtros** → escolhe área (site, app/API, banco de dados,
+arquivos, analisar dados, rede e entrega, treino de IA) e preço → a primeira da
+fila é a nuvem ideal, e a tabela completa mostra todo o resto com os excluídos e
+o motivo de cada corte. Quando nada passa no filtro, a página **diz que não há**
+em vez de forçar indicação ruim.
+
+### Como funciona (a regra, aberta)
+
+```
+área ∩ preço → refino por provedor / gratuidade / nível
+             → ordena por menor preço ou mais simples
+             → primeira da fila = nuvem ideal
+             → "Como chegamos aqui" lista cada serviço verificado e por que ficou dentro ou fora
+```
+
+O modo **Iniciante** restringe o catálogo ao que se configura por telas guiadas.
+Empate no critério de ordenação resolve pelo outro critério. Toda decisão fica
+visível — o filtro não é caixa preta.
+
+### O catálogo
+
+| Marca | Serviços | Destaque |
+|---|---:|---|
+| AWS | 34 | compute, S3, RDS, rede |
+| Azure | 29 | App Service, Functions, Cosmos DB |
+| Google Cloud | 30 | Cloud Run, Firestore, BigQuery |
+| Firebase | 4 | Auth, RTDB, FCM, Crashlytics |
+| Google | 4 | Colab, Kaggle, Looker Studio, Maps |
+| Oracle Cloud | 8 | Always Free |
+| Cloudflare | 8 | Workers, R2, D1, Pages |
+| DigitalOcean | 7 | Droplets, App Platform |
+
+Snapshot de preços de **out/2026**, valores aproximados em R$ para uso pequeno
+(conversão aproximada de USD 1 ≈ R$ 5,50). Cada linha liga a página oficial de
+preços ou documentação do serviço — confirme sempre lá. Nada é inventado: todo
+valor exibido existe no catálogo embutido, com fonte e data.
+
+### Rodar local
 
 Duplo clique em `index.html`, ou:
 
 ```powershell
-Set-Location 'C:\Users\Kelvin\Desktop\cloud4all-v1'
+Set-Location 'C:\Users\Kelvin\Desktop\cloud4all'
 python -m http.server 8080
 # abrir http://localhost:8080
 ```
 
-## Verificar a regra (teste real, sem IA)
+### Verificar a regra (teste real, sem IA)
 
-`test-v1.mjs` extrai o `<script>` do `index.html` e roda o `filtrar` de verdade
-no Node, com 19 asserções (ordenação, exclusão por teto, vazios honestos,
-filtros de provedor/gratuidade/nível/ordem, cobertura total, sem duplicatas):
+`test.mjs` extrai o `<script>` do `index.html` e roda o `filtrar` de verdade no
+Node, com 19 asserções — ordenação, exclusão por teto, vazios honestos, filtros
+de provedor/gratuidade/nível/ordem, cobertura total e ausência de duplicatas:
 
 ```powershell
-node test-v1.mjs
+node test.mjs
 ```
 
-## O que a v1 contém (v1.7: inicial explicativa + 3 provedores)
-
-- Abertura enxuta: título + 1 linha. Sem kicker institucional, sem fórmula
-  interna exposta (o passo a passo continua em "Como chegamos aqui").
-- Inicial explicativa (sem busca, sem CTA): por que a Cloud4All existe,
-  o que é nuvem e por que democratizar o acesso. A busca mora na aba Filtros.
-- Aba **Filtros**: negócio · preço · provedor · gratuidade · nível · ordem,
-  com contagem e tabela completa (primeira linha marcada como ideal).
-- Todo nome de nuvem é link para a página do serviço no provedor.
-- Preços calibrados: entradas de GPU/IA por hora de uso (não mensalidade
-  cheia); filtro "Conforme o uso" removido (duplicava o "Qualquer preço");
-  último grupo do catálogo virou "Entrada acima de R$ 100".
-- **124 serviços** em 8 marcas: entram **Oracle Cloud** (8, Always Free),
-  **Cloudflare** (8, plano grátis) e **DigitalOcean** (7, preço fixo).
-  Números da DO conferidos na página oficial de preços.
-- Filtros com **"Qualquer um"** (negócio) e **"Qualquer preço"**
-  **pré-selecionados**: o site abre já com recomendação na tela.
-  Áreas: site · app/API · banco de dados · arquivos · analisar dados ·
-  rede e entrega · treino de IA.
-- Catálogo com **101 serviços** (AWS 34 · Azure 29 · Google Cloud 30 ·
-  Firebase 4 · Google 4), cobrindo compute, containers, serverless, filas,
-  armazenamento, bancos, rede/CDN/DNS, analytics, segurança base e IA/ML.
-  Packs novos: Firebase/Google (Auth, RTDB, FCM, Crashlytics, Kaggle,
-  Looker Studio, Maps), segurança (KMS, Shield, Secrets, ACM, Sentinel,
-  Defender, Armor, SCC, certificados) e dados (Glue, QuickSight, OpenSearch,
-  AlloyDB, HDInsight, Data Explorer, Dataproc, Dataform, API Gateway).
-  Curadoria via enxame de subagents (nomes/termos/URLs) + conferência manual;
-  6 links oficiais verificados com retorno 2xx nesta rodada.
-- Snapshot de preços: **out/2026**, valores aproximados em R$ para uso pequeno
-  (conversão aproximada de USD 1 ≈ R$ 5,50). Cada linha liga a página oficial
-  de preços/docs — confirme sempre lá.
-- Caso sem opção honesta (ex.: `rede + gratuito`): a página **diz que não há**
-  em vez de forçar indicação.
-- Layout em **tela cheia** e navegação por **abas**: Início · Catálogo ·
-  Como funciona · O projeto. Hash acompanha (`#catalogo`, `#como-funciona`).
-- Logo em SVG próprio: só a nuvenzinha, de olhos fechados e sorriso
-  (três curvas, sem dentes). Monocromático.
-- Barras de rolagem finas (10px página, 8px trilho).
-
-## Design
+### Design
 
 Paleta monocromática (tinta `#101013` sobre papel `#f5f5f3`, cinzas para
-profundidade; pretos/brancos puros evitados por contraste e acabamento),
-tipos finas **Archivo 200–600** + números em **IBM Plex Mono**, sem gradiente,
-sem vidro, sem emoji como ícone, sem métrica inventada.
+profundidade; pretos/brancos puros evitados por contraste e acabamento), tipos
+finas **Archivo 200–600** + números em **IBM Plex Mono**, sem gradiente, sem
+vidro, sem emoji como ícone, sem métrica inventada. Logo em SVG próprio: só a
+nuvenzinha, de olhos fechados e sorriso. Barras de rolagem finas (10px página,
+8px trilho).
 
-## Roteiro
+### Roteiro
 
-- `v1` — esta página (filtro determinístico).
-- `v2` — plugar IA por último: o chat passa a extrair área/preço da frase e
-  chamar o mesmo `filtrar`; preços continuam vindo do catálogo, nunca do modelo.
-- `v3` — configuração assistida do serviço escolhido.
+- **hoje** — esta página: catálogo determinístico navegável;
+- **depois** — conversa com IA (RAG sobre documentação oficial) que busca
+  sozinha, sem mudar a regra de filtro;
+- **por fim** — configuração assistida do serviço escolhido.
 
-## Nota de integridade (05/out/2026)
+---
 
-A pasta anterior `Desktop\cloud4all` (Next.js + FastAPI + catálogo de 55 itens)
-existia no início da sessão e **desapareceu do disco no meio do trabalho**
-(confirmado por leitura de diretório e `Test-Path`). Esta v1 foi reconstruída
-do zero em `Desktop\cloud4all-v1` e não depende daqueles arquivos.
+## 🇺🇸 English
 
-Site público: <https://kelvinoliveiracode.github.io/cloud4all-v1/>
+### What it is
+
+Cloud4All turns a simple need into a cloud recommendation: the user picks an
+**area** and a **price range**, and the site points to the ideal service among
+**124 options from 8 providers** — AWS, Azure, Google Cloud, Oracle Cloud,
+Cloudflare, DigitalOcean, Firebase and Google. The recommendation is **fully
+deterministic**: filter `area ∩ price → lowest cost → simplest`, with the math
+wide open under "Como chegamos aqui" (how we got here). No AI model decides
+anything. It is a single HTML file, no build, no backend — the whole rule runs
+in the browser and can be audited line by line.
+
+### How it works (the rule, in the open)
+
+```
+area ∩ price → refine by provider / free tier / level
+             → sort by lowest price or simplest
+             → first in line = the ideal cloud
+             → "how we got here" lists every service checked and why it stayed in or out
+```
+
+**Beginner mode** restricts the catalog to what can be set up through guided
+screens. Ties in the sort order resolve by the other criterion. Every decision
+stays visible — the filter is not a black box.
+
+### The catalog
+
+| Provider | Services | Highlight |
+|---|---:|---|
+| AWS | 34 | compute, S3, RDS, networking |
+| Azure | 29 | App Service, Functions, Cosmos DB |
+| Google Cloud | 30 | Cloud Run, Firestore, BigQuery |
+| Firebase | 4 | Auth, RTDB, FCM, Crashlytics |
+| Google | 4 | Colab, Kaggle, Looker Studio, Maps |
+| Oracle Cloud | 8 | Always Free |
+| Cloudflare | 8 | Workers, R2, D1, Pages |
+| DigitalOcean | 7 | Droplets, App Platform |
+
+Price snapshot from **Oct/2026**, approximate BRL values for small usage
+(approximate conversion of USD 1 ≈ BRL 5.50). Every row links to the official
+pricing or docs page for that service — always confirm there. Nothing is made
+up: every displayed value exists in the embedded catalog, with source and date.
+
+### Running it locally
+
+Double-click `index.html`, or:
+
+```powershell
+Set-Location 'C:\Users\Kelvin\Desktop\cloud4all'
+python -m http.server 8080
+# open http://localhost:8080
+```
+
+### Verifying the rule (a real test, no AI)
+
+`test.mjs` extracts the `<script>` from `index.html` and runs the actual
+`filtrar` in Node, with 19 assertions — ordering, exclusion by ceiling, honest
+empty results, provider/free-tier/level/order filters, full coverage and no
+duplicates:
+
+```powershell
+node test.mjs
+```
+
+### Design
+
+Monochromatic palette (ink `#101013` on paper `#f5f5f3`, greys for depth; pure
+black/white avoided for contrast and finish), thin **Archivo 200–600** types +
+numbers in **IBM Plex Mono**, no gradient, no glass, no emoji as icon, no
+invented metric. Own SVG logo: just the little cloud, eyes closed and smiling.
+Thin scrollbars (10px page, 8px track).
+
+### Roadmap
+
+- **today** — this page: browsable deterministic catalog;
+- **next** — an AI conversation (RAG over official documentation) that searches
+  on its own, without changing the filter rule;
+- **last** — assisted setup of the chosen service.
+
+---
+
+## Autor
+
+**Kelvin Oliveira**
+
+- GitHub: [KelvinOliveiraCode](https://github.com/KelvinOliveiraCode)
+- LinkedIn: [kelvin-oliveira-code](https://www.linkedin.com/in/kelvin-oliveira-code/)
+- Portfólio: https://kelvinoliveiracode.github.io/portfolio/
+
+## Licença
+
+Distribuído sob a licença MIT. Consulte o arquivo de licença do repositório para detalhes.

@@ -1,5 +1,5 @@
 import fs from "node:fs";
-const html = fs.readFileSync("C:\\Users\\Kelvin\\Desktop\\cloud4all-v1\\index.html", "utf8");
+const html = fs.readFileSync("C:\\Users\\Kelvin\\Desktop\\cloud4all\\index.html", "utf8");
 const src = html.split("<script>")[1].split("</script>")[0];
 
 const elStub = () => ({ innerHTML: "", textContent: "", classList: { toggle(){} }, addEventListener(){}, appendChild(){}, value: "" });

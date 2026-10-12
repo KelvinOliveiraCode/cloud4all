@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cloud4All — v1: ache sua nuvem ideal</title>
-<meta name="description" content="Cloud4All v1: escolha a área e o preço e receba a nuvem ideal entre AWS, Azure e Google Cloud. Regra aberta, sem IA ainda.">
+<title>Cloud4All — ache sua nuvem ideal</title>
+<meta name="description" content="Cloud4All: escolha a área e o preço e receba a nuvem ideal entre AWS, Azure, Google Cloud, Oracle, Cloudflare e DigitalOcean. Regra aberta, sem IA.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@200;300;400;500;600&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
@@ -196,7 +196,7 @@
         <path d="M21 30 q4 4.5 8 0" stroke="#101013" stroke-width="1.8" fill="none" stroke-linecap="round"/>
       </svg>
       <b>Cloud4All</b>
-      <span>v1 · Brasil</span>
+      <span>Brasil</span>
     </a>
     <nav class="main" aria-label="Abas do site" role="tablist">
       <button type="button" role="tab" id="tab-inicio" data-tab="inicio" aria-selected="true" aria-controls="inicio">Início</button>
@@ -272,7 +272,7 @@
 <div class="page">
     <section class="block">
       <h2>Catálogo <strong>por preço</strong></h2>
-      <p class="sub">Todos os 124 serviços desta v1 — AWS, Azure, Google Cloud, Oracle Cloud, Cloudflare, DigitalOcean, Firebase e Google — agrupados pela faixa em que um uso pequeno se encaixa. Snapshot de <span class="mono">out/2026</span>; valores aproximados em reais — confirme sempre na página oficial ligada em cada linha.</p>
+      <p class="sub">Todos os 124 serviços — AWS, Azure, Google Cloud, Oracle Cloud, Cloudflare, DigitalOcean, Firebase e Google — agrupados pela faixa em que um uso pequeno se encaixa. Snapshot de <span class="mono">out/2026</span>; valores aproximados em reais — confirme sempre na página oficial ligada em cada linha.</p>
       <div id="tiers"></div>
     </section>
 </div>
@@ -352,7 +352,7 @@
 <div class="page">
     <section class="block">
       <h2>Como funciona <strong>(a regra, aberta)</strong></h2>
-      <p class="sub">Nenhum modelo de IA decide nada nesta v1. O caminho até a nuvem ideal é fixo e auditável:</p>
+      <p class="sub">Nenhum modelo de IA decide nada aqui. O caminho até a nuvem ideal é fixo e auditável:</p>
       <div class="cols">
         <div class="card">
           <h3>O filtro</h3>
@@ -364,7 +364,7 @@
           </ol>
         </div>
         <div class="card">
-          <h3>O que a v1 não faz</h3>
+          <h3>O que esta página não faz</h3>
           <ul>
             <li>Não consulta preço em tempo real (limitação assumida no artigo).</li>
             <li>Não configura nada sozinho (é o trabalho futuro do projeto).</li>
@@ -382,15 +382,15 @@
 <div class="page">
     <section class="block">
       <h2>O projeto <strong>Cloud4All Brasil</strong></h2>
-      <p class="sub">Plataforma para traduzir necessidade simples em configuração real de nuvem, para estudantes e pequenos negócios. Resumo aceito no Connepi 2026 (IFPA). Esta página é a v1: catálogo determinístico navegável. A v2 liga a IA (RAG sobre documentação oficial) sem mudar a regra de filtro.</p>
+      <p class="sub">Plataforma para traduzir necessidade simples em configuração real de nuvem, para estudantes e pequenos negócios. Resumo aceito no Connepi 2026 (IFPA). Esta página é o catálogo determinístico navegável. O próximo passo liga a IA (RAG sobre documentação oficial) sem mudar a regra de filtro.</p>
       <div class="cols">
         <div class="card">
-          <h3>Provedores desta v1</h3>
+          <h3>Provedores</h3>
           <p><strong>AWS</strong>, <strong>Azure</strong>, <strong>Google Cloud</strong>, <strong>Oracle Cloud</strong>, <strong>Cloudflare</strong>, <strong>DigitalOcean</strong>, <strong>Firebase</strong> e <strong>Google</strong>: só empresas grandes e conhecidas, cada uma com link oficial em cada serviço.</p>
         </div>
         <div class="card">
           <h3>Roteiro</h3>
-          <p><code>v1</code> filtro determinístico (esta página) → <code>v2</code> conversa com IA que busca sozinha → <code>v3</code> configuração assistida do serviço escolhido.</p>
+          <p><code>hoje</code> filtro determinístico (esta página) → <code>depois</code> conversa com IA que busca sozinha → <code>por fim</code> configuração assistida do serviço escolhido.</p>
         </div>
       </div>
     </section>
@@ -399,7 +399,7 @@
 
     <footer class="site">
       <div class="foot">
-        <span>Cloud4All Brasil · v1 · IFPA</span>
+        <span>Cloud4All Brasil · IFPA</span>
         <span>Snapshot <span class="mono">out/2026</span> — valores aproximados, confirme na página oficial.</span>
         <a href="#inicio">Voltar ao início</a>
       </div>
@@ -407,7 +407,7 @@
 </div>
 
 <script>
-/* Catálogo v1 — única fonte de verdade desta página.
+/* Catálogo — única fonte de verdade desta página.
    Campos: id, provedor, nome, area(s), gratis ('sempre'|'temporario'|'nao'),
    min/max BRL/mês em uso pequeno, complexidade 1-5, frase leiga, gratuidade, link doc/preço. */
 const CATALOGO = [
@@ -626,7 +626,7 @@ function render(){
       '<div class="empty"><p><strong>Sem indicação honesta para esse recorte.</strong> ' +
       'Dos ' + CATALOGO.length + ' serviços, ' + fora + ' ficaram de fora pelos seus critérios — ' +
       (selArea==="ia" && selPreco==="gratis"
-        ? 'treinar IA com GPU não tem nível sempre-grátis nos 3 provedores. Alternativa fora do escopo da v1: Google Colab (grátis, com limites).'
+        ? 'treinar IA com GPU não tem nível sempre-grátis nos 3 provedores. Alternativa fora do escopo desta página: Google Colab (grátis, com limites).'
         : 'tente uma faixa acima ou a opção “Conforme o uso”.') +
       '</p><details class="trace"><summary>Como chegamos aqui (' + log.length + ' verificados)</summary><ol>' +
       log.map(l=>'<li><code>'+esc(l.s.provedor+" / "+l.s.nome)+'</code> — '+(l.ok?"mantido":"fora: "+esc(l.motivo))+'</li>').join("") +
