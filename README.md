@@ -65,6 +65,16 @@ O modo **Iniciante** restringe o catálogo ao que se configura por telas guiadas
 Empate no critério de ordenação resolve pelo outro critério. Toda decisão fica
 visível — o filtro não é caixa preta.
 
+### Conceitos (ensinar sem jargão)
+
+A aba **Conceitos** traduz o vocabulário da nuvem para português claro:
+
+- **Nuvem em 3 camadas** — IaaS, PaaS e SaaS pela analogia da pizza (fazer em casa, delivery, restaurante), com exemplos reais do catálogo em cada camada;
+- **Seis analogias do dia a dia** — pagar como água e luz, hotel ou casa própria, a cozinha que aparece (serverless), a padaria do bairro (CDN), elevador ou escada, o endereço do prédio (região);
+- **Mito ou verdade** — cinco cartões interativos sobre as frases que todo mundo já ouviu ("nuvem é sempre mais barata", "grátis para sempre não existe");
+- **Glossário** — os 10 termos que aparecem no catálogo (instância, bucket, CDN, região, SLA, lock-in…) em linguagem leiga;
+- **Quiz** — cinco perguntas com correção e explicação na hora, placar e opção de refazer.
+
 ### O catálogo
 
 | Marca | Serviços | Destaque |
@@ -173,6 +183,16 @@ area ∩ price → refine by provider / free tier / level
 **Beginner mode** restricts the catalog to what can be set up through guided
 screens. Ties in the sort order resolve by the other criterion. Every decision
 stays visible — the filter is not a black box.
+
+### Concepts (teaching without jargon)
+
+The **Concepts** tab translates cloud vocabulary into plain Portuguese:
+
+- **Cloud in 3 layers** — IaaS, PaaS and SaaS through the pizza analogy (make it at home, delivery, restaurant), with real examples from the catalog on each layer;
+- **Six everyday analogies** — paying like water and power, hotel or own house, the kitchen that appears (serverless), the neighbourhood bakery (CDN), elevator or stairs, the building address (region);
+- **Myth or truth** — five interactive cards on the phrases everyone has heard ("cloud is always cheaper", "free forever doesn't exist");
+- **Glossary** — the 10 terms that show up in the catalog (instance, bucket, CDN, region, SLA, lock-in…) in layman's terms;
+- **Quiz** — five questions with instant correction and explanation, a scoreboard and a retry button.
 
 ### The catalog
 

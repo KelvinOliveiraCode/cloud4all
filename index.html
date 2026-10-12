@@ -175,6 +175,38 @@
   .promptbox .btn:hover{background:var(--dark-2)}
   .promptbox .btn.copiado{background:var(--paper);color:var(--ink)}
 
+  /* ---------- conceitos ---------- */
+  .btn{
+    font-family:inherit;font-size:.9rem;font-weight:500;
+    background:var(--ink);color:var(--paper);border:1px solid var(--ink);
+    border-radius:8px;padding:9px 18px;cursor:pointer;
+  }
+  .btn:hover{background:var(--dark-2)}
+  .btn.copiado{background:var(--paper);color:var(--ink)}
+  .promptbox .btn{align-self:flex-start}
+  .cols3{grid-template-columns:repeat(3,1fr)}
+  .camada{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;border:1px solid var(--line-strong);border-radius:5px;padding:2px 8px;margin-bottom:8px;color:var(--ink-2)}
+  .card-foot{font-size:.82rem;color:var(--ink-3);margin-top:10px}
+  .gloss{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+  .gloss > div{border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;background:var(--panel)}
+  .gloss dt{font-weight:500;font-size:.92rem}
+  .gloss dd{font-size:.88rem;color:var(--ink-2);margin-top:2px}
+  .mito-frase{font-size:.98rem;margin-bottom:12px}
+  .mito-resp{margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+  .mito-resp p{font-size:.88rem;color:var(--ink-2)}
+  .mito-resp strong{color:var(--ink)}
+  .quiz-q{border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin-bottom:14px;background:var(--panel)}
+  .quiz-q[data-done]{border-color:var(--ink)}
+  .quiz-enun{font-size:.98rem;font-weight:500;margin-bottom:10px}
+  .quiz-fb{font-size:.88rem;color:var(--ink-2);margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+  .quiz-fb strong{color:var(--ink)}
+  .opt button:disabled{cursor:default}
+  .opt button.certa{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .opt button.certa small{color:#c9c9c4}
+  :root[data-tema="dark"] .opt button.certa small{color:#8f8f8a}
+  .opt button.errada{border-color:var(--ink-3);color:var(--ink-3);text-decoration:line-through}
+  #quiz-refazer{margin-top:4px}
+
   /* ---------- catálogo ---------- */
   .block{margin-top:48px}
   .block h2{font-size:1.35rem;font-weight:300;letter-spacing:-.01em}
@@ -210,6 +242,7 @@
     nav.main{margin-left:0}
     nav.main button{padding:10px 8px}
     .cols{grid-template-columns:1fr}
+    .cols3, .gloss{grid-template-columns:1fr}
     table.cat th:nth-child(4), table.cat td:nth-child(4){display:none}
     h1{font-size:1.7rem}
   }
@@ -242,6 +275,7 @@
     </a>
     <nav class="main" aria-label="Abas do site" role="tablist">
       <button type="button" role="tab" id="tab-inicio" data-tab="inicio" aria-selected="true" aria-controls="inicio">Início</button>
+      <button type="button" role="tab" id="tab-conceitos" data-tab="conceitos" aria-selected="false" aria-controls="conceitos">Conceitos</button>
       <button type="button" role="tab" id="tab-catalogo" data-tab="catalogo" aria-selected="false" aria-controls="catalogo">Catálogo</button>
       <button type="button" role="tab" id="tab-filtros" data-tab="filtros" aria-selected="false" aria-controls="filtros">Filtros</button>
     </nav>
@@ -257,6 +291,7 @@
 <div class="page">
     <h1>A Cloud4All existe para facilitar o acesso a serviços que utilizem <strong>nuvem</strong>.</h1>
     <p class="lede">Você diz o que quer fazer e quanto pode gastar. A página traduz isso para a nuvem certa, com preço em reais e link oficial.</p>
+    <p class="hint">Não sabe por onde começar? A aba <a href="#conceitos">Conceitos</a> traduz as palavras que a nuvem usa — com pizza, hotel e padaria.</p>
 
     <section class="block">
       <h2>O que é <strong>nuvem</strong></h2>
@@ -349,6 +384,173 @@ invente preço — mostre a faixa min–max do JSON; diga o nível de configura�
         </div>
       </div>
       <div class="snap">Snapshot de preços: <span class="mono">out/2026</span> · Fontes: <a href="https://aws.amazon.com/pt/free/">AWS nível gratuito</a> · <a href="https://azure.microsoft.com/pt-br/pricing/purchase-options/azure-account">Azure conta gratuita</a> · <a href="https://cloud.google.com/free">Google Cloud nível gratuito</a> · <a href="https://cloud.google.com/run/pricing">Cloud Run preços</a> · <a href="https://firebase.google.com/pricing">Firebase preços</a></div>
+    </section>
+</div>
+</section>
+
+<section class="tabpanel" id="conceitos" role="tabpanel" aria-labelledby="tab-conceitos" tabindex="0">
+<div class="page">
+    <h1>Conceitos <strong>sem jargão</strong></h1>
+    <p class="lede">As palavras que a nuvem usa, traduzidas. Cada conceito vem com uma comparação do dia a dia — pizza, hotel, padaria — porque nuvem é conceito simples vestido de palavra difícil.</p>
+
+    <section class="block">
+      <h2>Nuvem em <strong>3 camadas</strong></h2>
+      <p class="sub">A pizza explica melhor que qualquer sigla. Pensando em serviço de nuvem como pizza: você pode fazer em casa, pedir para entregar ou comer no restaurante.</p>
+      <div class="cols cols3">
+        <div class="card">
+          <span class="camada">IaaS</span>
+          <h3>Pizza para levar</h3>
+          <p>A massa e os ingredientes são seus; o forno é alugado. Você monta e cuida de tudo, mas não comprou o forno. É a camada da infraestrutura pura: a máquina é sua para configurar.</p>
+          <p class="card-foot">No catálogo: EC2, Azure VMs, Compute Engine, Oracle Compute, Droplets.</p>
+        </div>
+        <div class="card">
+          <span class="camada">PaaS</span>
+          <h3>Delivery</h3>
+          <p>Você manda a massa pronta; eles assam e entregam. Você manda o código, eles rodam — sem cuidar de servidor, atualização ou tomada. É onde a maioria dos projetos pequenos vive.</p>
+          <p class="card-foot">No catálogo: Cloud Run, App Service, Firebase Hosting, Pages, App Platform.</p>
+        </div>
+        <div class="card">
+          <span class="camada">SaaS</span>
+          <h3>Comer no restaurante</h3>
+          <p>Você só come. Nem entra na cozinha, nem sabe do forno. O software já está pronto: abre, usa, some quando não precisa. Nada para instalar, nada para manter.</p>
+          <p class="card-foot">No catálogo: Looker Studio — relatório pronto, sem instalar nada.</p>
+        </div>
+      </div>
+      <div class="snap">A mesma pizza em três preços: quanto menos você cuida, mais caro o pedaço — e menos trabalho. Para site e app de pequeno negócio, o delivery (PaaS) costuma ser o ponto certo.</div>
+    </section>
+
+    <section class="block">
+      <h2>Analogias do <strong>dia a dia</strong></h2>
+      <p class="sub">Seis comparações que resolvem metade da confusão da nuvem.</p>
+      <div class="cols">
+        <div class="card">
+          <h3>Pagar como água e luz</h3>
+          <p>A conta vem pelo que você usou no mês, não por alugar o cano. Usou pouco, paga pouco. Fechou a torneira, a conta para. É o modelo de cobrança da maioria dos serviços do catálogo.</p>
+        </div>
+        <div class="card">
+          <h3>Hotel ou casa própria</h3>
+          <p>Servidor próprio é casa: sem diária, mas telhado, pintura e segurança são seus. Nuvem é hotel: paga por noite dormida e alguém cuida de tudo. Para quem está começando, hotel.</p>
+        </div>
+        <div class="card">
+          <h3>A cozinha que aparece</h3>
+          <p>Serverless é não ter cozinha em casa: quando alguém pede um prato, uma cozinha aparece, faz e desaparece. Você paga pelo prato, nunca pela cozinha parada.</p>
+        </div>
+        <div class="card">
+          <h3>A padaria do bairro</h3>
+          <p>Em vez de todo mundo ir à mesma padaria central, cada bairro tem uma cópia do pão quentinho. A CDN faz isso com o seu site: cópias pelo mundo, e quem visita recebe a cópia mais perto.</p>
+        </div>
+        <div class="card">
+          <h3>Elevador ou escada</h3>
+          <p>Crescer tem dois caminhos. Vertical é elevador: máquina maior, mais cara. Horizontal é escada larga: várias máquinas iguais, lado a lado. Site que cresce muito escolhe a escada.</p>
+        </div>
+        <div class="card">
+          <h3>O endereço do prédio</h3>
+          <p>Região é o endereço do datacenter. Região São Paulo quer dizer dados no Brasil — e isso se escolhe na hora de criar o serviço, não depois. Para quem trabalha com dado de gente, importa.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Mito ou <strong>verdade</strong></h2>
+      <p class="sub">Cinco frases que todo mundo já ouviu. Clique em cada cartão para revelar.</p>
+      <div class="cols">
+        <div class="card mito">
+          <p class="mito-frase">"Nuvem é sempre mais barata que servidor próprio."</p>
+          <button type="button" class="btn revelar">Revelar</button>
+          <div class="mito-resp" hidden><p><strong>Mito.</strong> Depende do uso. Serviço pesado ligado 24h por dia pode custar mais que a máquina comprada. A economia vem de pagar pelo que usa — e parar de pagar quando para.</p></div>
+        </div>
+        <div class="card mito">
+          <p class="mito-frase">"Meus dados ficam menos seguros na nuvem."</p>
+          <button type="button" class="btn revelar">Revelar</button>
+          <div class="mito-resp" hidden><p><strong>Mito.</strong> Provedor grande gasta com segurança o que uma empresa pequena não consegue. O erro comum é configuração: chave de API exposta, balde de arquivos aberto ao público.</p></div>
+        </div>
+        <div class="card mito">
+          <p class="mito-frase">"Precisa saber programar para usar nuvem."</p>
+          <button type="button" class="btn revelar">Revelar</button>
+          <div class="mito-resp" hidden><p><strong>Mito.</strong> Boa parte do catálogo é nível 1 ou 2: cria por tela guiada, sem escrever uma linha de código. Programar abre mais portas, mas não é porteira.</p></div>
+        </div>
+        <div class="card mito">
+          <p class="mito-frase">"Grátis para sempre não existe."</p>
+          <button type="button" class="btn revelar">Revelar</button>
+          <div class="mito-resp" hidden><p><strong>Verdade, com ressalva.</strong> Existe — chama Always Free — e tem limite: 4 CPUs e 24 GB da Oracle, 100 mil pedidos por dia da Cloudflare. Limite não é enganação; é o tamanho do balde.</p></div>
+        </div>
+        <div class="card mito">
+          <p class="mito-frase">"Meus dados podem ficar fora do Brasil."</p>
+          <button type="button" class="btn revelar">Revelar</button>
+          <div class="mito-resp" hidden><p><strong>Verdade.</strong> Por isso existe região: São Paulo está na maioria dos provedores. Criar o serviço na região São Paulo mantém os dados no Brasil — a escolha é na criação, não depois.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Glossário <strong>sem jargão</strong></h2>
+      <p class="sub">As palavras que aparecem no catálogo, em português claro.</p>
+      <dl class="gloss">
+        <div><dt>Instância (VM)</dt><dd>Um computador alugado por hora. Desligou, parou de pagar.</dd></div>
+        <div><dt>Bucket</dt><dd>Um guarda-volumes para arquivos, com link para cada um.</dd></div>
+        <div><dt>CDN</dt><dd>Cópias do seu site espalhadas pelo mundo; quem visita recebe a cópia mais perto.</dd></div>
+        <div><dt>Serverless</dt><dd>Você manda o código; a máquina aparece quando alguém chama e some depois.</dd></div>
+        <div><dt>Região e zona</dt><dd>A cidade e o bairro do datacenter. Região São Paulo = dados no Brasil.</dd></div>
+        <div><dt>SLA</dt><dd>O compromisso de tempo ligado, por escrito. Não cumprindo, costuma ter desconto.</dd></div>
+        <div><dt>Pay-as-you-go</dt><dd>Pagar pelo que usou, como água e luz.</dd></div>
+        <div><dt>Lock-in</dt><dd>O quanto custa sair. Cresce quando o projeto usa coisas que só existem em um provedor.</dd></div>
+        <div><dt>Cluster</dt><dd>Vários computadores se organizando sozinhos para dividir o trabalho.</dd></div>
+        <div><dt>GPU</dt><dd>A placa de vídeo potente que treina IA. É o item mais caro do catálogo por isso.</dd></div>
+      </dl>
+    </section>
+
+    <section class="block">
+      <h2>Teste o que <strong>aprendeu</strong></h2>
+      <p class="sub">Cinco perguntas, nenhuma pegadinha. Cada resposta abre a explicação na hora.</p>
+      <div id="quiz">
+        <div class="quiz-q" role="group" aria-label="Pergunta 1" data-resp="c" data-exp="PaaS é o delivery: você manda a massa — seu código — e eles assam. Fazer em casa é servidor próprio; comer no restaurante é SaaS, software pronto.">
+          <p class="quiz-enun">1. Na analogia da pizza, o que é PaaS?</p>
+          <div class="opt">
+            <button type="button" data-r="a">Fazer pizza em casa, comprando o forno</button>
+            <button type="button" data-r="b">Comer no restaurante sem ver a cozinha</button>
+            <button type="button" data-r="c">Pedir delivery: você manda a massa, eles assam</button>
+          </div>
+          <p class="quiz-fb" hidden></p>
+        </div>
+        <div class="quiz-q" role="group" aria-label="Pergunta 2" data-resp="a" data-exp="Pay-as-you-go: a conta vem pelo que você usou, como água e luz. É o modelo da maioria dos serviços do catálogo.">
+          <p class="quiz-enun">2. "Pagar como água e luz" descreve qual cobrança?</p>
+          <div class="opt">
+            <button type="button" data-r="a">Pay-as-you-go: paga pelo que usou</button>
+            <button type="button" data-r="b">Mensalidade fixa, use ou não</button>
+            <button type="button" data-r="c">Licença vitalícia, paga uma vez</button>
+          </div>
+          <p class="quiz-fb" hidden></p>
+        </div>
+        <div class="quiz-q" role="group" aria-label="Pergunta 3" data-resp="b" data-exp="A CDN espalha cópias do site pelo mundo; quem visita recebe a cópia mais perto. Backup é outra coisa: guardar cópia de segurança.">
+          <p class="quiz-enun">3. O que uma CDN faz?</p>
+          <div class="opt">
+            <button type="button" data-r="a">Faz backup dos arquivos do site</button>
+            <button type="button" data-r="b">Espalha cópias do site pelo mundo para ele chegar mais rápido</button>
+            <button type="button" data-r="c">Traduz o site para outros idiomas</button>
+          </div>
+          <p class="quiz-fb" hidden></p>
+        </div>
+        <div class="quiz-q" role="group" aria-label="Pergunta 4" data-resp="c" data-exp="O servidor existe, mas você não cuida dele. Ele aparece quando alguém chama seu código e some quando para. Você paga pelo uso, nunca pela máquina parada.">
+          <p class="quiz-enun">4. Serverless significa que não existe servidor?</p>
+          <div class="opt">
+            <button type="button" data-r="a">Sim, o código roda no ar</button>
+            <button type="button" data-r="b">Só funciona dentro de aplicativo de celular</button>
+            <button type="button" data-r="c">Não: existe, mas você não cuida — ele aparece quando alguém chama</button>
+          </div>
+          <p class="quiz-fb" hidden></p>
+        </div>
+        <div class="quiz-q" role="group" aria-label="Pergunta 5" data-resp="a" data-exp="Região São Paulo é datacenter do provedor no Brasil. Criar lá mantém os dados no país — e a escolha acontece na criação do serviço.">
+          <p class="quiz-enun">5. Com região São Paulo, onde ficam os dados?</p>
+          <div class="opt">
+            <button type="button" data-r="a">No datacenter do provedor no Brasil</button>
+            <button type="button" data-r="b">Nos Estados Unidos, sempre</button>
+            <button type="button" data-r="c">No celular de quem visita o site</button>
+          </div>
+          <p class="quiz-fb" hidden></p>
+        </div>
+      </div>
+      <p class="count" id="quiz-placar">0 de 0 respondidas</p>
+      <button type="button" class="btn" id="quiz-refazer" hidden>Refazer</button>
     </section>
 </div>
 </section>
@@ -710,8 +912,8 @@ document.querySelectorAll("[data-grat]").forEach(b=>b.addEventListener("click", 
 document.querySelectorAll("[data-cx]").forEach(b=>b.addEventListener("click", ()=>{ selCx=parseInt(b.getAttribute("data-cx"), 10); render(); }));
 document.querySelectorAll("[data-sort]").forEach(b=>b.addEventListener("click", ()=>{ selSort=b.getAttribute("data-sort"); render(); }));
 
-/* Abas: uma tela por vez, com hash (#inicio, #catalogo, #filtros). */
-const TABS = ["inicio","catalogo","filtros"];
+/* Abas: uma tela por vez, com hash (#inicio, #conceitos, #catalogo, #filtros). */
+const TABS = ["inicio","conceitos","catalogo","filtros"];
 function abaAtual(){
   if(typeof location === "undefined") return "inicio";
   const h = (location.hash || "#inicio").replace("#","");
@@ -730,6 +932,8 @@ function mostrarAba(nome, trocarHash){
   }
 }
 document.querySelectorAll("[data-tab]").forEach(b=>b.addEventListener("click", ()=>mostrarAba(b.getAttribute("data-tab"), true)));
+/* Link interno (#conceitos) também troca a aba. */
+window.addEventListener("hashchange", ()=>mostrarAba(abaAtual(), false));
 mostrarAba(abaAtual(), false);
 render();
 
@@ -770,6 +974,66 @@ render();
     btn.textContent = ok ? "Copiado" : "Selecione e copie";
     btn.classList.toggle("copiado", ok);
     setTimeout(()=>{ btn.textContent = antes; btn.classList.remove("copiado"); }, 2000);
+  });
+})();
+
+/* Mito ou verdade: revela e oculta, de verdade. */
+document.querySelectorAll(".mito .revelar").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    const resp = btn.parentElement.querySelector(".mito-resp");
+    const aberto = !resp.hidden;
+    resp.hidden = aberto;
+    btn.textContent = aberto ? "Revelar" : "Ocultar";
+  });
+});
+
+/* Quiz: corrige na hora, conta o placar e permite refazer. */
+(function(){
+  const box = document.getElementById("quiz");
+  const placar = document.getElementById("quiz-placar");
+  const refazer = document.getElementById("quiz-refazer");
+  if(!box || !placar) return;
+  const questoes = [...box.querySelectorAll(".quiz-q")];
+  let respondidas = 0, certas = 0;
+  function textoPlacar(){
+    let t = certas + " de " + respondidas + " certas";
+    if(respondidas === questoes.length){
+      t += certas === questoes.length
+        ? " — acertou todas. A nuvem já fala a sua língua."
+        : " — boa. Reveja os cartões acima: cada resposta abre a explicação.";
+    }
+    return t;
+  }
+  function reset(){
+    respondidas = 0; certas = 0;
+    questoes.forEach(q=>{
+      delete q.dataset.done;
+      q.querySelectorAll("button").forEach(b=>{ b.disabled = false; b.classList.remove("certa","errada"); });
+      const fb = q.querySelector(".quiz-fb");
+      fb.hidden = true; fb.innerHTML = "";
+    });
+    placar.textContent = textoPlacar();
+    refazer.hidden = true;
+  }
+  refazer.addEventListener("click", reset);
+  questoes.forEach(q=>{
+    q.querySelectorAll("button").forEach(b=>b.addEventListener("click", ()=>{
+      if(q.dataset.done) return;
+      q.dataset.done = "1";
+      const certo = b.getAttribute("data-r") === q.getAttribute("data-resp");
+      if(certo) certas++;
+      respondidas++;
+      q.querySelectorAll("button").forEach(x=>{
+        x.disabled = true;
+        if(x.getAttribute("data-r") === q.getAttribute("data-resp")) x.classList.add("certa");
+      });
+      if(!certo) b.classList.add("errada");
+      const fb = q.querySelector(".quiz-fb");
+      fb.hidden = false;
+      fb.innerHTML = (certo ? "<strong>Certo.</strong> " : "<strong>Não é.</strong> ") + q.getAttribute("data-exp");
+      placar.textContent = textoPlacar();
+      if(respondidas === questoes.length) refazer.hidden = false;
+    }));
   });
 })();
 

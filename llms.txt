@@ -13,5 +13,6 @@ Cloud4All traduz "quero hospedar o site da minha loja gastando pouco" na nuvem i
 ## Páginas
 
 - [Início](https://kelvinoliveiracode.github.io/cloud4all/#inicio): o que é nuvem, por que democratizar e como usar com IA
+- [Conceitos](https://kelvinoliveiracode.github.io/cloud4all/#conceitos): nuvem em 3 camadas, analogias do dia a dia, mito ou verdade, glossário e quiz
 - [Catálogo](https://kelvinoliveiracode.github.io/cloud4all/#catalogo): todos os 124 serviços agrupados por faixa de preço
 - [Filtros](https://kelvinoliveiracode.github.io/cloud4all/#filtros): combinação de negócio, preço, provedor, gratuidade e nível

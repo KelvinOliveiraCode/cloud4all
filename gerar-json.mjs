@@ -16,13 +16,13 @@ const bloco = blocos.find(b => b.includes("CATALOGO"));
 if (!bloco) { console.error("FAIL bloco do catalogo nao encontrado no index.html"); process.exit(1); }
 const src = bloco.replace(/^<script>/, "").replace(/<\/script>$/, "");
 
-const elStub = () => ({ innerHTML: "", textContent: "", classList: { toggle(){} }, addEventListener(){}, appendChild(){}, setAttribute(){}, getAttribute: () => null, value: "" });
+const elStub = () => ({ innerHTML: "", textContent: "", classList: { toggle(){} }, addEventListener(){}, appendChild(){}, setAttribute(){}, getAttribute: () => null, querySelectorAll: () => [], value: "" });
 const documentStub = {
   documentElement: { getAttribute: () => "light", setAttribute(){} },
   getElementById: () => elStub(),
   querySelectorAll: () => [],
 };
-const ctx = vm.createContext({ document: documentStub, console });
+const ctx = vm.createContext({ document: documentStub, window: { addEventListener(){} }, console });
 const { CATALOGO, AREAS } = vm.runInContext(src + "\n;({ CATALOGO, AREAS });", ctx);
 
 const SITE = "https://kelvinoliveiracode.github.io/cloud4all/";
@@ -76,6 +76,7 @@ Cloud4All traduz "quero hospedar o site da minha loja gastando pouco" na nuvem i
 ## Páginas
 
 - [Início](${SITE}#inicio): o que é nuvem, por que democratizar e como usar com IA
+- [Conceitos](${SITE}#conceitos): nuvem em 3 camadas, analogias do dia a dia, mito ou verdade, glossário e quiz
 - [Catálogo](${SITE}#catalogo): todos os ${total} serviços agrupados por faixa de preço
 - [Filtros](${SITE}#filtros): combinação de negócio, preço, provedor, gratuidade e nível
 `;

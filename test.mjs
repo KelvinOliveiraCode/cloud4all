@@ -6,13 +6,13 @@ const bloco = blocos.find(b => b.includes("CATALOGO"));
 if (!bloco) { console.error("FAIL bloco do catalogo nao encontrado no index.html"); process.exit(1); }
 const src = bloco.replace(/^<script>/, "").replace(/<\/script>$/, "");
 
-const elStub = () => ({ innerHTML: "", textContent: "", classList: { toggle(){} }, addEventListener(){}, appendChild(){}, setAttribute(){}, getAttribute: () => null, value: "" });
+const elStub = () => ({ innerHTML: "", textContent: "", classList: { toggle(){} }, addEventListener(){}, appendChild(){}, setAttribute(){}, getAttribute: () => null, querySelectorAll: () => [], value: "" });
 const documentStub = {
   documentElement: { getAttribute: () => "light", setAttribute(){} },
   getElementById: () => elStub(),
   querySelectorAll: () => [],
 };
-const sandbox = { document: documentStub, console };
+const sandbox = { document: documentStub, window: { addEventListener(){} }, console };
 import vm from "node:vm";
 const ctx = vm.createContext(sandbox);
 const test = `
