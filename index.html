@@ -4,10 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cloud4All — ache sua nuvem ideal</title>
-<meta name="description" content="Cloud4All: escolha a área e o preço e receba a nuvem ideal entre AWS, Azure, Google Cloud, Oracle, Cloudflare e DigitalOcean. Regra aberta, sem IA.">
+<meta name="description" content="Cloud4All: escolha a área e o preço e receba a nuvem ideal entre 124 serviços de 8 grandes provedores. Regra aberta e determinística — e catálogo aberto para o chat de IA que você já usa.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@200;300;400;500;600&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+<script>
+/* Tema: resolve antes da primeira pintura para não piscar.
+   Sem escolha guardada, segue o sistema (prefers-color-scheme). */
+(function(){try{var t=localStorage.getItem("cloud4all-tema");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-tema",t);}catch(e){document.documentElement.setAttribute("data-tema","light");}})();
+</script>
 <style>
   :root{
     --paper:#f5f5f3;
@@ -20,8 +25,36 @@
     --dark:#141416;
     --dark-2:#1d1d20;
     --dark-line:#2c2c31;
+    --code-bg:#ececea;
+    --hover:#fafaf8;
+    --head-bg:#141416;
+    --head-ink:#f0f0ee;
+    --head-ink-2:#a9a9a4;
+    --scrollbar:#cfcfca;
+    --logo-fill:#ffffff;
+    --logo-stroke:#101013;
     --radius:10px;
     --max:1120px;
+  }
+  :root[data-tema="dark"]{
+    --paper:#141416;
+    --panel:#1d1d20;
+    --ink:#f0f0ee;
+    --ink-2:#b9b9b4;
+    --ink-3:#8a8e95;
+    --line:#2c2c31;
+    --line-strong:#3d3d43;
+    --dark:#0a0a0c;
+    --dark-2:#17171a;
+    --dark-line:#2c2c31;
+    --code-bg:#26262b;
+    --hover:#202024;
+    --head-bg:#0a0a0c;
+    --head-ink:#f0f0ee;
+    --head-ink-2:#8f8f8a;
+    --scrollbar:#3d3d43;
+    --logo-fill:#1d1d20;
+    --logo-stroke:#f0f0ee;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -43,6 +76,8 @@
   .brand svg{flex:none;display:block}
   .brand b{font-weight:600;letter-spacing:.01em;font-size:1.02rem}
   .brand span{font-weight:200;color:var(--ink-3);font-size:.85rem;border-left:1px solid var(--line-strong);padding-left:12px}
+  .brand svg path{stroke:var(--logo-stroke)}
+  .brand svg path:first-of-type{fill:var(--logo-fill)}
   nav.main{display:flex;gap:4px;margin-left:auto;overflow-x:auto}
   nav.main button{font-family:inherit;font-size:.9rem;font-weight:400;color:var(--ink-2);background:none;border:0;border-bottom:2px solid transparent;padding:10px 12px;cursor:pointer;white-space:nowrap}
   nav.main button:hover{color:var(--ink)}
@@ -80,13 +115,13 @@
   h1{font-weight:200;font-size:2.15rem;line-height:1.2;letter-spacing:-.01em;margin:8px 0 10px;max-width:22ch}
   h1 strong{font-weight:600}
   .lede{color:var(--ink-2);font-size:1.02rem;max-width:62ch}
-  .lede code{font-family:'IBM Plex Mono',monospace;font-size:.88em;background:#ececea;padding:1px 6px;border-radius:5px}
+  .lede code{font-family:'IBM Plex Mono',monospace;font-size:.88em;background:var(--code-bg);padding:1px 6px;border-radius:5px}
 
   /* ---------- resultado ---------- */
   #resultado{margin-top:28px;border:1px solid var(--line-strong);border-radius:12px;overflow:hidden}
-  #resultado .res-head{background:var(--dark);color:#f0f0ee;padding:16px 20px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+  #resultado .res-head{background:var(--head-bg);color:var(--head-ink);padding:16px 20px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
   #resultado .res-head h2{font-size:1rem;font-weight:500}
-  #resultado .res-head .rule{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:#a9a9a4}
+  #resultado .res-head .rule{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--head-ink-2)}
   #resultado .res-body{padding:20px}
   .ideal{border:1px solid var(--ink);border-radius:var(--radius);padding:18px 20px;margin-bottom:14px}
   .ideal .tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.08em;border:1px solid var(--ink);border-radius:20px;padding:2px 10px;margin-bottom:8px}
@@ -111,27 +146,34 @@
   .empty{padding:8px 0}
   .empty p{color:var(--ink-2);font-size:.95rem;max-width:60ch}
 
-  /* ---------- chat (maquete, sem IA) ---------- */
-  #chat{margin-top:36px;border:1px solid var(--line-strong);border-radius:12px;overflow:hidden}
-  #chat .chat-head{padding:14px 20px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:center}
-  #chat .chat-head h2{font-size:1rem;font-weight:500}
-  .pill{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;border:1px dashed var(--ink-3);color:var(--ink-3);border-radius:20px;padding:2px 10px;white-space:nowrap}
-  #chatlog{padding:18px 20px;display:flex;flex-direction:column;gap:10px;min-height:120px;background:var(--paper)}
-  .msg{max-width:75%;padding:10px 14px;border-radius:10px;font-size:.92rem}
-  .msg.bot{background:var(--panel);border:1px solid var(--line);align-self:flex-start}
-  .msg.user{background:var(--dark);color:#f0f0ee;align-self:flex-end}
-  .msg .who{display:block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--ink-3);margin-bottom:4px}
-  .msg.user .who{color:#a9a9a4}
-  .chat-form{display:flex;gap:10px;padding:14px 20px;border-top:1px solid var(--line);background:var(--panel)}
-  .chat-form input{
-    flex:1;font-family:inherit;font-size:.95rem;font-weight:300;color:var(--ink);
-    border:1px solid var(--line-strong);border-radius:8px;padding:11px 14px;background:var(--paper);
+  /* ---------- tema claro/escuro ---------- */
+  button.tema{
+    flex:none;margin-left:6px;width:38px;height:34px;display:grid;place-items:center;
+    font-family:inherit;color:var(--ink-2);background:none;
+    border:1px solid var(--line-strong);border-radius:8px;cursor:pointer;
   }
-  .chat-form button{
-    font-family:inherit;font-size:.9rem;font-weight:500;background:var(--ink);color:var(--paper);
-    border:1px solid var(--ink);border-radius:8px;padding:0 20px;cursor:pointer;
+  button.tema:hover{border-color:var(--ink);color:var(--ink)}
+  button.tema svg{display:block}
+  button.tema .sol{display:none}
+  :root[data-tema="dark"] button.tema .sol{display:block}
+  :root[data-tema="dark"] button.tema .lua{display:none}
+
+  /* ---------- prompt para IA ---------- */
+  .promptbox{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+  .promptbox textarea{
+    font-family:'IBM Plex Mono',monospace;font-size:.78rem;line-height:1.55;font-weight:400;
+    color:var(--ink);background:var(--paper);
+    border:1px solid var(--line-strong);border-radius:8px;padding:12px;width:100%;
+    min-height:200px;resize:vertical;
   }
-  .chat-form button:hover{background:var(--dark-2)}
+  .promptbox textarea:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+  .promptbox .btn{
+    align-self:flex-start;font-family:inherit;font-size:.9rem;font-weight:500;
+    background:var(--ink);color:var(--paper);border:1px solid var(--ink);
+    border-radius:8px;padding:9px 18px;cursor:pointer;
+  }
+  .promptbox .btn:hover{background:var(--dark-2)}
+  .promptbox .btn.copiado{background:var(--paper);color:var(--ink)}
 
   /* ---------- catálogo ---------- */
   .block{margin-top:48px}
@@ -145,7 +187,7 @@
   table.cat{width:100%;border-collapse:collapse;font-size:.88rem}
   table.cat th{text-align:left;font-weight:500;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding:8px 10px;border-bottom:1px solid var(--line-strong)}
   table.cat td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
-  table.cat tr:hover td{background:#fafaf8}
+  table.cat tr:hover td{background:var(--hover)}
   .mono{font-family:'IBM Plex Mono',monospace;font-size:.8rem}
   .prov{display:inline-block;font-size:.72rem;font-weight:500;border:1px solid var(--line-strong);border-radius:5px;padding:1px 8px;white-space:nowrap}
   .area-tag{font-size:.78rem;color:var(--ink-3);white-space:nowrap}
@@ -156,7 +198,7 @@
   .card h3{font-size:.95rem;font-weight:500;margin-bottom:6px}
   .card p, .card li{font-size:.88rem;color:var(--ink-2)}
   .card ol, .card ul{margin-left:20px}
-  .card code{font-family:'IBM Plex Mono',monospace;font-size:.8em;background:#ececea;padding:1px 6px;border-radius:5px}
+  .card code{font-family:'IBM Plex Mono',monospace;font-size:.8em;background:var(--code-bg);padding:1px 6px;border-radius:5px}
   .snap{margin-top:18px;border:1px solid var(--line);border-radius:var(--radius);padding:14px 18px;font-size:.85rem;color:var(--ink-2);background:var(--paper)}
   .snap a{color:inherit}
 
@@ -177,10 +219,10 @@
   }
 
   /* ---------- barras de rolagem finas ---------- */
-  html{scrollbar-width:thin;scrollbar-color:#c9c9c4 transparent}
+  html{scrollbar-width:thin;scrollbar-color:var(--scrollbar) transparent}
   ::-webkit-scrollbar{width:10px;height:10px}
   ::-webkit-scrollbar-track{background:transparent}
-  ::-webkit-scrollbar-thumb{background:#cfcfca;border-radius:8px;border:2px solid var(--paper)}
+  ::-webkit-scrollbar-thumb{background:var(--scrollbar);border-radius:8px;border:2px solid var(--paper)}
   ::-webkit-scrollbar-thumb:hover{background:var(--ink-3)}
 </style>
 </head>
@@ -202,9 +244,11 @@
       <button type="button" role="tab" id="tab-inicio" data-tab="inicio" aria-selected="true" aria-controls="inicio">Início</button>
       <button type="button" role="tab" id="tab-catalogo" data-tab="catalogo" aria-selected="false" aria-controls="catalogo">Catálogo</button>
       <button type="button" role="tab" id="tab-filtros" data-tab="filtros" aria-selected="false" aria-controls="filtros">Filtros</button>
-      <button type="button" role="tab" id="tab-como-funciona" data-tab="como-funciona" aria-selected="false" aria-controls="como-funciona">Como funciona</button>
-      <button type="button" role="tab" id="tab-projeto" data-tab="projeto" aria-selected="false" aria-controls="projeto">O projeto</button>
     </nav>
+    <button type="button" id="btn-tema" class="tema" aria-label="Alternar tema claro e escuro" aria-pressed="false" title="Alternar tema claro/escuro">
+      <svg class="lua" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="sol" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+    </button>
   </div>
 </header>
 
@@ -252,19 +296,60 @@
       </div>
     </section>
 
-    <div id="chat">
-      <div class="chat-head">
-        <h2>Conversa</h2>
-        <span class="pill">Maquete — o assistente automático entra na v2</span>
+    <section class="block">
+      <h2>Converse com <strong>sua IA</strong></h2>
+      <p class="sub">O catálogo inteiro está publicado como <strong>dado aberto</strong>. Dê o link para o chat que você já usa — ChatGPT, Gemini, Claude, Copilot — e pergunte qual nuvem serve para você. Sem cadastro, sem chave de API, sem instalar nada.</p>
+      <div class="cols">
+        <div class="card">
+          <h3>Copie o prompt</h3>
+          <p>Ele já carrega o link do catálogo e as regras: só recomendar o que existe no arquivo, nunca inventar preço e sempre mostrar o link oficial.</p>
+          <div class="promptbox">
+            <textarea id="prompt-ia" readonly rows="11" aria-label="Prompt pronto para colar no seu chat de IA">Você é um consultor de nuvem. Leia o catálogo aberto da Cloud4All em
+https://kelvinoliveiracode.github.io/cloud4all/catalogo.json
+
+São 124 serviços de AWS, Azure, Google Cloud, Oracle Cloud, Cloudflare,
+DigitalOcean, Firebase e Google, com preços aproximados em reais (snapshot de
+out/2026). Regras: recomende apenas serviços que existem nesse arquivo; nunca
+invente preço — mostre a faixa min–max do JSON; diga o nível de configuração
+(1–5) e a gratuidade; termine com o link oficial. Meu caso:
+[descreva o que você quer fazer e quanto pode gastar por mês].</textarea>
+            <button type="button" id="copiar-prompt" class="btn">Copiar prompt</button>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Cole no seu chat</h3>
+          <p>Chats com acesso à internet leem o link sozinhos. A resposta volta com nome do serviço, faixa de preço em reais, nível de configuração e o link oficial — escolhida entre as 124 do catálogo, não inventada.</p>
+          <h3>Se o chat não abrir links</h3>
+          <p>Baixe <a href="catalogo.json">catalogo.json</a> e anexe o arquivo na conversa, do mesmo jeito que se anexa um PDF. Funciona em qualquer chat, até offline.</p>
+        </div>
       </div>
-      <div id="chatlog" aria-live="polite">
-        <div class="msg bot"><span class="who">Cloud4All</span>Olá. Por enquanto eu ainda não busco sozinho: abra a aba Filtros, ajuste como quiser e eu mostro a conta aqui em cima. Na v2, esta conversa vai entender seu pedido e buscar no catálogo por você.</div>
+      <p class="hint">Dados abertos: <a href="catalogo.json">catalogo.json</a> (124 serviços, com fonte em cada linha) · resumo no formato que agentes de IA leem primeiro: <a href="llms.txt">llms.txt</a></p>
+    </section>
+
+    <section class="block">
+      <h2>Limites <strong>honestos</strong></h2>
+      <div class="cols">
+        <div class="card">
+          <h3>A regra, aberta</h3>
+          <ol>
+            <li>Fica só quem atende a <strong>área</strong> e cabe no <strong>preço</strong> escolhidos.</li>
+            <li><strong>Provedor</strong>, <strong>gratuidade</strong> e <strong>nível</strong> refinam: no modo Iniciante, só entra o que se configura por telas guiadas.</li>
+            <li>Ordena por <strong>menor preço</strong> ou <strong>mais simples</strong>, você escolhe; empate resolve pelo outro critério.</li>
+            <li>A primeira da fila é a <strong>nuvem ideal</strong>; o resto aparece na tabela da aba Filtros.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>O que esta página não faz</h3>
+          <ul>
+            <li>Não consulta preço em tempo real (limitação assumida no artigo).</li>
+            <li>Não configura nada sozinho (é o trabalho futuro do projeto).</li>
+            <li>Não inventa número: todo valor exibido existe no catálogo embutido, com fonte e data.</li>
+            <li>Se nada passar no filtro, a resposta diz isso em vez de forçar uma indicação ruim.</li>
+          </ul>
+        </div>
       </div>
-      <form class="chat-form" id="chatform">
-        <input id="chatinput" type="text" placeholder="Ex.: quero um site para minha loja gastando pouco" aria-label="Sua mensagem" autocomplete="off">
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
+      <div class="snap">Snapshot de preços: <span class="mono">out/2026</span> · Fontes: <a href="https://aws.amazon.com/pt/free/">AWS nível gratuito</a> · <a href="https://azure.microsoft.com/pt-br/pricing/purchase-options/azure-account">Azure conta gratuita</a> · <a href="https://cloud.google.com/free">Google Cloud nível gratuito</a> · <a href="https://cloud.google.com/run/pricing">Cloud Run preços</a> · <a href="https://firebase.google.com/pricing">Firebase preços</a></div>
+    </section>
 </div>
 </section>
 
@@ -348,58 +433,9 @@
 </div>
 </section>
 
-<section class="tabpanel" id="como-funciona" role="tabpanel" aria-labelledby="tab-como-funciona" tabindex="0">
-<div class="page">
-    <section class="block">
-      <h2>Como funciona <strong>(a regra, aberta)</strong></h2>
-      <p class="sub">Nenhum modelo de IA decide nada aqui. O caminho até a nuvem ideal é fixo e auditável:</p>
-      <div class="cols">
-        <div class="card">
-          <h3>O filtro</h3>
-          <ol>
-            <li>Fica só quem atende a <strong>área</strong> e cabe no <strong>preço</strong> escolhidos.</li>
-            <li><strong>Provedor</strong>, <strong>gratuidade</strong> e <strong>nível</strong> refinam: no modo Iniciante, só entra o que se configura por telas guiadas.</li>
-            <li>Ordena por <strong>menor preço</strong> ou <strong>mais simples</strong>, você escolhe; empate resolve pelo outro critério.</li>
-            <li>A primeira da fila é a <strong>nuvem ideal</strong>; o resto aparece na tabela da aba Filtros.</li>
-          </ol>
-        </div>
-        <div class="card">
-          <h3>O que esta página não faz</h3>
-          <ul>
-            <li>Não consulta preço em tempo real (limitação assumida no artigo).</li>
-            <li>Não configura nada sozinho (é o trabalho futuro do projeto).</li>
-            <li>Não inventa número: todo valor exibido existe no catálogo embutido, com fonte e data.</li>
-            <li>Se nada passar no filtro, a resposta diz isso em vez de forçar uma indicação ruim.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="snap">Snapshot de preços: <span class="mono">out/2026</span> · Fontes: <a href="https://aws.amazon.com/pt/free/">AWS nível gratuito</a> · <a href="https://azure.microsoft.com/pt-br/pricing/purchase-options/azure-account">Azure conta gratuita</a> · <a href="https://cloud.google.com/free">Google Cloud nível gratuito</a> · <a href="https://cloud.google.com/run/pricing">Cloud Run preços</a> · <a href="https://firebase.google.com/pricing">Firebase preços</a></div>
-    </section>
-</div>
-</section>
-
-<section class="tabpanel" id="projeto" role="tabpanel" aria-labelledby="tab-projeto" tabindex="0">
-<div class="page">
-    <section class="block">
-      <h2>O projeto <strong>Cloud4All Brasil</strong></h2>
-      <p class="sub">Plataforma para traduzir necessidade simples em configuração real de nuvem, para estudantes e pequenos negócios. Resumo aceito no Connepi 2026 (IFPA). Esta página é o catálogo determinístico navegável. O próximo passo liga a IA (RAG sobre documentação oficial) sem mudar a regra de filtro.</p>
-      <div class="cols">
-        <div class="card">
-          <h3>Provedores</h3>
-          <p><strong>AWS</strong>, <strong>Azure</strong>, <strong>Google Cloud</strong>, <strong>Oracle Cloud</strong>, <strong>Cloudflare</strong>, <strong>DigitalOcean</strong>, <strong>Firebase</strong> e <strong>Google</strong>: só empresas grandes e conhecidas, cada uma com link oficial em cada serviço.</p>
-        </div>
-        <div class="card">
-          <h3>Roteiro</h3>
-          <p><code>hoje</code> filtro determinístico (esta página) → <code>depois</code> conversa com IA que busca sozinha → <code>por fim</code> configuração assistida do serviço escolhido.</p>
-        </div>
-      </div>
-    </section>
-</div>
-</section>
-
     <footer class="site">
       <div class="foot">
-        <span>Cloud4All Brasil · IFPA</span>
+        <span>Cloud4All Brasil</span>
         <span>Snapshot <span class="mono">out/2026</span> — valores aproximados, confirme na página oficial.</span>
         <a href="#inicio">Voltar ao início</a>
       </div>
@@ -674,8 +710,8 @@ document.querySelectorAll("[data-grat]").forEach(b=>b.addEventListener("click", 
 document.querySelectorAll("[data-cx]").forEach(b=>b.addEventListener("click", ()=>{ selCx=parseInt(b.getAttribute("data-cx"), 10); render(); }));
 document.querySelectorAll("[data-sort]").forEach(b=>b.addEventListener("click", ()=>{ selSort=b.getAttribute("data-sort"); render(); }));
 
-/* Abas: uma tela por vez, com hash (#inicio, #catalogo, #como-funciona, #projeto). */
-const TABS = ["inicio","catalogo","filtros","como-funciona","projeto"];
+/* Abas: uma tela por vez, com hash (#inicio, #catalogo, #filtros). */
+const TABS = ["inicio","catalogo","filtros"];
 function abaAtual(){
   if(typeof location === "undefined") return "inicio";
   const h = (location.hash || "#inicio").replace("#","");
@@ -697,25 +733,45 @@ document.querySelectorAll("[data-tab]").forEach(b=>b.addEventListener("click", (
 mostrarAba(abaAtual(), false);
 render();
 
-/* Chat-maquete: resposta fixa, sem fingir IA. */
-const RESPOSTA_FIXA = "O assistente automático chega na v2 — por enquanto eu não busco sozinho. Abra a aba Filtros e combine negócio, preço, provedor e nível: a recomendação aparece ali em cima, com a conta aberta.";
-document.getElementById("chatform").addEventListener("submit", e=>{
-  e.preventDefault();
-  const input = document.getElementById("chatinput");
-  const texto = input.value.trim();
-  if(!texto) return;
-  const log = document.getElementById("chatlog");
-  const u = document.createElement("div");
-  u.className = "msg user";
-  u.innerHTML = '<span class="who">Você</span>' + esc(texto);
-  log.appendChild(u);
-  const b = document.createElement("div");
-  b.className = "msg bot";
-  b.innerHTML = '<span class="who">Cloud4All</span>' + esc(RESPOSTA_FIXA);
-  log.appendChild(b);
-  input.value = "";
-  log.lastElementChild.scrollIntoView({block:"nearest"});
-});
+/* Tema claro/escuro: alterna, persiste e mantém o botão honesto. */
+(function(){
+  const btn = document.getElementById("btn-tema");
+  if(!btn) return;
+  const escuro = () => document.documentElement.getAttribute("data-tema") === "dark";
+  btn.setAttribute("aria-pressed", String(escuro()));
+  btn.addEventListener("click", ()=>{
+    const t = escuro() ? "light" : "dark";
+    document.documentElement.setAttribute("data-tema", t);
+    try{ localStorage.setItem("cloud4all-tema", t); }catch(e){}
+    btn.setAttribute("aria-pressed", String(t === "dark"));
+  });
+})();
+
+/* Prompt pronto: copia de verdade, com feedback e sem biblioteca. */
+(function(){
+  const btn = document.getElementById("copiar-prompt");
+  const ta = document.getElementById("prompt-ia");
+  if(!btn || !ta) return;
+  btn.addEventListener("click", async ()=>{
+    const texto = ta.value;
+    let ok = false;
+    try{
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        await navigator.clipboard.writeText(texto);
+        ok = true;
+      }
+    }catch(e){ /* segue para o fallback */ }
+    if(!ok){
+      ta.focus();
+      ta.select();
+      try{ ok = document.execCommand("copy"); }catch(e){ ok = false; }
+    }
+    const antes = btn.textContent;
+    btn.textContent = ok ? "Copiado" : "Selecione e copie";
+    btn.classList.toggle("copiado", ok);
+    setTimeout(()=>{ btn.textContent = antes; btn.classList.remove("copiado"); }, 2000);
+  });
+})();
 
 /* Catálogo agrupado por preço. */
 (function(){

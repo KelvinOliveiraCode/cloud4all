@@ -1,0 +1,2028 @@
+{
+  "fonte": "Cloud4All",
+  "site": "https://kelvinoliveiracode.github.io/cloud4all/",
+  "catalogo_json": "https://kelvinoliveiracode.github.io/cloud4all/catalogo.json",
+  "snapshot": "out/2026",
+  "moeda": "BRL",
+  "nota_precos": "valores aproximados em reais para uso pequeno (conversão aproximada de USD 1 ≈ R$ 5,50); confirme sempre na página oficial de cada serviço",
+  "total": 124,
+  "areas": {
+    "site": "Hospedar site",
+    "app": "Rodar app ou API",
+    "banco": "Hospedar banco de dados",
+    "arquivos": "Guardar arquivos",
+    "dados": "Analisar dados",
+    "rede": "Rede e entrega",
+    "ia": "Treinamento de IA",
+    "qualquer": "Qualquer um"
+  },
+  "gratuidade": {
+    "sempre": "grátis para sempre",
+    "temporario": "grátis no começo (conta nova ou período de teste)",
+    "nao": "pago"
+  },
+  "campos": {
+    "id": "identificador estável do serviço",
+    "provedor": "marca do serviço",
+    "nome": "nome do serviço",
+    "areas": "para qué serve (ver o dicionário 'areas')",
+    "gratis": "sempre | temporario | nao",
+    "min": "preço mínimo mensal aproximado, em R$",
+    "max": "preço máximo mensal aproximado, em R$",
+    "complexidade": "nível de configuração, 1 (guiado) a 5 (técnico)",
+    "frase": "explicação em linguagem leiga",
+    "gratuidade": "detalhe do que é grátis",
+    "doc": "link da documentação oficial",
+    "preco": "link da página oficial de preços"
+  },
+  "servicos": [
+    {
+      "id": "azure-swa",
+      "provedor": "Azure",
+      "nome": "Static Web Apps",
+      "areas": [
+        "site"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 20,
+      "complexidade": 1,
+      "frase": "assistente de poucos cliques, sem servidor para cuidar",
+      "gratuidade": "Plano gratuito generoso para sites estáticos",
+      "doc": "https://azure.microsoft.com/pt-br/products/app-service/static",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/app-service/static/"
+    },
+    {
+      "id": "gcp-firebase-hosting",
+      "provedor": "Google Cloud",
+      "nome": "Firebase Hosting",
+      "areas": [
+        "site"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 30,
+      "complexidade": 1,
+      "frase": "publica com um comando, certificado incluso",
+      "gratuidade": "Cota gratuita mensal para hospedagem",
+      "doc": "https://firebase.google.com/docs/hosting",
+      "preco": "https://firebase.google.com/pricing"
+    },
+    {
+      "id": "gcp-cloud-run",
+      "provedor": "Google Cloud",
+      "nome": "Cloud Run",
+      "areas": [
+        "site",
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 60,
+      "complexidade": 3,
+      "frase": "roda seu app em container e zera a conta parado",
+      "gratuidade": "2 milhões de requisições/mês sempre grátis",
+      "doc": "https://cloud.google.com/run/docs",
+      "preco": "https://cloud.google.com/run/pricing"
+    },
+    {
+      "id": "azure-app-service",
+      "provedor": "Azure",
+      "nome": "App Service",
+      "areas": [
+        "site",
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 80,
+      "complexidade": 2,
+      "frase": "painel guiado, do grátis ao pago sem migrar",
+      "gratuidade": "Plano F1 gratuito com limites",
+      "doc": "https://azure.microsoft.com/pt-br/products/app-service",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/app-service/windows/"
+    },
+    {
+      "id": "aws-amplify",
+      "provedor": "AWS",
+      "nome": "Amplify Hosting",
+      "areas": [
+        "site"
+      ],
+      "gratis": "temporario",
+      "min": 0,
+      "max": 45,
+      "complexidade": 2,
+      "frase": "liga o repositório e publica sozinho",
+      "gratuidade": "12 meses grátis para conta nova, depois por uso",
+      "doc": "https://aws.amazon.com/pt/amplify/",
+      "preco": "https://aws.amazon.com/pt/amplify/pricing/"
+    },
+    {
+      "id": "aws-lightsail",
+      "provedor": "AWS",
+      "nome": "Lightsail",
+      "areas": [
+        "site",
+        "app"
+      ],
+      "gratis": "temporario",
+      "min": 25,
+      "max": 60,
+      "complexidade": 3,
+      "frase": "servidor com preço fixo, como um aluguel",
+      "gratuidade": "Primeiros meses grátis para conta nova",
+      "doc": "https://aws.amazon.com/pt/lightsail/",
+      "preco": "https://aws.amazon.com/pt/lightsail/pricing/"
+    },
+    {
+      "id": "gcp-firestore",
+      "provedor": "Google Cloud",
+      "nome": "Firestore",
+      "areas": [
+        "banco"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 40,
+      "complexidade": 2,
+      "frase": "banco pronto, com cota diária gratuita",
+      "gratuidade": "Leituras e escrita gratuitas por dia",
+      "doc": "https://cloud.google.com/firestore/docs",
+      "preco": "https://cloud.google.com/firestore/pricing"
+    },
+    {
+      "id": "aws-dynamodb",
+      "provedor": "AWS",
+      "nome": "DynamoDB",
+      "areas": [
+        "banco"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 50,
+      "complexidade": 3,
+      "frase": "banco rápido da Amazon com nível sempre grátis",
+      "gratuidade": "25 GB sempre grátis",
+      "doc": "https://aws.amazon.com/pt/dynamodb/",
+      "preco": "https://aws.amazon.com/pt/dynamodb/pricing/"
+    },
+    {
+      "id": "azure-cosmosdb",
+      "provedor": "Azure",
+      "nome": "Cosmos DB",
+      "areas": [
+        "banco"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 70,
+      "complexidade": 3,
+      "frase": "banco global com nível gratuito mensal",
+      "gratuidade": "1.000 RU/s gratuitas por mês",
+      "doc": "https://azure.microsoft.com/pt-br/products/cosmos-db",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/cosmos-db/autoscale/"
+    },
+    {
+      "id": "azure-sql",
+      "provedor": "Azure",
+      "nome": "Azure SQL Database",
+      "areas": [
+        "banco"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 90,
+      "complexidade": 3,
+      "frase": "SQL gerenciado com nível gratuito",
+      "gratuidade": "Nível gratuito com limites mensais",
+      "doc": "https://azure.microsoft.com/pt-br/products/azure-sql/database",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/azure-sql-database/single/"
+    },
+    {
+      "id": "aws-rds",
+      "provedor": "AWS",
+      "nome": "RDS",
+      "areas": [
+        "banco"
+      ],
+      "gratis": "temporario",
+      "min": 60,
+      "max": 200,
+      "complexidade": 4,
+      "frase": "banco relacional gerenciado, exige rede e acesso",
+      "gratuidade": "750 h/mês por 12 meses em conta nova",
+      "doc": "https://aws.amazon.com/pt/rds/",
+      "preco": "https://aws.amazon.com/pt/rds/pricing/"
+    },
+    {
+      "id": "gcp-cloud-sql",
+      "provedor": "Google Cloud",
+      "nome": "Cloud SQL",
+      "areas": [
+        "banco"
+      ],
+      "gratis": "nao",
+      "min": 50,
+      "max": 180,
+      "complexidade": 3,
+      "frase": "MySQL e Postgres gerenciados no Google",
+      "gratuidade": "Sem nível gratuito permanente",
+      "doc": "https://cloud.google.com/sql/docs",
+      "preco": "https://cloud.google.com/sql/pricing"
+    },
+    {
+      "id": "aws-sagemaker",
+      "provedor": "AWS",
+      "nome": "SageMaker",
+      "areas": [
+        "ia"
+      ],
+      "gratis": "temporario",
+      "min": 0,
+      "max": 400,
+      "complexidade": 4,
+      "frase": "treino gerenciado, grátis no começo e por hora depois",
+      "gratuidade": "250 h grátis nos 2 primeiros meses",
+      "doc": "https://aws.amazon.com/pt/sagemaker/",
+      "preco": "https://aws.amazon.com/pt/sagemaker/pricing/"
+    },
+    {
+      "id": "azure-ml",
+      "provedor": "Azure",
+      "nome": "Azure Machine Learning",
+      "areas": [
+        "ia"
+      ],
+      "gratis": "nao",
+      "min": 20,
+      "max": 800,
+      "complexidade": 4,
+      "frase": "estúdio de treino, paga a máquina por hora",
+      "gratuidade": "Área de trabalho grátis; computação paga",
+      "doc": "https://azure.microsoft.com/pt-br/products/machine-learning",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/machine-learning/"
+    },
+    {
+      "id": "gcp-vertex",
+      "provedor": "Google Cloud",
+      "nome": "Vertex AI",
+      "areas": [
+        "ia"
+      ],
+      "gratis": "nao",
+      "min": 10,
+      "max": 700,
+      "complexidade": 4,
+      "frase": "treino e ajuste de modelos por hora de máquina",
+      "gratuidade": "Sem nível gratuito permanente",
+      "doc": "https://cloud.google.com/vertex-ai/docs",
+      "preco": "https://cloud.google.com/vertex-ai/pricing"
+    },
+    {
+      "id": "azure-openai",
+      "provedor": "Azure",
+      "nome": "Azure OpenAI / Foundry",
+      "areas": [
+        "ia"
+      ],
+      "gratis": "nao",
+      "min": 5,
+      "max": 600,
+      "complexidade": 3,
+      "frase": "usa modelo pronto por chamada, sem treinar",
+      "gratuidade": "Sem nível gratuito permanente",
+      "doc": "https://azure.microsoft.com/pt-br/products/ai-services/openai-service",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/cognitive-services/openai-service/"
+    },
+    {
+      "id": "aws-ec2-gpu",
+      "provedor": "AWS",
+      "nome": "EC2 com GPU",
+      "areas": [
+        "ia"
+      ],
+      "gratis": "nao",
+      "min": 30,
+      "max": 1500,
+      "complexidade": 5,
+      "frase": "máquina com placa de vídeo, a mais técnica e cara",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://aws.amazon.com/pt/ec2/instance-types/",
+      "preco": "https://aws.amazon.com/pt/ec2/pricing/on-demand/"
+    },
+    {
+      "id": "gcp-gpu",
+      "provedor": "Google Cloud",
+      "nome": "Compute Engine com GPU",
+      "areas": [
+        "ia"
+      ],
+      "gratis": "nao",
+      "min": 30,
+      "max": 1200,
+      "complexidade": 5,
+      "frase": "máquina com GPU no Google, cobra por minuto",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://cloud.google.com/compute/docs/gpus",
+      "preco": "https://cloud.google.com/compute/pricing"
+    },
+    {
+      "id": "aws-lambda",
+      "provedor": "AWS",
+      "nome": "Lambda",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 40,
+      "complexidade": 3,
+      "frase": "roda seu código sem servidor, paga por execução",
+      "gratuidade": "1 milhão de execuções/mês sempre grátis",
+      "doc": "https://aws.amazon.com/pt/lambda/",
+      "preco": "https://aws.amazon.com/pt/lambda/pricing/"
+    },
+    {
+      "id": "azure-functions",
+      "provedor": "Azure",
+      "nome": "Functions",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 40,
+      "complexidade": 3,
+      "frase": "código sob demanda com cota mensal gratuita",
+      "gratuidade": "1 milhão de execuções/mês grátis",
+      "doc": "https://azure.microsoft.com/pt-br/products/functions",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/functions/"
+    },
+    {
+      "id": "gcp-app-engine",
+      "provedor": "Google Cloud",
+      "nome": "App Engine",
+      "areas": [
+        "site",
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 50,
+      "complexidade": 2,
+      "frase": "publica o app e esquece o servidor",
+      "gratuidade": "Cota diária gratuita",
+      "doc": "https://cloud.google.com/appengine/docs",
+      "preco": "https://cloud.google.com/appengine/pricing"
+    },
+    {
+      "id": "aws-ec2",
+      "provedor": "AWS",
+      "nome": "EC2",
+      "areas": [
+        "app"
+      ],
+      "gratis": "temporario",
+      "min": 40,
+      "max": 150,
+      "complexidade": 4,
+      "frase": "servidor flexível, o mais técnico de configurar",
+      "gratuidade": "Horas grátis para conta nova, depois por uso",
+      "doc": "https://aws.amazon.com/pt/ec2/",
+      "preco": "https://aws.amazon.com/pt/ec2/pricing/on-demand/"
+    },
+    {
+      "id": "aws-s3",
+      "provedor": "AWS",
+      "nome": "S3",
+      "areas": [
+        "arquivos"
+      ],
+      "gratis": "temporario",
+      "min": 0,
+      "max": 30,
+      "complexidade": 2,
+      "frase": "guarda arquivos com link, paga pelo espaço",
+      "gratuidade": "5 GB grátis por 12 meses em conta nova",
+      "doc": "https://aws.amazon.com/pt/s3/",
+      "preco": "https://aws.amazon.com/pt/s3/pricing/"
+    },
+    {
+      "id": "azure-blob",
+      "provedor": "Azure",
+      "nome": "Blob Storage",
+      "areas": [
+        "arquivos"
+      ],
+      "gratis": "temporario",
+      "min": 0,
+      "max": 30,
+      "complexidade": 2,
+      "frase": "guarda-arquivos da Microsoft, com nível de entrada grátis",
+      "gratuidade": "5 GB grátis por 12 meses em conta nova",
+      "doc": "https://azure.microsoft.com/pt-br/products/storage/blobs",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/storage/blobs/"
+    },
+    {
+      "id": "gcp-cloud-storage",
+      "provedor": "Google Cloud",
+      "nome": "Cloud Storage",
+      "areas": [
+        "arquivos"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 30,
+      "complexidade": 2,
+      "frase": "guarda arquivos no Google com cota sempre grátis",
+      "gratuidade": "5 GB sempre grátis",
+      "doc": "https://cloud.google.com/storage/docs",
+      "preco": "https://cloud.google.com/storage/pricing"
+    },
+    {
+      "id": "aws-ecs",
+      "provedor": "AWS",
+      "nome": "ECS",
+      "areas": [
+        "app"
+      ],
+      "gratis": "nao",
+      "min": 40,
+      "max": 200,
+      "complexidade": 4,
+      "frase": "roda containers; com Fargate, sem cuidar de máquina",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://aws.amazon.com/pt/ecs/",
+      "preco": "https://aws.amazon.com/pt/ecs/pricing/"
+    },
+    {
+      "id": "aws-eks",
+      "provedor": "AWS",
+      "nome": "EKS",
+      "areas": [
+        "app"
+      ],
+      "gratis": "nao",
+      "min": 80,
+      "max": 400,
+      "complexidade": 5,
+      "frase": "Kubernetes gerenciado, o mais avançado",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://aws.amazon.com/pt/eks/",
+      "preco": "https://aws.amazon.com/pt/eks/pricing/"
+    },
+    {
+      "id": "aws-apigw",
+      "provedor": "AWS",
+      "nome": "API Gateway",
+      "areas": [
+        "app"
+      ],
+      "gratis": "temporario",
+      "min": 0,
+      "max": 30,
+      "complexidade": 3,
+      "frase": "porta de entrada da sua API",
+      "gratuidade": "1 milhão de chamadas/mês por 12 meses",
+      "doc": "https://aws.amazon.com/pt/api-gateway/",
+      "preco": "https://aws.amazon.com/pt/api-gateway/pricing/"
+    },
+    {
+      "id": "aws-sqs",
+      "provedor": "AWS",
+      "nome": "SQS",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 10,
+      "complexidade": 2,
+      "frase": "fila de recados entre partes do app",
+      "gratuidade": "1 milhão de requisições/mês sempre grátis",
+      "doc": "https://aws.amazon.com/pt/sqs/",
+      "preco": "https://aws.amazon.com/pt/sqs/pricing/"
+    },
+    {
+      "id": "aws-sns",
+      "provedor": "AWS",
+      "nome": "SNS",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 10,
+      "complexidade": 2,
+      "frase": "avisos e notificações para app e e-mail",
+      "gratuidade": "1 milhão de publicações/mês sempre grátis",
+      "doc": "https://aws.amazon.com/pt/sns/",
+      "preco": "https://aws.amazon.com/pt/sns/pricing/"
+    },
+    {
+      "id": "aws-cloudfront",
+      "provedor": "AWS",
+      "nome": "CloudFront",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "temporario",
+      "min": 0,
+      "max": 40,
+      "complexidade": 3,
+      "frase": "entrega o site mais rápido no mundo todo",
+      "gratuidade": "50 GB grátis por 12 meses",
+      "doc": "https://aws.amazon.com/pt/cloudfront/",
+      "preco": "https://aws.amazon.com/pt/cloudfront/pricing/"
+    },
+    {
+      "id": "aws-route53",
+      "provedor": "AWS",
+      "nome": "Route 53",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "nao",
+      "min": 3,
+      "max": 15,
+      "complexidade": 3,
+      "frase": "liga seu domínio ao site",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://aws.amazon.com/pt/route53/",
+      "preco": "https://aws.amazon.com/pt/route53/pricing/"
+    },
+    {
+      "id": "aws-alb",
+      "provedor": "AWS",
+      "nome": "Elastic Load Balancing",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "nao",
+      "min": 90,
+      "max": 160,
+      "complexidade": 4,
+      "frase": "divide visitas entre servidores",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://aws.amazon.com/pt/elasticloadbalancing/",
+      "preco": "https://aws.amazon.com/pt/elasticloadbalancing/pricing/"
+    },
+    {
+      "id": "aws-waf",
+      "provedor": "AWS",
+      "nome": "WAF",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "nao",
+      "min": 30,
+      "max": 80,
+      "complexidade": 3,
+      "frase": "barreira contra ataques ao site",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://aws.amazon.com/pt/waf/",
+      "preco": "https://aws.amazon.com/pt/waf/pricing/"
+    },
+    {
+      "id": "aws-glacier",
+      "provedor": "AWS",
+      "nome": "S3 Glacier",
+      "areas": [
+        "arquivos"
+      ],
+      "gratis": "nao",
+      "min": 5,
+      "max": 20,
+      "complexidade": 3,
+      "frase": "guarda-arquivos frio, centavos por GB",
+      "gratuidade": "Sem nível gratuito permanente",
+      "doc": "https://aws.amazon.com/pt/s3/storage-classes/glacier/",
+      "preco": "https://aws.amazon.com/pt/s3/pricing/"
+    },
+    {
+      "id": "aws-aurora",
+      "provedor": "AWS",
+      "nome": "Aurora",
+      "areas": [
+        "banco"
+      ],
+      "gratis": "nao",
+      "min": 100,
+      "max": 300,
+      "complexidade": 4,
+      "frase": "banco relacional rápido da Amazon",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://aws.amazon.com/pt/rds/aurora/",
+      "preco": "https://aws.amazon.com/pt/rds/aurora/pricing/"
+    },
+    {
+      "id": "aws-elasticache",
+      "provedor": "AWS",
+      "nome": "ElastiCache",
+      "areas": [
+        "app"
+      ],
+      "gratis": "nao",
+      "min": 60,
+      "max": 200,
+      "complexidade": 4,
+      "frase": "memória rápida para acelerar o app",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://aws.amazon.com/pt/elasticache/",
+      "preco": "https://aws.amazon.com/pt/elasticache/pricing/"
+    },
+    {
+      "id": "aws-athena",
+      "provedor": "AWS",
+      "nome": "Athena",
+      "areas": [
+        "dados"
+      ],
+      "gratis": "nao",
+      "min": 10,
+      "max": 60,
+      "complexidade": 2,
+      "frase": "consulta arquivos com SQL, paga por TB lido",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://aws.amazon.com/pt/athena/",
+      "preco": "https://aws.amazon.com/pt/athena/pricing/"
+    },
+    {
+      "id": "aws-redshift",
+      "provedor": "AWS",
+      "nome": "Redshift",
+      "areas": [
+        "dados"
+      ],
+      "gratis": "nao",
+      "min": 200,
+      "max": 800,
+      "complexidade": 4,
+      "frase": "armazém de dados para relatórios grandes",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://aws.amazon.com/pt/redshift/",
+      "preco": "https://aws.amazon.com/pt/redshift/pricing/"
+    },
+    {
+      "id": "aws-emr",
+      "provedor": "AWS",
+      "nome": "EMR",
+      "areas": [
+        "dados"
+      ],
+      "gratis": "nao",
+      "min": 100,
+      "max": 500,
+      "complexidade": 5,
+      "frase": "processa volumes gigantes de dados",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://aws.amazon.com/pt/emr/",
+      "preco": "https://aws.amazon.com/pt/emr/pricing/"
+    },
+    {
+      "id": "aws-kinesis",
+      "provedor": "AWS",
+      "nome": "Kinesis",
+      "areas": [
+        "dados"
+      ],
+      "gratis": "nao",
+      "min": 30,
+      "max": 150,
+      "complexidade": 4,
+      "frase": "dados em tempo real, como placar ao vivo",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://aws.amazon.com/pt/kinesis/",
+      "preco": "https://aws.amazon.com/pt/kinesis/pricing/"
+    },
+    {
+      "id": "aws-bedrock",
+      "provedor": "AWS",
+      "nome": "Bedrock",
+      "areas": [
+        "ia"
+      ],
+      "gratis": "nao",
+      "min": 5,
+      "max": 400,
+      "complexidade": 3,
+      "frase": "usa modelos prontos de IA por chamada",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://aws.amazon.com/pt/bedrock/",
+      "preco": "https://aws.amazon.com/pt/bedrock/pricing/"
+    },
+    {
+      "id": "aws-rekognition",
+      "provedor": "AWS",
+      "nome": "Rekognition",
+      "areas": [
+        "ia"
+      ],
+      "gratis": "temporario",
+      "min": 0,
+      "max": 60,
+      "complexidade": 3,
+      "frase": "reconhece rostos e objetos em fotos",
+      "gratuidade": "5 mil imagens/mês por 12 meses",
+      "doc": "https://aws.amazon.com/pt/rekognition/",
+      "preco": "https://aws.amazon.com/pt/rekognition/pricing/"
+    },
+    {
+      "id": "azure-vms",
+      "provedor": "Azure",
+      "nome": "Virtual Machines",
+      "areas": [
+        "app"
+      ],
+      "gratis": "temporario",
+      "min": 30,
+      "max": 150,
+      "complexidade": 4,
+      "frase": "máquina virtual Windows ou Linux",
+      "gratuidade": "Horas grátis para conta nova",
+      "doc": "https://azure.microsoft.com/pt-br/products/virtual-machines",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/virtual-machines/windows/"
+    },
+    {
+      "id": "azure-aks",
+      "provedor": "Azure",
+      "nome": "Kubernetes Service (AKS)",
+      "areas": [
+        "app"
+      ],
+      "gratis": "nao",
+      "min": 60,
+      "max": 300,
+      "complexidade": 5,
+      "frase": "Kubernetes gerenciado no Azure",
+      "gratuidade": "Cluster grátis, paga as máquinas",
+      "doc": "https://azure.microsoft.com/pt-br/products/kubernetes-service",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/kubernetes-service/"
+    },
+    {
+      "id": "azure-container-apps",
+      "provedor": "Azure",
+      "nome": "Container Apps",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 60,
+      "complexidade": 3,
+      "frase": "apps em container sem servidor",
+      "gratuidade": "Cota mensal gratuita",
+      "doc": "https://azure.microsoft.com/pt-br/products/container-apps",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/container-apps/"
+    },
+    {
+      "id": "azure-acr",
+      "provedor": "Azure",
+      "nome": "Container Registry",
+      "areas": [
+        "app"
+      ],
+      "gratis": "nao",
+      "min": 30,
+      "max": 60,
+      "complexidade": 2,
+      "frase": "guarda as imagens dos seus containers",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://azure.microsoft.com/pt-br/products/container-registry",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/container-registry/"
+    },
+    {
+      "id": "azure-servicebus",
+      "provedor": "Azure",
+      "nome": "Service Bus",
+      "areas": [
+        "app"
+      ],
+      "gratis": "nao",
+      "min": 5,
+      "max": 30,
+      "complexidade": 3,
+      "frase": "fila e tópicos para ligar sistemas",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://azure.microsoft.com/pt-br/products/service-bus",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/service-bus/"
+    },
+    {
+      "id": "azure-frontdoor",
+      "provedor": "Azure",
+      "nome": "Front Door",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "nao",
+      "min": 190,
+      "max": 400,
+      "complexidade": 3,
+      "frase": "acelera e protege o site globalmente",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://azure.microsoft.com/pt-br/products/front-door",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/front-door/"
+    },
+    {
+      "id": "azure-cdn",
+      "provedor": "Azure",
+      "nome": "Content Delivery Network",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "nao",
+      "min": 5,
+      "max": 60,
+      "complexidade": 3,
+      "frase": "entrega o conteúdo perto do visitante",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://azure.microsoft.com/pt-br/products/cdn",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/cdn/"
+    },
+    {
+      "id": "azure-dns",
+      "provedor": "Azure",
+      "nome": "DNS",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "nao",
+      "min": 3,
+      "max": 10,
+      "complexidade": 2,
+      "frase": "o DNS do seu domínio",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://azure.microsoft.com/pt-br/products/dns",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/dns/"
+    },
+    {
+      "id": "azure-lb",
+      "provedor": "Azure",
+      "nome": "Load Balancer",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "nao",
+      "min": 30,
+      "max": 120,
+      "complexidade": 4,
+      "frase": "divide o tráfego entre máquinas",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://azure.microsoft.com/pt-br/products/load-balancer",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/load-balancer/"
+    },
+    {
+      "id": "azure-keyvault",
+      "provedor": "Azure",
+      "nome": "Key Vault",
+      "areas": [
+        "app"
+      ],
+      "gratis": "nao",
+      "min": 0,
+      "max": 10,
+      "complexidade": 2,
+      "frase": "cofre de senhas e chaves do app",
+      "gratuidade": "Custo irrisório em uso pequeno",
+      "doc": "https://azure.microsoft.com/pt-br/products/key-vault",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/key-vault/"
+    },
+    {
+      "id": "azure-synapse",
+      "provedor": "Azure",
+      "nome": "Synapse Analytics",
+      "areas": [
+        "dados"
+      ],
+      "gratis": "nao",
+      "min": 30,
+      "max": 500,
+      "complexidade": 4,
+      "frase": "analisa dados sem servidor, paga por TB",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://azure.microsoft.com/pt-br/products/synapse-analytics",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/synapse-analytics/"
+    },
+    {
+      "id": "azure-databricks",
+      "provedor": "Azure",
+      "nome": "Databricks",
+      "areas": [
+        "dados"
+      ],
+      "gratis": "temporario",
+      "min": 100,
+      "max": 600,
+      "complexidade": 4,
+      "frase": "engenharia de dados com Spark",
+      "gratuidade": "14 dias de teste",
+      "doc": "https://azure.microsoft.com/pt-br/products/databricks",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/databricks/"
+    },
+    {
+      "id": "azure-stream",
+      "provedor": "Azure",
+      "nome": "Stream Analytics",
+      "areas": [
+        "dados"
+      ],
+      "gratis": "nao",
+      "min": 50,
+      "max": 300,
+      "complexidade": 4,
+      "frase": "analisa dados ao vivo",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://azure.microsoft.com/pt-br/products/stream-analytics",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/stream-analytics/"
+    },
+    {
+      "id": "azure-cognitive",
+      "provedor": "Azure",
+      "nome": "AI Services (Vision, Speech, Language)",
+      "areas": [
+        "ia"
+      ],
+      "gratis": "temporario",
+      "min": 0,
+      "max": 60,
+      "complexidade": 3,
+      "frase": "visão, voz e texto prontos por chamada",
+      "gratuidade": "Cota gratuita mensal",
+      "doc": "https://azure.microsoft.com/pt-br/products/ai-services",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/cognitive-services/"
+    },
+    {
+      "id": "azure-datafactory",
+      "provedor": "Azure",
+      "nome": "Data Factory",
+      "areas": [
+        "dados"
+      ],
+      "gratis": "nao",
+      "min": 20,
+      "max": 150,
+      "complexidade": 3,
+      "frase": "move e transforma dados sozinho",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://azure.microsoft.com/pt-br/products/data-factory",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/data-factory/"
+    },
+    {
+      "id": "azure-mysql",
+      "provedor": "Azure",
+      "nome": "Database for MySQL",
+      "areas": [
+        "banco"
+      ],
+      "gratis": "nao",
+      "min": 50,
+      "max": 180,
+      "complexidade": 3,
+      "frase": "MySQL gerenciado",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://azure.microsoft.com/pt-br/products/mysql",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/mysql/"
+    },
+    {
+      "id": "azure-apim",
+      "provedor": "Azure",
+      "nome": "API Management",
+      "areas": [
+        "app"
+      ],
+      "gratis": "nao",
+      "min": 5,
+      "max": 100,
+      "complexidade": 3,
+      "frase": "porta de entrada e controle da sua API",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://azure.microsoft.com/pt-br/products/api-management",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/api-management/"
+    },
+    {
+      "id": "gcp-compute",
+      "provedor": "Google Cloud",
+      "nome": "Compute Engine",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 120,
+      "complexidade": 4,
+      "frase": "máquina virtual, com 1 modelo sempre grátis",
+      "gratuidade": "1 VM e2-micro sempre grátis em regiões elegíveis",
+      "doc": "https://cloud.google.com/compute/docs",
+      "preco": "https://cloud.google.com/compute/pricing"
+    },
+    {
+      "id": "gcp-gke",
+      "provedor": "Google Cloud",
+      "nome": "Kubernetes Engine (GKE)",
+      "areas": [
+        "app"
+      ],
+      "gratis": "temporario",
+      "min": 60,
+      "max": 300,
+      "complexidade": 5,
+      "frase": "Kubernetes gerenciado do Google",
+      "gratuidade": "Cluster zonal grátis, paga as máquinas",
+      "doc": "https://cloud.google.com/kubernetes-engine/docs",
+      "preco": "https://cloud.google.com/kubernetes-engine/pricing"
+    },
+    {
+      "id": "gcp-functions",
+      "provedor": "Google Cloud",
+      "nome": "Cloud Functions",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 30,
+      "complexidade": 3,
+      "frase": "código sob demanda, 2 milhões grátis por mês",
+      "gratuidade": "2 milhões de execuções/mês sempre grátis",
+      "doc": "https://cloud.google.com/functions/docs",
+      "preco": "https://cloud.google.com/functions/pricing"
+    },
+    {
+      "id": "gcp-cdn",
+      "provedor": "Google Cloud",
+      "nome": "Cloud CDN",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "nao",
+      "min": 10,
+      "max": 60,
+      "complexidade": 3,
+      "frase": "a CDN do Google",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://cloud.google.com/cdn/docs",
+      "preco": "https://cloud.google.com/cdn/pricing"
+    },
+    {
+      "id": "gcp-dns",
+      "provedor": "Google Cloud",
+      "nome": "Cloud DNS",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "nao",
+      "min": 2,
+      "max": 10,
+      "complexidade": 2,
+      "frase": "DNS por zona e por consulta",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://cloud.google.com/dns/docs",
+      "preco": "https://cloud.google.com/dns/pricing"
+    },
+    {
+      "id": "gcp-lb",
+      "provedor": "Google Cloud",
+      "nome": "Cloud Load Balancing",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "nao",
+      "min": 100,
+      "max": 250,
+      "complexidade": 4,
+      "frase": "balanceador global",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://cloud.google.com/load-balancing/docs",
+      "preco": "https://cloud.google.com/load-balancing/pricing"
+    },
+    {
+      "id": "gcp-pubsub",
+      "provedor": "Google Cloud",
+      "nome": "Pub/Sub",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 20,
+      "complexidade": 3,
+      "frase": "fila de mensagens entre serviços",
+      "gratuidade": "10 GB por mês sempre grátis",
+      "doc": "https://cloud.google.com/pubsub/docs",
+      "preco": "https://cloud.google.com/pubsub/pricing"
+    },
+    {
+      "id": "gcp-bigquery",
+      "provedor": "Google Cloud",
+      "nome": "BigQuery",
+      "areas": [
+        "dados"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 100,
+      "complexidade": 3,
+      "frase": "consulta dados gigantes com SQL",
+      "gratuidade": "1 TB de consultas por mês sempre grátis",
+      "doc": "https://cloud.google.com/bigquery/docs",
+      "preco": "https://cloud.google.com/bigquery/pricing"
+    },
+    {
+      "id": "gcp-dataflow",
+      "provedor": "Google Cloud",
+      "nome": "Dataflow",
+      "areas": [
+        "dados"
+      ],
+      "gratis": "nao",
+      "min": 50,
+      "max": 300,
+      "complexidade": 4,
+      "frase": "processa fluxos de dados",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://cloud.google.com/dataflow/docs",
+      "preco": "https://cloud.google.com/dataflow/pricing"
+    },
+    {
+      "id": "gcp-bigtable",
+      "provedor": "Google Cloud",
+      "nome": "Bigtable",
+      "areas": [
+        "banco"
+      ],
+      "gratis": "nao",
+      "min": 400,
+      "max": 1500,
+      "complexidade": 4,
+      "frase": "banco NoSQL para escala gigante",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://cloud.google.com/bigtable/docs",
+      "preco": "https://cloud.google.com/bigtable/pricing"
+    },
+    {
+      "id": "gcp-spanner",
+      "provedor": "Google Cloud",
+      "nome": "Spanner",
+      "areas": [
+        "banco"
+      ],
+      "gratis": "nao",
+      "min": 350,
+      "max": 1200,
+      "complexidade": 5,
+      "frase": "banco relacional global",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://cloud.google.com/spanner/docs",
+      "preco": "https://cloud.google.com/spanner/pricing"
+    },
+    {
+      "id": "gcp-memorystore",
+      "provedor": "Google Cloud",
+      "nome": "Memorystore",
+      "areas": [
+        "app"
+      ],
+      "gratis": "nao",
+      "min": 220,
+      "max": 500,
+      "complexidade": 3,
+      "frase": "cache Redis gerenciado",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://cloud.google.com/memorystore/docs",
+      "preco": "https://cloud.google.com/memorystore/pricing"
+    },
+    {
+      "id": "gcp-ai-apis",
+      "provedor": "Google Cloud",
+      "nome": "Speech e Vision AI",
+      "areas": [
+        "ia"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 40,
+      "complexidade": 2,
+      "frase": "voz e visão prontas, com cota mensal grátis",
+      "gratuidade": "Cota mensal gratuita",
+      "doc": "https://cloud.google.com/speech-to-text/docs",
+      "preco": "https://cloud.google.com/speech-to-text/pricing"
+    },
+    {
+      "id": "google-colab",
+      "provedor": "Google",
+      "nome": "Colab",
+      "areas": [
+        "ia"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 55,
+      "complexidade": 1,
+      "frase": "caderno com GPU grátis, o jeito mais simples de treinar",
+      "gratuidade": "GPU grátis com limites",
+      "doc": "https://colab.research.google.com",
+      "preco": "https://colab.research.google.com/signup/pricing"
+    },
+    {
+      "id": "gcp-secrets",
+      "provedor": "Google Cloud",
+      "nome": "Secret Manager",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 5,
+      "complexidade": 2,
+      "frase": "guarda senhas do app",
+      "gratuidade": "6 versões ativas grátis",
+      "doc": "https://cloud.google.com/secret-manager/docs",
+      "preco": "https://cloud.google.com/secret-manager/pricing"
+    },
+    {
+      "id": "fb-auth",
+      "provedor": "Firebase",
+      "nome": "Authentication",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 20,
+      "complexidade": 2,
+      "frase": "login pronto com cota mensal grátis",
+      "gratuidade": "50 mil usuários por mês grátis",
+      "doc": "https://firebase.google.com/docs/auth",
+      "preco": "https://firebase.google.com/pricing"
+    },
+    {
+      "id": "fb-rtdb",
+      "provedor": "Firebase",
+      "nome": "Realtime Database",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 20,
+      "complexidade": 2,
+      "frase": "banco em tempo real para app",
+      "gratuidade": "1 GB + 10 GB por mês grátis",
+      "doc": "https://firebase.google.com/docs/database",
+      "preco": "https://firebase.google.com/pricing"
+    },
+    {
+      "id": "fb-fcm",
+      "provedor": "Firebase",
+      "nome": "Cloud Messaging",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 0,
+      "complexidade": 1,
+      "frase": "notificações push grátis",
+      "gratuidade": "Grátis",
+      "doc": "https://firebase.google.com/docs/cloud-messaging",
+      "preco": "https://firebase.google.com/docs/projects/billing/cloud-messaging-pricing"
+    },
+    {
+      "id": "fb-crash",
+      "provedor": "Firebase",
+      "nome": "Crashlytics",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 0,
+      "complexidade": 2,
+      "frase": "relatório de erros do app",
+      "gratuidade": "Grátis",
+      "doc": "https://firebase.google.com/docs/crashlytics",
+      "preco": "https://firebase.google.com/docs/projects/billing/crashlytics-pricing"
+    },
+    {
+      "id": "google-kaggle",
+      "provedor": "Google",
+      "nome": "Kaggle Notebooks",
+      "areas": [
+        "ia"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 0,
+      "complexidade": 1,
+      "frase": "cadernos com GPU grátis toda semana",
+      "gratuidade": "GPU grátis com cota semanal",
+      "doc": "https://www.kaggle.com/docs/notebooks",
+      "preco": "https://www.kaggle.com/docs/quotas"
+    },
+    {
+      "id": "google-looker-studio",
+      "provedor": "Google",
+      "nome": "Looker Studio",
+      "areas": [
+        "dados"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 0,
+      "complexidade": 1,
+      "frase": "relatórios e dashboards grátis",
+      "gratuidade": "Grátis",
+      "doc": "https://lookerstudio.google.com/overview",
+      "preco": "https://support.google.com/looker-studio/"
+    },
+    {
+      "id": "google-maps",
+      "provedor": "Google",
+      "nome": "Maps Platform",
+      "areas": [
+        "site"
+      ],
+      "gratis": "temporario",
+      "min": 0,
+      "max": 1100,
+      "complexidade": 2,
+      "frase": "mapas no site com crédito mensal",
+      "gratuidade": "US$ 200 de crédito por mês",
+      "doc": "https://developers.google.com/maps/documentation",
+      "preco": "https://developers.google.com/maps/billing-and-pricing/pricing"
+    },
+    {
+      "id": "aws-kms",
+      "provedor": "AWS",
+      "nome": "KMS",
+      "areas": [
+        "app"
+      ],
+      "gratis": "nao",
+      "min": 5,
+      "max": 20,
+      "complexidade": 2,
+      "frase": "cofre de chaves de criptografia",
+      "gratuidade": "20 mil pedidos por mês grátis em chaves gerenciadas",
+      "doc": "https://aws.amazon.com/pt/kms/",
+      "preco": "https://aws.amazon.com/pt/kms/pricing/"
+    },
+    {
+      "id": "aws-shield",
+      "provedor": "AWS",
+      "nome": "Shield Standard",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 0,
+      "complexidade": 1,
+      "frase": "proteção anti-DDoS automática",
+      "gratuidade": "Sempre grátis",
+      "doc": "https://aws.amazon.com/pt/shield/",
+      "preco": "https://aws.amazon.com/pt/shield/pricing/"
+    },
+    {
+      "id": "aws-secrets",
+      "provedor": "AWS",
+      "nome": "Secrets Manager",
+      "areas": [
+        "app"
+      ],
+      "gratis": "nao",
+      "min": 2,
+      "max": 10,
+      "complexidade": 2,
+      "frase": "guarda senhas e tokens do app",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://aws.amazon.com/pt/secrets-manager/",
+      "preco": "https://aws.amazon.com/pt/secrets-manager/pricing/"
+    },
+    {
+      "id": "aws-acm",
+      "provedor": "AWS",
+      "nome": "Certificate Manager",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 0,
+      "complexidade": 2,
+      "frase": "certificado SSL grátis para o site",
+      "gratuidade": "Certificados públicos grátis",
+      "doc": "https://aws.amazon.com/pt/certificate-manager/",
+      "preco": "https://aws.amazon.com/pt/certificate-manager/pricing/"
+    },
+    {
+      "id": "aws-glue",
+      "provedor": "AWS",
+      "nome": "Glue",
+      "areas": [
+        "dados"
+      ],
+      "gratis": "nao",
+      "min": 30,
+      "max": 200,
+      "complexidade": 3,
+      "frase": "prepara dados para análise",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://aws.amazon.com/pt/glue/",
+      "preco": "https://aws.amazon.com/pt/glue/pricing/"
+    },
+    {
+      "id": "aws-quicksight",
+      "provedor": "AWS",
+      "nome": "QuickSight",
+      "areas": [
+        "dados"
+      ],
+      "gratis": "temporario",
+      "min": 20,
+      "max": 100,
+      "complexidade": 2,
+      "frase": "dashboards pagos por usuário",
+      "gratuidade": "30 dias de teste",
+      "doc": "https://aws.amazon.com/pt/quicksight/",
+      "preco": "https://aws.amazon.com/pt/quicksight/pricing/"
+    },
+    {
+      "id": "aws-opensearch",
+      "provedor": "AWS",
+      "nome": "OpenSearch Service",
+      "areas": [
+        "dados"
+      ],
+      "gratis": "temporario",
+      "min": 0,
+      "max": 160,
+      "complexidade": 4,
+      "frase": "busca e painéis em cima de logs",
+      "gratuidade": "750 horas por mês de máquina pequena",
+      "doc": "https://aws.amazon.com/pt/opensearch-service/",
+      "preco": "https://aws.amazon.com/pt/opensearch-service/pricing/"
+    },
+    {
+      "id": "azure-sentinel",
+      "provedor": "Azure",
+      "nome": "Sentinel",
+      "areas": [
+        "dados"
+      ],
+      "gratis": "temporario",
+      "min": 200,
+      "max": 800,
+      "complexidade": 4,
+      "frase": "caça ameaças nos logs",
+      "gratuidade": "31 dias de teste",
+      "doc": "https://azure.microsoft.com/pt-br/products/microsoft-sentinel",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/microsoft-sentinel/"
+    },
+    {
+      "id": "azure-defender",
+      "provedor": "Azure",
+      "nome": "Defender for Cloud",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "temporario",
+      "min": 50,
+      "max": 300,
+      "complexidade": 3,
+      "frase": "proteção da sua nuvem",
+      "gratuidade": "30 dias de teste",
+      "doc": "https://azure.microsoft.com/pt-br/products/defender-for-cloud",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/defender-for-cloud/"
+    },
+    {
+      "id": "azure-hdinsight",
+      "provedor": "Azure",
+      "nome": "HDInsight",
+      "areas": [
+        "dados"
+      ],
+      "gratis": "nao",
+      "min": 150,
+      "max": 600,
+      "complexidade": 4,
+      "frase": "Hadoop e Spark gerenciados",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://azure.microsoft.com/pt-br/products/hdinsight",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/hdinsight/"
+    },
+    {
+      "id": "azure-adx",
+      "provedor": "Azure",
+      "nome": "Data Explorer",
+      "areas": [
+        "dados"
+      ],
+      "gratis": "nao",
+      "min": 500,
+      "max": 2000,
+      "complexidade": 4,
+      "frase": "explora dados em segundos, só escala grande",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://learn.microsoft.com/pt-br/azure/data-explorer/",
+      "preco": "https://azure.microsoft.com/pt-br/pricing/details/data-explorer/"
+    },
+    {
+      "id": "gcp-armor",
+      "provedor": "Google Cloud",
+      "nome": "Cloud Armor",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "nao",
+      "min": 30,
+      "max": 100,
+      "complexidade": 3,
+      "frase": "barreira para app e site",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://cloud.google.com/armor/docs",
+      "preco": "https://cloud.google.com/armor/pricing"
+    },
+    {
+      "id": "gcp-kms",
+      "provedor": "Google Cloud",
+      "nome": "Cloud KMS",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 10,
+      "complexidade": 2,
+      "frase": "cofre de chaves",
+      "gratuidade": "100 chaves + 10 mil operações por mês grátis",
+      "doc": "https://cloud.google.com/kms/docs",
+      "preco": "https://cloud.google.com/kms/pricing"
+    },
+    {
+      "id": "gcp-scc",
+      "provedor": "Google Cloud",
+      "nome": "Security Command Center",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 20,
+      "complexidade": 3,
+      "frase": "painel de segurança da nuvem",
+      "gratuidade": "Nível Standard grátis",
+      "doc": "https://cloud.google.com/security-command-center/docs",
+      "preco": "https://cloud.google.com/security-command-center/pricing"
+    },
+    {
+      "id": "gcp-certman",
+      "provedor": "Google Cloud",
+      "nome": "Certificate Manager",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 10,
+      "complexidade": 2,
+      "frase": "certificados SSL gerenciados",
+      "gratuidade": "Primeiros certificados do mês grátis",
+      "doc": "https://cloud.google.com/certificate-manager/docs",
+      "preco": "https://cloud.google.com/certificate-manager/pricing"
+    },
+    {
+      "id": "gcp-dataproc",
+      "provedor": "Google Cloud",
+      "nome": "Dataproc",
+      "areas": [
+        "dados"
+      ],
+      "gratis": "nao",
+      "min": 50,
+      "max": 300,
+      "complexidade": 4,
+      "frase": "Hadoop e Spark gerenciados",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://cloud.google.com/dataproc/docs",
+      "preco": "https://cloud.google.com/dataproc/pricing"
+    },
+    {
+      "id": "gcp-dataform",
+      "provedor": "Google Cloud",
+      "nome": "Dataform",
+      "areas": [
+        "dados"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 10,
+      "complexidade": 3,
+      "frase": "transforma dados para o BigQuery",
+      "gratuidade": "Serviço grátis, paga só o BigQuery",
+      "doc": "https://cloud.google.com/dataform/docs",
+      "preco": "https://cloud.google.com/dataform/pricing"
+    },
+    {
+      "id": "gcp-apigw",
+      "provedor": "Google Cloud",
+      "nome": "API Gateway",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 30,
+      "complexidade": 3,
+      "frase": "porta de entrada da sua API",
+      "gratuidade": "2 milhões de chamadas por mês grátis",
+      "doc": "https://cloud.google.com/api-gateway/docs",
+      "preco": "https://cloud.google.com/api-gateway/pricing"
+    },
+    {
+      "id": "gcp-alloydb",
+      "provedor": "Google Cloud",
+      "nome": "AlloyDB",
+      "areas": [
+        "banco"
+      ],
+      "gratis": "nao",
+      "min": 150,
+      "max": 600,
+      "complexidade": 4,
+      "frase": "Postgres gerenciado de alta performance",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://cloud.google.com/alloydb/docs",
+      "preco": "https://cloud.google.com/alloydb/pricing"
+    },
+    {
+      "id": "oracle-arm",
+      "provedor": "Oracle Cloud",
+      "nome": "Compute Ampere (ARM)",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 60,
+      "complexidade": 4,
+      "frase": "4 CPUs e 24 GB grátis para sempre",
+      "gratuidade": "4 OCPU + 24 GB sempre grátis",
+      "doc": "https://docs.oracle.com/en-us/iaas/Content/Compute/home.htm",
+      "preco": "https://www.oracle.com/cloud/pricing/"
+    },
+    {
+      "id": "oracle-amd",
+      "provedor": "Oracle Cloud",
+      "nome": "Compute AMD",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 30,
+      "complexidade": 4,
+      "frase": "2 máquinas pequenas grátis",
+      "gratuidade": "2 VMs sempre grátis",
+      "doc": "https://docs.oracle.com/en-us/iaas/Content/Compute/home.htm",
+      "preco": "https://www.oracle.com/cloud/pricing/"
+    },
+    {
+      "id": "oracle-block",
+      "provedor": "Oracle Cloud",
+      "nome": "Block Volumes",
+      "areas": [
+        "arquivos"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 20,
+      "complexidade": 2,
+      "frase": "200 GB de disco grátis",
+      "gratuidade": "200 GB sempre grátis",
+      "doc": "https://docs.oracle.com/en-us/iaas/Content/Block/Concepts/overview.htm",
+      "preco": "https://www.oracle.com/cloud/pricing/"
+    },
+    {
+      "id": "oracle-object",
+      "provedor": "Oracle Cloud",
+      "nome": "Object Storage",
+      "areas": [
+        "arquivos"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 20,
+      "complexidade": 2,
+      "frase": "10 GB para guardar arquivos",
+      "gratuidade": "10 GB sempre grátis",
+      "doc": "https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/objectstorageoverview.htm",
+      "preco": "https://www.oracle.com/cloud/pricing/"
+    },
+    {
+      "id": "oracle-autonomous",
+      "provedor": "Oracle Cloud",
+      "nome": "Autonomous Database",
+      "areas": [
+        "banco"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 50,
+      "complexidade": 3,
+      "frase": "2 bancos de 20 GB que se cuidam sozinhos",
+      "gratuidade": "2 bancos sempre grátis",
+      "doc": "https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html",
+      "preco": "https://www.oracle.com/cloud/pricing/"
+    },
+    {
+      "id": "oracle-lb",
+      "provedor": "Oracle Cloud",
+      "nome": "Load Balancer",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 30,
+      "complexidade": 3,
+      "frase": "1 balanceador flexível grátis",
+      "gratuidade": "1 LB sempre grátis",
+      "doc": "https://docs.oracle.com/en-us/iaas/Content/Balance/home.htm",
+      "preco": "https://www.oracle.com/cloud/pricing/"
+    },
+    {
+      "id": "oracle-functions",
+      "provedor": "Oracle Cloud",
+      "nome": "Functions",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 20,
+      "complexidade": 3,
+      "frase": "código sob demanda com cota grátis",
+      "gratuidade": "2 milhões de execuções por mês grátis",
+      "doc": "https://docs.oracle.com/en-us/iaas/Content/Functions/home.htm",
+      "preco": "https://www.oracle.com/cloud/pricing/"
+    },
+    {
+      "id": "oracle-mysql",
+      "provedor": "Oracle Cloud",
+      "nome": "MySQL Service",
+      "areas": [
+        "banco"
+      ],
+      "gratis": "nao",
+      "min": 100,
+      "max": 300,
+      "complexidade": 3,
+      "frase": "MySQL gerenciado",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://docs.oracle.com/en-us/iaas/mysql-database/index.html",
+      "preco": "https://www.oracle.com/cloud/pricing/"
+    },
+    {
+      "id": "cf-workers",
+      "provedor": "Cloudflare",
+      "nome": "Workers",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 20,
+      "complexidade": 3,
+      "frase": "código na borda, 100 mil pedidos por dia grátis",
+      "gratuidade": "100 mil requisições por dia grátis",
+      "doc": "https://developers.cloudflare.com/workers/",
+      "preco": "https://www.cloudflare.com/pt-br/plans/"
+    },
+    {
+      "id": "cf-pages",
+      "provedor": "Cloudflare",
+      "nome": "Pages",
+      "areas": [
+        "site"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 20,
+      "complexidade": 1,
+      "frase": "site estático grátis com CDN junto",
+      "gratuidade": "Grátis",
+      "doc": "https://developers.cloudflare.com/pages/",
+      "preco": "https://www.cloudflare.com/pt-br/plans/"
+    },
+    {
+      "id": "cf-r2",
+      "provedor": "Cloudflare",
+      "nome": "R2",
+      "areas": [
+        "arquivos"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 20,
+      "complexidade": 2,
+      "frase": "10 GB sem taxa para tirar os arquivos",
+      "gratuidade": "10 GB grátis",
+      "doc": "https://developers.cloudflare.com/r2/",
+      "preco": "https://www.cloudflare.com/pt-br/plans/"
+    },
+    {
+      "id": "cf-d1",
+      "provedor": "Cloudflare",
+      "nome": "D1",
+      "areas": [
+        "banco"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 20,
+      "complexidade": 2,
+      "frase": "banco SQLite gerenciado com cota grátis",
+      "gratuidade": "Cota mensal grátis",
+      "doc": "https://developers.cloudflare.com/d1/",
+      "preco": "https://www.cloudflare.com/pt-br/plans/"
+    },
+    {
+      "id": "cf-kv",
+      "provedor": "Cloudflare",
+      "nome": "Workers KV",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 10,
+      "complexidade": 2,
+      "frase": "chave-valor rapidinho para o app",
+      "gratuidade": "100 mil leituras por dia grátis",
+      "doc": "https://developers.cloudflare.com/kv/",
+      "preco": "https://www.cloudflare.com/pt-br/plans/"
+    },
+    {
+      "id": "cf-cdn",
+      "provedor": "Cloudflare",
+      "nome": "CDN",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 0,
+      "complexidade": 1,
+      "frase": "CDN grátis no plano free",
+      "gratuidade": "Grátis",
+      "doc": "https://developers.cloudflare.com/cache/",
+      "preco": "https://www.cloudflare.com/pt-br/plans/"
+    },
+    {
+      "id": "cf-dns",
+      "provedor": "Cloudflare",
+      "nome": "DNS",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 0,
+      "complexidade": 1,
+      "frase": "DNS grátis e rápido",
+      "gratuidade": "Grátis",
+      "doc": "https://developers.cloudflare.com/dns/",
+      "preco": "https://www.cloudflare.com/pt-br/plans/"
+    },
+    {
+      "id": "cf-queues",
+      "provedor": "Cloudflare",
+      "nome": "Queues",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 10,
+      "complexidade": 3,
+      "frase": "fila com 1 milhão de operações grátis",
+      "gratuidade": "1 milhão de operações por mês grátis",
+      "doc": "https://developers.cloudflare.com/queues/",
+      "preco": "https://www.cloudflare.com/pt-br/plans/"
+    },
+    {
+      "id": "do-droplets",
+      "provedor": "DigitalOcean",
+      "nome": "Droplets",
+      "areas": [
+        "app"
+      ],
+      "gratis": "nao",
+      "min": 20,
+      "max": 60,
+      "complexidade": 3,
+      "frase": "servidor simples com preço fixo",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://docs.digitalocean.com/products/droplets/",
+      "preco": "https://www.digitalocean.com/pricing"
+    },
+    {
+      "id": "do-app-platform",
+      "provedor": "DigitalOcean",
+      "nome": "App Platform",
+      "areas": [
+        "site"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 30,
+      "complexidade": 1,
+      "frase": "3 sites estáticos grátis",
+      "gratuidade": "3 sites estáticos grátis",
+      "doc": "https://docs.digitalocean.com/products/app-platform/",
+      "preco": "https://www.digitalocean.com/pricing"
+    },
+    {
+      "id": "do-functions",
+      "provedor": "DigitalOcean",
+      "nome": "Functions",
+      "areas": [
+        "app"
+      ],
+      "gratis": "sempre",
+      "min": 0,
+      "max": 20,
+      "complexidade": 2,
+      "frase": "código sob demanda com cota grátis",
+      "gratuidade": "90 mil GB-s por mês grátis",
+      "doc": "https://docs.digitalocean.com/products/functions/",
+      "preco": "https://www.digitalocean.com/pricing"
+    },
+    {
+      "id": "do-k8s",
+      "provedor": "DigitalOcean",
+      "nome": "Kubernetes",
+      "areas": [
+        "app"
+      ],
+      "gratis": "temporario",
+      "min": 60,
+      "max": 300,
+      "complexidade": 5,
+      "frase": "Kubernetes com controle grátis",
+      "gratuidade": "Controle grátis, paga as máquinas",
+      "doc": "https://docs.digitalocean.com/products/kubernetes/",
+      "preco": "https://www.digitalocean.com/pricing"
+    },
+    {
+      "id": "do-db",
+      "provedor": "DigitalOcean",
+      "nome": "Managed Databases",
+      "areas": [
+        "banco"
+      ],
+      "gratis": "nao",
+      "min": 80,
+      "max": 200,
+      "complexidade": 3,
+      "frase": "Postgres e MySQL gerenciados",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://docs.digitalocean.com/products/databases/",
+      "preco": "https://www.digitalocean.com/pricing"
+    },
+    {
+      "id": "do-spaces",
+      "provedor": "DigitalOcean",
+      "nome": "Spaces",
+      "areas": [
+        "arquivos"
+      ],
+      "gratis": "nao",
+      "min": 30,
+      "max": 60,
+      "complexidade": 2,
+      "frase": "250 GB por US$ 5",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://docs.digitalocean.com/products/spaces/",
+      "preco": "https://www.digitalocean.com/pricing"
+    },
+    {
+      "id": "do-lb",
+      "provedor": "DigitalOcean",
+      "nome": "Load Balancers",
+      "areas": [
+        "rede"
+      ],
+      "gratis": "nao",
+      "min": 65,
+      "max": 120,
+      "complexidade": 3,
+      "frase": "divide visitas, US$ 12 fixos",
+      "gratuidade": "Sem nível gratuito",
+      "doc": "https://docs.digitalocean.com/products/networking/load-balancers/",
+      "preco": "https://www.digitalocean.com/pricing"
+    }
+  ]
+}

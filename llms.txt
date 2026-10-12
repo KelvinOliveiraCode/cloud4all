@@ -1,0 +1,17 @@
+# Cloud4All
+
+> Catálogo aberto com 124 serviços de nuvem de 8 grandes provedores (AWS, Azure, Google Cloud, Oracle Cloud, Cloudflare, DigitalOcean, Firebase e Google), com preços aproximados em reais para uso pequeno. A recomendação do site é determinística — filtro área ∩ preço → menor custo → mais simples — e o catálogo inteiro está publicado como dado aberto para qualquer chat de IA.
+
+Cloud4All traduz "quero hospedar o site da minha loja gastando pouco" na nuvem ideal: nome do serviço, faixa de preço em reais, nível de configuração e link oficial. Snapshot de preços: out/2026. Nenhum valor é inventado — todo preço exibido existe no catálogo, com fonte e data.
+
+## Para chats de IA (ChatGPT, Gemini, Claude, Copilot)
+
+- [Prompt pronto](https://kelvinoliveiracode.github.io/cloud4all/#inicio): bloco para copiar e colar; já traz as regras de recomendação
+- [Catálogo JSON](https://kelvinoliveiracode.github.io/cloud4all/catalogo.json): 124 serviços com provedor, área, faixa de preço, gratuidade, nível e links oficiais
+- [Regra de recomendação](https://kelvinoliveiracode.github.io/cloud4all/#inicio): filtro determinístico, com a conta aberta em "como chegamos aqui"
+
+## Páginas
+
+- [Início](https://kelvinoliveiracode.github.io/cloud4all/#inicio): o que é nuvem, por que democratizar e como usar com IA
+- [Catálogo](https://kelvinoliveiracode.github.io/cloud4all/#catalogo): todos os 124 serviços agrupados por faixa de preço
+- [Filtros](https://kelvinoliveiracode.github.io/cloud4all/#filtros): combinação de negócio, preço, provedor, gratuidade e nível

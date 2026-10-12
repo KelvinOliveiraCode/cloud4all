@@ -1,9 +1,14 @@
 import fs from "node:fs";
 const html = fs.readFileSync("C:\\Users\\Kelvin\\Desktop\\cloud4all\\index.html", "utf8");
-const src = html.split("<script>")[1].split("</script>")[0];
+/* A página tem mais de um bloco <script> (boot do tema no head). O do catálogo é o que contém CATALOGO. */
+const blocos = html.match(/<script>[\s\S]*?<\/script>/g) || [];
+const bloco = blocos.find(b => b.includes("CATALOGO"));
+if (!bloco) { console.error("FAIL bloco do catalogo nao encontrado no index.html"); process.exit(1); }
+const src = bloco.replace(/^<script>/, "").replace(/<\/script>$/, "");
 
-const elStub = () => ({ innerHTML: "", textContent: "", classList: { toggle(){} }, addEventListener(){}, appendChild(){}, value: "" });
+const elStub = () => ({ innerHTML: "", textContent: "", classList: { toggle(){} }, addEventListener(){}, appendChild(){}, setAttribute(){}, getAttribute: () => null, value: "" });
 const documentStub = {
+  documentElement: { getAttribute: () => "light", setAttribute(){} },
   getElementById: () => elStub(),
   querySelectorAll: () => [],
 };
