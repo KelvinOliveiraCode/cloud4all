@@ -1,16 +1,49 @@
+<<<<<<< HEAD
 # Cloud4All — ache sua nuvem ideal por regra aberta
+=======
+# Cloud4All — Catálogo Aberto de Nuvem por Regra Aberta
+>>>>>>> 073ad97cb1bc15dbfbf1e6d232362bbe045d06ac
 
-![HTML5](https://img.shields.io/badge/HTML5-e34f26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572b6?style=flat-square&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-f7df1e?style=flat-square&logo=javascript&logoColor=black)
-![GitHub Pages](https://img.shields.io/badge/Live-GitHub_Pages-121013?style=flat-square&logo=githubpages&logoColor=white)
+![linguagem: HTML](https://img.shields.io/badge/linguagem-HTML-blue)  
+![status: concluido](https://img.shields.io/badge/status-concluido-green)  
+![licenca: MIT](https://img.shields.io/badge/licenca-MIT-blue)
 
+<<<<<<< HEAD
 Um único arquivo HTML que traduz "o que você quer fazer e quanto pode gastar" na nuvem certa: nome do serviço, faixa de preço em reais, nível de configuração e link oficial. São 124 serviços de 8 provedores, recomendação determinística e código aberto para auditar linha por linha.
 
 Ver o site: https://kelvinoliveiracode.github.io/cloud4all/
+=======
+### Descrição
+A nuvem ideal por regra aberta: 124 serviços de 8 marcas, filtro determinístico, modo claro/escuro e catálogo aberto (JSON + llms.txt) para qualquer chat de IA.
+
+### O que faz
+A nuvem ideal por regra aberta: 124 serviços de 8 marcas, filtro determinístico, modo claro/escuro e catálogo aberto (JSON + llms.txt) para qualquer chat de IA.
+
+### Tecnologias
+- HTML5
+- CSS3
+- JavaScript
+- JSON
+
+### Como usar
+Abra o arquivo `index.html` no navegador.
+
+### Estrutura
+Consulte a árvore do repositório para a organização exata de pastas e arquivos.
+
+### Testes
+Não há contagem de testes registrada nesta metadata. Adicione e execute testes apropriados à linguagem (pytest para Python, ./mvnw test para Java, npm test para JavaScript/TypeScript).
+
+### Licença
+MIT
+
+### Autor
+Kelvin Oliveira — github.com/KelvinOliveiraCode
+>>>>>>> 073ad97cb1bc15dbfbf1e6d232362bbe045d06ac
 
 ## Problema / Por que existe
 
+<<<<<<< HEAD
 Escolher um serviço de nuvem exige inglês, jargão (instância, bucket, vCPU) e paciência para comparar tabelas de preço. Estudante, MEI e pequeno negócio sabem o que querem fazer, mas travam na terminologia, pagam caro demais por medo ou nunca saem do papel achando que nuvem é coisa de empresa grande. A Cloud4All existe para traduzir essa necessidade em uma opção concreta, sem cadastro e sem número inventado.
 
 Resumo aceito no Connepi 2026 (IFPA).
@@ -117,3 +150,37 @@ Kelvin Oliveira
 - GitHub: https://github.com/KelvinOliveiraCode
 - LinkedIn: https://www.linkedin.com/in/kelvin-oliveira-code/
 - Portfólio: https://kelvinoliveiracode.github.io/portfolio/
+=======
+# Cloud4All — Open Cloud Catalog by Open Rule
+
+![language: HTML](https://img.shields.io/badge/language-HTML-blue)  
+![status: concluido](https://img.shields.io/badge/status-concluido-green)  
+![license: MIT](https://img.shields.io/badge/license-MIT-blue)
+
+### Description
+The ideal cloud by open rule: 124 services from 8 brands, deterministic filter, light/dark mode and open catalog (JSON + llms.txt) for any AI chat.
+
+### What it does
+The ideal cloud by open rule: 124 services from 8 brands, deterministic filter, light/dark mode and open catalog (JSON + llms.txt) for any AI chat.
+
+### Technologies
+- HTML5
+- CSS3
+- JavaScript
+- JSON
+
+### How to use
+Open `index.html` in the browser.
+
+### Structure
+Check the repository tree for the exact folder and file organization.
+
+### Tests
+No test count recorded in this metadata. Add and run tests appropriate for the language (pytest for Python, ./mvnw test for Java, npm test for JavaScript/TypeScript).
+
+### License
+MIT
+
+### Author
+Kelvin Oliveira — github.com/KelvinOliveiraCode
+>>>>>>> 073ad97cb1bc15dbfbf1e6d232362bbe045d06ac
