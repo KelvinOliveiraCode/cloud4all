@@ -40,18 +40,18 @@ Ou faça deploy no GitHub Pages / Netlify / Vercel com configuração zero.
 
 ---
 
-## Capabilities
+## Capacidades
 
-| Capability | Description |
+| Capacidade | Descrição |
 |------------|-------------|
-| Recommendation Engine | Deterministic filter: Area ∩ Price -> Provider -> Free tier -> Config level |
-| Catalog | 124 services from 8 providers (AWS, Azure, GCP, Oracle, Cloudflare, DO, Firebase, Google) |
-| Open Data | catalogo.json + llms.txt for AI chat consumption |
-| Education | Cloud vocabulary (IaaS/PaaS/SaaS), myth-busting, glossary, 5-question quiz |
-| Theming | Light/dark mode persisted in localStorage, no external CSS |
-| Zero Build | Single index.html ,  deploy anywhere (GitHub Pages, Netlify, Vercel) |
-| Auditability | Every filter decision shown: "How we got here" traces all 124 services |
-| No Tracking | No user accounts, no analytics, no external dependencies |
+| Motor de Recomendação | Filtro determinístico: Área ∩ Preço -> Provedor -> Tier gratuito -> Nível de config |
+| Catálogo | 124 serviços de 8 provedores (AWS, Azure, GCP, Oracle, Cloudflare, DO, Firebase, Google) |
+| Dados Abertos | catalogo.json + llms.txt para consumo por chat de IA |
+| Educação | Vocabulário de nuvem (IaaS/PaaS/SaaS), myth-busting, glossário, quiz de 5 perguntas |
+| Tematização | Modo claro/escuro persistido em localStorage, sem CSS externo |
+| Zero Build | index.html único ,  deploy em qualquer lugar (GitHub Pages, Netlify, Vercel) |
+| Auditoria | Cada decisão do filtro exibida: "Como chegamos aqui" rastreia todos 124 serviços |
+| Sem Rastreamento | Sem contas de usuário, sem analytics, sem dependências externas |
 
 
 ---
@@ -70,26 +70,26 @@ Ou faça deploy no GitHub Pages / Netlify / Vercel com configuração zero.
 
 ---
 
-## FAQ
+## Perguntas Frequentes
 
 <details>
-<summary><strong>Are prices real-time?</strong></summary>
+<summary><strong>Preços são em tempo real?</strong></summary>
 
-No. Prices are a snapshot (Oct/2026) with ~USD 1 ≈ R$ 5.50 conversion. Always confirm on the provider's official page (linked in each row).
+Não. Preços são snapshot (Out/2026) com ~USD 1 ≈ R$ 5,50 conversão. Sempre confirme na página oficial do provedor (linkada em cada linha).
 
 </details>
 
 <details>
-<summary><strong>Why no recommendation when nothing matches?</strong></summary>
+<summary><strong>Por que sem recomendação quando nada passa?</strong></summary>
 
-Honest empty result is better than a misleading suggestion. The tool shows exactly why each service was included or excluded.
+Resultado vazio honesto é melhor que sugestão enganosa. A ferramenta mostra exatamente por que cada serviço foi incluído ou excluído.
 
 </details>
 
 <details>
-<summary><strong>Can I add more providers?</strong></summary>
+<summary><strong>Posso adicionar mais provedores?</strong></summary>
 
-Yes ,  edit the catalog in index.html (or regenerate catalogo.json via gerar-json.mjs).
+Sim ,  edite o catálogo no index.html (ou regenere catalogo.json via gerar-json.mjs).
 
 </details>
 
@@ -97,15 +97,15 @@ Yes ,  edit the catalog in index.html (or regenerate catalogo.json via gerar-jso
 
 ---
 
-## Documentation
+## Documentação
 
-- **Source Code** ,  Browse the `src/` directory for implementation details
-- **API Reference** ,  N/A
-- **Architecture Diagram** ,  See [architecture.mermaid](docs/architecture.mermaid) (if present)
-- **Changelog** ,  [CHANGELOG.md](CHANGELOG.md) (if present)
-- **Contributing** ,  [CONTRIBUTING.md](CONTRIBUTING.md) (if present)
+- **Código-Fonte** ,  Navegue pelo diretório `src/` para detalhes de implementação
+- **Referência da API** ,  N/A
+- **Diagrama de Arquitetura** ,  Veja [architecture.mermaid](docs/architecture.mermaid) (se presente)
+- **Changelog** ,  [CHANGELOG.md](CHANGELOG.md) (se presente)
+- **Contribuindo** ,  [CONTRIBUTING.md](CONTRIBUTING.md) (se presente)
 
-## License
+## Licença
 
 [MIT](LICENSE) ,  Kelvin Oliveira
 
@@ -113,8 +113,8 @@ Yes ,  edit the catalog in index.html (or regenerate catalogo.json via gerar-jso
 
 <div align="center">
 
-**Built with** · Vanilla HTML/CSS/JS
+**Construído com** · Vanilla HTML/CSS/JS
 
-**Author** · [Kelvin Oliveira](https://github.com/KelvinOliveiraCode) · [Portfolio](https://kelvinoliveiracode.github.io/portfolio/)
+**Autor** · [Kelvin Oliveira](https://github.com/KelvinOliveiraCode) · [Portfolio](https://kelvinoliveiracode.github.io/portfolio/)
 
 </div>
