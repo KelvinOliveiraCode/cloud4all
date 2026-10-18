@@ -1,119 +1,68 @@
-# Cloud4All — find your ideal cloud by open rule
 
-![HTML5](https://img.shields.io/badge/HTML5-e34f26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572b6?style=flat-square&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-f7df1e?style=flat-square&logo=javascript&logoColor=black)
-![GitHub Pages](https://img.shields.io/badge/Live-GitHub_Pages-121013?style=flat-square&logo=githubpages&logoColor=white)
+# cloud4all
 
-A single HTML file translates "what you want to do and how much you can spend" into the right cloud: service name, price range in Brazilian reais, configuration level, and official link. 124 services from 8 providers, deterministic recommendation, open source to audit line by line.
+![language: HTML](https://img.shields.io/badge/language-HTML-blue)   ![status: done](https://img.shields.io/badge/status-done-green)   ![license: MIT](https://img.shields.io/badge/license-MIT-blue)
 
-View the site: https://kelvinoliveiracode.github.io/cloud4all/
+## Summary
 
-## Problem / Why it exists
+Static page or site in HTML, CSS and vanilla JavaScript, with no build dependencies. Cloud4All, a nuvem ideal por regra aberta: 124 servicos de 8 marcas, filtro deterministico, modo claro/escuro e catalogo aberto (JSON + llms.txt) para qualquer chat de IA
 
-Choosing a cloud service requires English, jargon (instance, bucket, vCPU), and patience to compare price tables. Students, MEI microentrepreneurs, and small businesses know what they want to do, but get stuck on terminology, pay too much out of fear, or never get started thinking the cloud is only for big companies. Cloud4All exists to translate that need into a concrete option, no signup and no invented numbers.
+## Problem / why it exists
 
-Abstract accepted at Connepi 2026 (IFPA).
+The project delivers a lightweight web solution, hostable on any static server (including GitHub Pages), without requiring an application server, database or build process.
+
+## Architecture
+
+- `index.html`: entry point and page structure.
+- CSS: styling and layout (light/dark mode when applicable).
+- JavaScript: client-side interactivity and logic.
+
+Everything lives in one or a few files, easy to audit line by line.
+
+## Technologies
+
+- HTML5
+- CSS3
+- JavaScript (vanilla)
 
 ## What it does
 
-- Takes the business area (host a website, run an app or API, database, store files, analyze data, network and delivery, AI training) and the price range that fits the budget.
-- Filters the 124 services in the catalog by area intersect price, refines by provider, free tier type (always free, free at first, paid) and technical level from 1 to 5, and orders by lowest price or simplest.
-- Points to the first in line as the ideal cloud and shows the rest in a table, with each service verified and the reason for each cut ("How we got here").
-- If nothing passes the filter, it says there is no honest recommendation for that selection, instead of forcing a bad recommendation.
-- Publishes the catalog as open data (catalogo.json and llms.txt) so any AI chat can recommend without installing anything.
-- Teaches cloud vocabulary without jargon: IaaS, PaaS, and SaaS layers, everyday analogies, myth or truth, glossary, and a 5-question quiz.
-
-| Provider | Services |
-|---|---:|
-| AWS | 34 |
-| Azure | 29 |
-| Google Cloud | 30 |
-| Oracle Cloud | 8 |
-| Cloudflare | 8 |
-| DigitalOcean | 7 |
-| Firebase | 4 |
-| Google | 4 |
-| Total | 124 |
-
-## Stack
-
-- HTML5, CSS3, and vanilla JavaScript. Everything — styling, catalog, and recommendation rule — lives in a single index.html file.
-- No build, no back-end, no database, and no framework. The rule runs entirely in the browser and can be audited line by line.
-- Fonts: Archivo and IBM Plex Mono (Google Fonts).
-- Hosting: GitHub Pages.
-- Helper scripts: gerar-json.mjs generates catalogo.json and llms.txt from index.html; test.mjs validates the rule with 19 assertions in Node.
-
-## How it works
-
-The recommendation rule is deterministic and open:
-
-1. area ∩ price: keeps only services that cover the selected area and fit the price range.
-2. refinement: provider, free tier type, and maximum configuration level.
-3. ordering: lowest price or simplest; ties resolved by the other criterion.
-4. first in line: ideal cloud. The rest appears in the Filters tab table.
-5. "How we got here" lists each of the 124 verified services and why each was included or excluded.
-
-Beginner mode restricts the catalog to what can be set up through guided screens. Every decision is visible: the filter is not a black box.
+Cloud4All, a nuvem ideal por regra aberta: 124 servicos de 8 marcas, filtro deterministico, modo claro/escuro e catalogo aberto (JSON + llms.txt) para qualquer chat de IA
 
 ## How to run
 
-- Double-click index.html. Works directly in the browser, no server needed.
-- Or serve locally:
+Open `index.html` directly in the browser, or serve locally:
 
 ```
 python -m http.server 8080
+# access http://localhost:8080
 ```
-
-and open http://localhost:8080.
-
-- To regenerate catalogo.json and llms.txt from index.html:
-
-```
-node gerar-json.mjs
-```
-
-- To validate the recommendation rule:
-
-```
-node test.mjs
-```
-
-(test.mjs runs 19 assertions: full coverage of the 124 services, no duplicates, provider, free tier, level, and order filters.)
 
 ## Project structure
 
-- index.html: single page with styling, catalog of 124 services, and recommendation rule.
-- catalogo.json: open catalog (provider, area, price range, free tier, level, official links); generated by gerar-json.mjs.
-- llms.txt: summary for AI agents in llmstxt.org format; generated by gerar-json.mjs.
-- gerar-json.mjs: extracts the catalog from index.html and writes catalogo.json and llms.txt.
-- test.mjs: validates the filter rule with 19 assertions in Node.
-- .nojekyll: disables Jekyll processing on GitHub Pages.
+- .nojekyll, catalogo.json, gerar-json.mjs, index.html, llms.txt, README.en.md, README.md, test.mjs
+
 
 ## Trade-offs and decisions
 
-- Price snapshot (Oct 2026), not real time: avoids depending on provider APIs and API keys; the user always confirms on the official page linked from each line.
-- Single HTML file: easy to audit and host anywhere; the catalog is coupled to the code.
-- Deterministic recommendation without AI on the site: predictable and auditable result. AI enters optionally, reading catalogo.json + llms.txt in the user's chat.
-- Approximate prices in Brazilian reais for small-scale use (approximate conversion of USD 1 ≈ R$ 5.50); values may not reflect promotions or actual usage.
-- No user registration or data storage: light/dark theme choice stays in the browser's localStorage.
+- Single file (or a few): easy to host anywhere and audit.
+- No build, no server, no database.
+- Data in snapshot (when applicable), not real-time.
 
 ## Known limitations
 
-- Does not check price in real time (Oct 2026 snapshot).
-- Does not set up the chosen service by itself.
-- Does not recommend anything when nothing passes the filter (honest empty answer).
-- Prices are approximate for small-scale use; confirm on each service's official page.
-- index.html works offline, but official links require internet.
+- No backend; functionality limited to the browser.
+- Static data or snapshot; confirm values in official sources.
+
+## Tests
+
+No automated tests detected.
 
 ## License
 
-Distributed under the MIT license. See the repository's license file for details.
+Distributed under the MIT License. See the `LICENSE` file in this repository.
 
 ## Author
 
-Kelvin Oliveira
-
-- GitHub: https://github.com/KelvinOliveiraCode
-- LinkedIn: https://www.linkedin.com/in/kelvin-oliveira-code/
-- Portfolio: https://kelvinoliveiracode.github.io/portfolio/
+Kelvin Oliveira, https://github.com/KelvinOliveiraCode
+Portfolio: https://kelvinoliveiracode.github.io/portfolio/
