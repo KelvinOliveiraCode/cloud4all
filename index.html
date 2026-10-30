@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<title>Cloud4All Brasil, entender e escolher nuvem</title>
+<meta name="description" content="Atlas aberto da nuvem em português: glossário com 96 termos, catálogo de 124 serviços com preço e gratuidade, recomendador com trilha visível e cursos oficiais.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f3f0e9">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cloud4All Brasil, atlas aberto da nuvem">
+<meta property="og:description" content="Entenda o vocabulário, compare serviços por preço e gratuidade e monte um prompt para a IA que você já usa.">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f3f0e9'/%3E%3Cpath d='M9 24h13a4.5 4.5 0 0 0 .6-8.96A7 7 0 0 0 9.3 13.4 5 5 0 0 0 9 24Z' fill='none' stroke='%2315160f' stroke-width='1.7'/%3E%3Ccircle cx='16' cy='18' r='1.6' fill='%232e5b45'/%3E%3C/svg%3E">
+<script src="js/theme-boot.js"></script>
+<link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/primitives.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/views.css">
+<link rel="stylesheet" href="css/motion.css">
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<canvas id="field" class="field-canvas" aria-hidden="true"></canvas>
+
+<header class="site-header">
+  <div class="header-inner shell">
+    <a class="brand" href="#/inicio" data-route="inicio" aria-label="Cloud4All Brasil, página inicial">
+      <svg class="brand-mark" viewBox="0 0 34 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+        <path d="M9 20h14a4.6 4.6 0 0 0 .6-9.16A7.2 7.2 0 0 0 9.4 9.4 5 5 0 0 0 9 20Z"/>
+        <circle cx="17" cy="14.5" r="1.5" fill="currentColor" stroke="none"/>
+      </svg>
+      <span class="brand-word">
+        <span class="brand-name">Cloud<em>4</em>All</span>
+        <span class="brand-sub">Brasil · atlas da nuvem</span>
+      </span>
+    </a>
+
+    <nav class="site-nav" aria-label="Principal">
+      <a href="#/aprender" data-route="aprender">Aprender</a>
+      <a href="#/glossario" data-route="glossario">Glossário</a>
+      <a href="#/catalogo" data-route="catalogo">Catálogo</a>
+      <a href="#/encontrar" data-route="encontrar">Encontrar</a>
+      <a href="#/cursos" data-route="cursos">Cursos</a>
+      <a href="#/sobre" data-route="sobre">Sobre</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-button theme-button" id="theme-toggle" type="button" aria-label="Alternar tema">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/>
+        </svg>
+      </button>
+      <button class="menu-toggle" type="button" data-menu-open aria-expanded="false" aria-controls="menu">
+        <span>Menu</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu principal" hidden>
+  <div class="menu-head shell">
+    <a class="brand" href="#/inicio" data-route="inicio" aria-label="Cloud4All Brasil, página inicial">
+      <svg class="brand-mark" viewBox="0 0 34 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+        <path d="M9 20h14a4.6 4.6 0 0 0 .6-9.16A7.2 7.2 0 0 0 9.4 9.4 5 5 0 0 0 9 20Z"/>
+        <circle cx="17" cy="14.5" r="1.5" fill="currentColor" stroke="none"/>
+      </svg>
+      <span class="brand-word">
+        <span class="brand-name">Cloud<em>4</em>All</span>
+        <span class="brand-sub">Brasil · atlas da nuvem</span>
+      </span>
+    </a>
+    <button class="icon-button" id="menu-close" type="button" aria-label="Fechar menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false">
+        <path d="M6 6l12 12M18 6 6 18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="menu-body shell">
+    <nav class="menu-list" aria-label="Todas as páginas">
+      <a href="#/inicio" data-route="inicio">Início</a>
+      <a href="#/aprender" data-route="aprender">Aprender</a>
+      <a href="#/glossario" data-route="glossario">Glossário</a>
+      <a href="#/tipos" data-route="tipos">Tipos de nuvem</a>
+      <a href="#/catalogo" data-route="catalogo">Catálogo</a>
+      <a href="#/encontrar" data-route="encontrar">Encontrar</a>
+      <a href="#/cursos" data-route="cursos">Cursos</a>
+      <a href="#/ia" data-route="ia">Minha IA</a>
+      <a href="#/sobre" data-route="sobre">Sobre</a>
+    </nav>
+  </div>
+  <div class="menu-foot shell">
+    <span>Versão 3 · outubro de 2026</span>
+    <span>Sem conta, sem rastreamento</span>
+  </div>
+</div>
+
+<main id="conteudo" class="site-main" tabindex="-1">
+  <div id="app" class="shell"></div>
+  <noscript>
+    <div class="shell">
+      <div class="empty">
+        <h3>Este site precisa de JavaScript.</h3>
+        <p>O conteúdo é montado no navegador a partir de arquivos JSON locais. Ative o JavaScript para ler o glossário e o catálogo.</p>
+      </div>
+    </div>
+  </noscript>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-name">Cloud<em>4</em>All <span>Brasil</span></span>
+        <p>Atlas aberto para entender, comparar e escolher nuvem em português. Preço com data, gratuidade declarada e nenhuma vitrine paga.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Aprender</h3>
+        <ul>
+          <li><a href="#/aprender">Seis módulos</a></li>
+          <li><a href="#/glossario">Glossário</a></li>
+          <li><a href="#/tipos">Tipos de nuvem</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Escolher</h3>
+        <ul>
+          <li><a href="#/catalogo">Catálogo</a></li>
+          <li><a href="#/encontrar">Recomendador</a></li>
+          <li><a href="#/cursos">Cursos</a></li>
+          <li><a href="#/ia">Minha IA</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Projeto</h3>
+        <ul>
+          <li><a href="#/sobre">Sobre e método</a></li>
+          <li><a href="data/catalogo.json">Dados abertos</a></li>
+          <li><a href="data/glossario.json">Glossário em JSON</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Cloud4All Brasil · versão 3 · <span id="ano">2026</span></p>
+      <p>Feito para ler no celular. Sem cadastro, sem cookies de terceiro.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <nav aria-label="Atalhos">
+    <a href="#/inicio" data-route="inicio">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M4 10.5 12 4l8 6.5"/><path d="M6 9.5V20h12V9.5"/>
+      </svg>
+      <span>Início</span>
+    </a>
+    <a href="#/aprender" data-route="aprender">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5Z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20"/>
+      </svg>
+      <span>Aprender</span>
+    </a>
+    <a href="#/catalogo" data-route="catalogo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/>
+      </svg>
+      <span>Catálogo</span>
+    </a>
+    <a href="#/glossario" data-route="glossario">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false">
+        <path d="M4 6h16M4 12h10M4 18h13"/>
+      </svg>
+      <span>Glossário</span>
+    </a>
+    <button type="button" data-menu-open aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false">
+        <path d="M4 7h16M4 12h16M4 17h16"/>
+      </svg>
+      <span>Menu</span>
+    </button>
+  </nav>
+</div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

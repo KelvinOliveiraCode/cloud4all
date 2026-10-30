@@ -1,0 +1,25 @@
+{
+  "name": "cloud4all-brasil",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Atlas aberto da nuvem em português: glossário, catálogo com preço e gratuidade, recomendador honesto e cursos oficiais. Estático, sem build, sem conta.",
+  "type": "module",
+  "scripts": {
+    "serve": "python -m http.server 8033",
+    "audit": "node audit-syntax.cjs && node audit-classes.cjs",
+    "test": "node --test tests/*.test.mjs",
+    "verify": "npm run audit && npm test"
+  },
+  "keywords": [
+    "cloud",
+    "nuvem",
+    "catalogo",
+    "recomendacao",
+    "portugues",
+    "static-site"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}

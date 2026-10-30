@@ -1,0 +1,389 @@
+{
+  "atualizado_em": "2026-10-28",
+  "itens": [
+    {
+      "id": "m1",
+      "numero": 1,
+      "titulo": "O que é nuvem",
+      "chamada": "Computador alugado, com alguém cuidando do prédio.",
+      "cartoes": [
+        {
+          "t": "Alguém já cuidou do prédio",
+          "d": "Nuvem é alugar computador de outra pessoa. O provedor cuida do prédio, da energia e da rede. Você cuida do que coloca lá dentro."
+        },
+        {
+          "t": "Você continua responsável",
+          "d": "Sua conta, seus arquivos e suas permissões são seus. O provedor entrega a capacidade, não configura a sua aplicação por você."
+        },
+        {
+          "t": "Três jeitos de usar",
+          "d": "IaaS aluga a máquina crua. PaaS entrega o código rodando. SaaS é o aplicativo pronto, aberto no navegador."
+        },
+        {
+          "t": "Paga pelo uso",
+          "d": "A conta soma tempo ligado, espaço guardado e dados que saem. Desligar o que não usa é parte do trabalho."
+        },
+        {
+          "t": "Fica perto de quem acessa",
+          "d": "O provedor espalha máquinas por regiões. Escolher uma região próxima reduz a espera de quem abre o site."
+        },
+        {
+          "t": "Nuvem não é mágica",
+          "d": "Sem configuração, o serviço fica caro ou aberto demais. Aprender o básico evita as duas coisas."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "O que a nuvem substitui na prática?",
+          "opcoes": [
+            "O computador que você teria de comprar e manter",
+            "A necessidade de escrever código",
+            "A responsabilidade sobre os seus dados"
+          ],
+          "correta": 0,
+          "explica": "Você aluga capacidade em vez de comprar máquina. O código e os dados continuam seus."
+        },
+        {
+          "q": "Quem configura a sua aplicação na nuvem?",
+          "opcoes": [
+            "O provedor, automaticamente",
+            "Você ou quem cuida do projeto",
+            "Ninguém, ela se configura sozinha"
+          ],
+          "correta": 1,
+          "explica": "O provedor entrega a base. A configuração e as permissões são responsabilidade de quem contrata."
+        },
+        {
+          "q": "Por que a região importa?",
+          "opcoes": [
+            "Porque muda o nome do serviço",
+            "Porque define a cor do painel",
+            "Porque a distância muda o tempo de resposta"
+          ],
+          "correta": 2,
+          "explica": "Quanto mais longe o servidor, maior a espera. Escolher a região certa é parte da decisão."
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "numero": 2,
+      "titulo": "Quanto custa e como se paga",
+      "chamada": "A fatura nasce do uso, não de um preço único.",
+      "cartoes": [
+        {
+          "t": "Cobrança por uso",
+          "d": "Muitos serviços cobram por hora ligada, por requisição ou por gigabyte. O total do mês depende do que aconteceu, não só da tabela."
+        },
+        {
+          "t": "Grátis tem prazo e limite",
+          "d": "O tier gratuito cobre uma faixa de uso. Passar do limite, ou continuar depois do prazo, gera cobrança normal."
+        },
+        {
+          "t": "Saída de dados pesa",
+          "d": "Transferir dados para fora do provedor ou da região costuma ser cobrado. Entrada tende a ser mais barata."
+        },
+        {
+          "t": "Preço em dólar, conta em real",
+          "d": "A conversão muda com o câmbio. O valor em reais do catálogo é uma aproximação para uso pequeno."
+        },
+        {
+          "t": "Defina um teto",
+          "d": "Alerta de orçamento avisa antes da surpresa. Sem teto, um teste esquecido pode virar fatura alta."
+        },
+        {
+          "t": "Compare o mesmo uso",
+          "d": "Dois serviços só são comparáveis com o mesmo tempo ligado, o mesmo volume e a mesma saída de dados."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "O que costuma gerar cobrança mesmo em serviço com tier gratuito?",
+          "opcoes": [
+            "Ultrapassar o limite de uso definido",
+            "Criar uma conta nova",
+            "Abrir o painel do provedor"
+          ],
+          "correta": 0,
+          "explica": "O tier gratuito tem faixa e prazo. Fora deles, a cobrança segue a tabela normal."
+        },
+        {
+          "q": "Qual item costuma pesar mais ao migrar dados para fora?",
+          "opcoes": [
+            "A entrada de dados",
+            "A saída de dados",
+            "O nome do servidor"
+          ],
+          "correta": 1,
+          "explica": "A saída de dados é cobrada com frequência. Vale conferir antes de mover volumes grandes."
+        },
+        {
+          "q": "Para que serve um alerta de orçamento?",
+          "opcoes": [
+            "Para deixar o serviço mais rápido",
+            "Para criar backup automático",
+            "Para avisar antes de a fatura passar do previsto"
+          ],
+          "correta": 2,
+          "explica": "O alerta não impede o gasto, mas dá tempo de agir. Ele é uma configuração simples e útil."
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "numero": 3,
+      "titulo": "Onde ficam seus dados",
+      "chamada": "Região, zona e backup são três coisas diferentes.",
+      "cartoes": [
+        {
+          "t": "Região",
+          "d": "É a área geográfica onde o provedor mantém data centers. Escolher a região muda distância, preço e regras locais."
+        },
+        {
+          "t": "Zona",
+          "d": "É um data center isolado dentro da região, com energia e rede próprias. Uma falha local não derruba as outras zonas."
+        },
+        {
+          "t": "Cópia não é backup",
+          "d": "Réplica em outra zona protege contra falha física. Backup protege contra exclusão acidental e erro de migração."
+        },
+        {
+          "t": "Retenção",
+          "d": "É por quanto tempo a cópia fica guardada. Sem prazo definido, o backup cresce e ninguém sabe o que apagar."
+        },
+        {
+          "t": "Criptografia",
+          "d": "Em repouso protege o arquivo no disco. Em trânsito protege o caminho entre você e o servidor."
+        },
+        {
+          "t": "Teste a restauração",
+          "d": "Backup que nunca foi restaurado é só uma esperança. Restaure uma cópia pequena de tempos em tempos."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "O que uma zona de disponibilidade representa?",
+          "opcoes": [
+            "Um país inteiro",
+            "Um data center isolado dentro de uma região",
+            "Um plano de assinatura"
+          ],
+          "correta": 1,
+          "explica": "A zona é uma instalação isolada. Separar cópias entre zonas protege contra falha física local."
+        },
+        {
+          "q": "Réplica em outra zona substitui backup?",
+          "opcoes": [
+            "Sim, copia tudo automaticamente",
+            "Sim, se a região for a mesma",
+            "Não, porque não protege contra exclusão acidental"
+          ],
+          "correta": 2,
+          "explica": "A réplica acompanha o erro. O backup guarda uma versão anterior, separada."
+        },
+        {
+          "q": "Para que serve definir retenção?",
+          "opcoes": [
+            "Para saber por quanto tempo a cópia fica guardada",
+            "Para acelerar o site",
+            "Para escolher o provedor"
+          ],
+          "correta": 0,
+          "explica": "Retenção é prazo. Sem ela, o custo sobe e a limpeza fica sem critério."
+        }
+      ]
+    },
+    {
+      "id": "m4",
+      "numero": 4,
+      "titulo": "Segurança básica",
+      "chamada": "Senha longa, segunda verificação e menos permissão.",
+      "cartoes": [
+        {
+          "t": "Senha longa vence",
+          "d": "Uma frase longa e única protege mais que uma palavra curta com símbolos. Nunca repita a senha entre serviços."
+        },
+        {
+          "t": "Verificação em duas etapas",
+          "d": "Além da senha, um código confirma que é você. Ative nos serviços que guardam dinheiro ou dados."
+        },
+        {
+          "t": "Menor privilégio",
+          "d": "Dê só a permissão necessária para a tarefa. Quanto menor o acesso, menor o estrago de um vazamento."
+        },
+        {
+          "t": "Chave não vai no código",
+          "d": "Credencial escrita no arquivo vai parar no histórico. Guarde em variável de ambiente ou cofre."
+        },
+        {
+          "t": "Quem cuida de quê",
+          "d": "O provedor protege a estrutura física. Você protege contas, permissões, código e dados."
+        },
+        {
+          "t": "Atualize o que usa",
+          "d": "Versão antiga costuma ter falha conhecida. Atualizar é uma das tarefas mais baratas de segurança."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "O que significa aplicar menor privilégio?",
+          "opcoes": [
+            "Dar acesso total ao time de segurança",
+            "Conceder só as permissões necessárias para a tarefa",
+            "Usar uma conta única para tudo"
+          ],
+          "correta": 1,
+          "explica": "Menos permissão reduz o alcance de um erro. Acesso total amplia o impacto."
+        },
+        {
+          "q": "Onde uma chave de acesso não deve ficar?",
+          "opcoes": [
+            "Em variável de ambiente",
+            "Em um cofre de segredos",
+            "Escrita dentro do código publicado"
+          ],
+          "correta": 2,
+          "explica": "O código circula e fica no histórico. A chave precisa de um lugar próprio e restrito."
+        },
+        {
+          "q": "Na responsabilidade compartilhada, o que cabe a você?",
+          "opcoes": [
+            "Contas, permissões, código e dados",
+            "A energia do data center",
+            "O resfriamento dos servidores"
+          ],
+          "correta": 0,
+          "explica": "A estrutura física é do provedor. A configuração e o conteúdo são seus."
+        }
+      ]
+    },
+    {
+      "id": "m5",
+      "numero": 5,
+      "titulo": "Erros comuns que custam caro",
+      "chamada": "Quase toda fatura alta nasce de um esquecimento.",
+      "cartoes": [
+        {
+          "t": "Máquina ligada sem uso",
+          "d": "Servidor de teste ligado no fim de semana cobra igual. Desligue ou destrua o que não está em uso."
+        },
+        {
+          "t": "Teste que virou produção",
+          "d": "Recurso criado para experimentar fica no ar e recebe tráfego. Marque data para revisar ou apagar."
+        },
+        {
+          "t": "Sem alerta de gasto",
+          "d": "Sem aviso, a descoberta chega na fatura. Configure um teto no primeiro dia, não no primeiro susto."
+        },
+        {
+          "t": "Permissão larga demais",
+          "d": "Acesso total é rápido de configurar e difícil de auditar. Restrinja por serviço e por pessoa."
+        },
+        {
+          "t": "Backup sem teste",
+          "d": "A cópia existe, mas ninguém sabe restaurar. Um teste pequeno mostra se o plano funciona."
+        },
+        {
+          "t": "Escolher pelo medo",
+          "d": "O serviço mais caro não é automaticamente o mais seguro. Escolha pelo problema e pelo uso real."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Qual hábito evita a maior parte das faturas inesperadas?",
+          "opcoes": [
+            "Contratar o plano mais caro",
+            "Revisar e desligar o que não está em uso",
+            "Desativar todos os alertas"
+          ],
+          "correta": 1,
+          "explica": "Recurso esquecido é a causa comum. Revisão periódica e alerta de orçamento resolvem boa parte."
+        },
+        {
+          "q": "Backup sem restauração testada é o quê?",
+          "opcoes": [
+            "Uma garantia completa",
+            "Um plano que ninguém sabe se funciona",
+            "Um tipo de criptografia"
+          ],
+          "correta": 1,
+          "explica": "Só o teste mostra se a cópia serve. Restaurar um arquivo pequeno já revela problemas."
+        },
+        {
+          "q": "Por que permissão larga demais é um risco?",
+          "opcoes": [
+            "Porque deixa o site mais lento",
+            "Porque aumenta o alcance de qualquer erro",
+            "Porque impede o backup"
+          ],
+          "correta": 1,
+          "explica": "Quanto mais acesso uma conta tem, maior o dano se ela for usada indevidamente."
+        }
+      ]
+    },
+    {
+      "id": "m6",
+      "numero": 6,
+      "titulo": "Seu primeiro passo",
+      "chamada": "Uma pergunta, um filtro, um teste pequeno.",
+      "cartoes": [
+        {
+          "t": "Diga o que quer fazer",
+          "d": "Hospedar um site, rodar uma API, guardar arquivos. A área certa elimina metade do catálogo."
+        },
+        {
+          "t": "Coloque um teto",
+          "d": "Escolha quanto pode gastar por mês. O filtro mostra só o que cabe nesse valor."
+        },
+        {
+          "t": "Prefira o simples",
+          "d": "Comece pelo serviço com menos configuração. Você sempre pode trocar depois, com mais informação."
+        },
+        {
+          "t": "Pergunte à sua IA",
+          "d": "Copie o prompt pronto e cole no chat que você já usa. Ele lê o mesmo catálogo aberto."
+        },
+        {
+          "t": "Teste pequeno primeiro",
+          "d": "Publique uma página simples antes do projeto inteiro. Errar pequeno custa pouco."
+        },
+        {
+          "t": "Guarde o link oficial",
+          "d": "A página do provedor é a fonte do preço. Confira antes de decidir e antes de pagar."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Qual é o melhor primeiro filtro?",
+          "opcoes": [
+            "O nome do serviço mais famoso",
+            "A área do que você quer fazer",
+            "A cor do painel"
+          ],
+          "correta": 1,
+          "explica": "A área reduz o catálogo para o que serve ao seu problema. Depois entram preço e nível."
+        },
+        {
+          "q": "Por que começar pelo serviço mais simples?",
+          "opcoes": [
+            "Porque é sempre mais barato",
+            "Porque evita configuração desnecessária no início",
+            "Porque tem mais recursos"
+          ],
+          "correta": 1,
+          "explica": "Menos configuração significa menos erro. A troca por algo mais técnico fica para depois."
+        },
+        {
+          "q": "Qual é a fonte final do preço?",
+          "opcoes": [
+            "O catálogo do Cloud4All",
+            "Um vídeo antigo",
+            "A página oficial do provedor"
+          ],
+          "correta": 2,
+          "explica": "O catálogo é um retrato com data. A página oficial é a fonte que vale no momento da compra."
+        }
+      ]
+    }
+  ]
+}

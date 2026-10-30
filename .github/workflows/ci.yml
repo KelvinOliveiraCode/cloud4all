@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Checks (sintaxe + classes + JSON)
+        run: node audit-syntax.cjs && node audit-classes.cjs
+      - name: Testes do motor de recomendação
+        run: node --test tests/*.test.mjs

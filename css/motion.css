@@ -1,0 +1,313 @@
+/* Movimento: entrada de vista, revelações, arte animada e campo de partículas. */
+
+/* campo de partículas atrás do conteúdo */
+.field-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.site-header,
+.site-main,
+.site-footer,
+.mobile-bar,
+.menu {
+  position: relative;
+  z-index: 1;
+}
+
+.site-header {
+  position: fixed;
+}
+
+.menu {
+  position: fixed;
+}
+
+.mobile-bar {
+  position: fixed;
+}
+
+.site-footer {
+  z-index: 2;
+}
+
+/* entrada de rota */
+.view-enter {
+  animation: view-in var(--t-slow) var(--ease-out) both;
+}
+
+@keyframes view-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* revelação por observador */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 640ms var(--ease-out), transform 640ms var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-group > * {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 560ms var(--ease-out), transform 560ms var(--ease-out);
+}
+
+.reveal-group.is-revealed > * {
+  opacity: 1;
+  transform: none;
+}
+
+.reveal-group.is-revealed > :nth-child(2) {
+  transition-delay: 60ms;
+}
+.reveal-group.is-revealed > :nth-child(3) {
+  transition-delay: 120ms;
+}
+.reveal-group.is-revealed > :nth-child(4) {
+  transition-delay: 180ms;
+}
+.reveal-group.is-revealed > :nth-child(5) {
+  transition-delay: 240ms;
+}
+.reveal-group.is-revealed > :nth-child(6) {
+  transition-delay: 300ms;
+}
+.reveal-group.is-revealed > :nth-child(7) {
+  transition-delay: 360ms;
+}
+.reveal-group.is-revealed > :nth-child(8) {
+  transition-delay: 420ms;
+}
+.reveal-group.is-revealed > :nth-child(9) {
+  transition-delay: 480ms;
+}
+.reveal-group.is-revealed > :nth-child(10) {
+  transition-delay: 540ms;
+}
+
+/* cabeçalho ao rolar */
+.site-header {
+  transition: box-shadow var(--t-mid) var(--ease), background var(--t-mid) var(--ease);
+}
+
+.site-header.is-scrolled {
+  box-shadow: 0 1px 0 var(--rule), 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* arte */
+.art {
+  color: var(--art-line);
+}
+
+.art-line {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.15;
+  vector-effect: non-scaling-stroke;
+}
+
+.art-faint {
+  fill: none;
+  stroke: var(--art-faint);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.art-accent {
+  fill: none;
+  stroke: var(--art-accent);
+  stroke-width: 1.4;
+  vector-effect: non-scaling-stroke;
+}
+
+.art-dot {
+  fill: var(--art-accent);
+}
+
+.art-dot-soft {
+  fill: var(--art-line);
+  opacity: 0.5;
+}
+
+.art-fill {
+  fill: var(--art-accent);
+  opacity: 0.07;
+}
+
+.art-paper {
+  fill: var(--paper);
+}
+
+.art-soft {
+  fill: var(--accent-soft);
+}
+
+.art-dash {
+  stroke-dasharray: 4 6;
+  animation: dash-drift 22s linear infinite;
+}
+
+.art-draw {
+  stroke-dasharray: 320;
+  stroke-dashoffset: 320;
+  animation: draw 2.6s var(--ease-out) 200ms forwards;
+}
+
+.art-orbit {
+  transform-origin: 50% 50%;
+  animation: orbit 46s linear infinite;
+}
+
+.art-orbit--reverse {
+  animation-direction: reverse;
+  animation-duration: 64s;
+}
+
+.art-float {
+  animation: float 7s ease-in-out infinite;
+}
+
+.art-float--slow {
+  animation-duration: 11s;
+  animation-delay: -3s;
+}
+
+.art-pulse {
+  animation: pulse 4.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.art-pulse--2 {
+  animation-delay: -1.4s;
+}
+
+.art-pulse--3 {
+  animation-delay: -2.6s;
+}
+
+.art-node {
+  transition: fill var(--t-mid) var(--ease);
+}
+
+@keyframes dash-drift {
+  to {
+    stroke-dashoffset: -200;
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+/* estado de carregamento */
+.loading-block {
+  display: grid;
+  gap: var(--s-4);
+  padding-block: var(--s-7);
+}
+
+.skeleton {
+  height: 14px;
+  background: linear-gradient(
+    90deg,
+    var(--paper-2) 0%,
+    var(--paper-3) 50%,
+    var(--paper-2) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+.skeleton--title {
+  height: 42px;
+  width: min(520px, 80%);
+}
+
+.skeleton--short {
+  width: 42%;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+/* foco em alvo depois de navegar */
+:target {
+  scroll-margin-top: calc(var(--header-h) + 24px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .field-canvas {
+    opacity: 0.35;
+  }
+
+  [data-reveal],
+  .reveal-group > * {
+    opacity: 1;
+    transform: none;
+  }
+
+  .art-dash,
+  .art-draw,
+  .art-orbit,
+  .art-float,
+  .art-pulse,
+  .skeleton {
+    animation: none;
+  }
+
+  .art-draw {
+    stroke-dashoffset: 0;
+  }
+}

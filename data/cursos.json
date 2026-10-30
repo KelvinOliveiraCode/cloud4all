@@ -1,0 +1,174 @@
+{
+  "atualizado_em": "2026-10-28",
+  "aviso": "Preços, vouchers e nomes de exame mudam. Confirme sempre no site oficial antes de pagar.",
+  "plataformas": [
+    {
+      "provedor": "AWS",
+      "nome": "AWS Skill Builder",
+      "url": "https://skillbuilder.aws/",
+      "verificado": true,
+      "verificado_em": "2026-10-28"
+    },
+    {
+      "provedor": "Azure",
+      "nome": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/pt-br/training/",
+      "verificado": true,
+      "verificado_em": "2026-10-28"
+    },
+    {
+      "provedor": "Google Cloud",
+      "nome": "Google Cloud Training",
+      "url": "https://cloud.google.com/training",
+      "verificado": true,
+      "verificado_em": "2026-10-28"
+    },
+    {
+      "provedor": "Oracle Cloud",
+      "nome": "Oracle MyLearn",
+      "url": "https://mylearn.oracle.com/",
+      "verificado": true,
+      "verificado_em": "2026-10-28"
+    },
+    {
+      "provedor": "Cloudflare",
+      "nome": "Cloudflare Learning Paths",
+      "url": "https://developers.cloudflare.com/learning-paths/",
+      "verificado": true,
+      "verificado_em": "2026-10-28"
+    },
+    {
+      "provedor": "DigitalOcean",
+      "nome": "DigitalOcean Tutorials",
+      "url": "https://www.digitalocean.com/community/tutorials",
+      "verificado": true,
+      "verificado_em": "2026-10-28"
+    }
+  ],
+  "itens": [
+    {
+      "id": "aws-cert-ccp",
+      "provedor": "AWS",
+      "nome": "AWS Certified Cloud Practitioner",
+      "tipo": "certificação",
+      "nivel": "iniciante",
+      "custo": "pago",
+      "url": "https://aws.amazon.com/certification/certified-cloud-practitioner/",
+      "verificado": true,
+      "verificado_em": "2026-10-28"
+    },
+    {
+      "id": "aws-curso-essentials",
+      "provedor": "AWS",
+      "nome": "Cloud Practitioner – Digital and Classroom Training",
+      "tipo": "curso",
+      "nivel": "iniciante",
+      "custo": "gratuito com conta",
+      "url": "https://aws.amazon.com/training/digital/aws-cloud-practitioner-essentials/",
+      "verificado": true,
+      "verificado_em": "2026-10-28"
+    },
+    {
+      "id": "azure-cert-az900",
+      "provedor": "Azure",
+      "nome": "Microsoft Certified: Conceitos básicos do Azure (AZ-900)",
+      "tipo": "certificação",
+      "nivel": "iniciante",
+      "custo": "pago",
+      "idioma": "pt-BR",
+      "url": "https://learn.microsoft.com/pt-br/credentials/certifications/azure-fundamentals/",
+      "verificado": true,
+      "verificado_em": "2026-10-28"
+    },
+    {
+      "id": "azure-trilha-conceitos",
+      "provedor": "Azure",
+      "nome": "Introdução à infraestrutura de nuvem: descrever conceitos de nuvem",
+      "tipo": "trilha",
+      "nivel": "iniciante",
+      "custo": "gratuito",
+      "idioma": "pt-BR",
+      "url": "https://learn.microsoft.com/pt-br/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/",
+      "verificado": true,
+      "verificado_em": "2026-10-28"
+    },
+    {
+      "id": "gcp-cert-cdl",
+      "provedor": "Google Cloud",
+      "nome": "Cloud Digital Leader",
+      "tipo": "certificação",
+      "nivel": "iniciante",
+      "custo": "pago",
+      "url": "https://cloud.google.com/learn/certification/cloud-digital-leader",
+      "verificado": true,
+      "verificado_em": "2026-10-28"
+    },
+    {
+      "id": "gcp-trilha-cdl",
+      "provedor": "Google Cloud",
+      "nome": "Cloud Digital Leader Certification",
+      "tipo": "trilha",
+      "nivel": "iniciante",
+      "custo": "varia",
+      "url": "https://www.cloudskillsboost.google/paths/9",
+      "verificado": true,
+      "verificado_em": "2026-10-28"
+    },
+    {
+      "id": "oracle-cert-foundations",
+      "provedor": "Oracle Cloud",
+      "nome": "Oracle Cloud Infrastructure Foundations Associate",
+      "tipo": "certificação",
+      "nivel": "iniciante",
+      "custo": "pago",
+      "url": "https://education.oracle.com/",
+      "verificado": false,
+      "verificado_em": "2026-10-28",
+      "nota": "O portal respondeu, mas bloqueou a leitura da página do exame. O link leva ao Oracle University, onde a certificação é publicada."
+    },
+    {
+      "id": "oracle-trilha-foundations",
+      "provedor": "Oracle Cloud",
+      "nome": "Oracle Cloud Infrastructure Foundations Associate",
+      "tipo": "trilha",
+      "nivel": "iniciante",
+      "custo": "gratuito com conta",
+      "url": "https://mylearn.oracle.com/ou/learning-path/oracle-cloud-infrastructure-foundations-associate/112163",
+      "verificado": true,
+      "verificado_em": "2026-10-28"
+    },
+    {
+      "id": "cloudflare-trilhas",
+      "provedor": "Cloudflare",
+      "nome": "Cloudflare Learning Paths",
+      "tipo": "trilha",
+      "nivel": "iniciante",
+      "custo": "gratuito",
+      "url": "https://developers.cloudflare.com/learning-paths/",
+      "verificado": true,
+      "verificado_em": "2026-10-28"
+    },
+    {
+      "id": "cloudflare-fundamentos",
+      "provedor": "Cloudflare",
+      "nome": "Cloudflare Fundamentals",
+      "tipo": "curso",
+      "nivel": "iniciante",
+      "custo": "gratuito",
+      "url": "https://developers.cloudflare.com/fundamentals/",
+      "verificado": true,
+      "verificado_em": "2026-10-28"
+    },
+    {
+      "id": "digitalocean-tutoriais",
+      "provedor": "DigitalOcean",
+      "nome": "Tutorials",
+      "tipo": "trilha",
+      "nivel": "iniciante",
+      "custo": "gratuito",
+      "url": "https://www.digitalocean.com/community/tutorials",
+      "verificado": true,
+      "verificado_em": "2026-10-28"
+    }
+  ]
+}

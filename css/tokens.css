@@ -1,0 +1,116 @@
+/* Tokens do atlas.
+   Papel neutro, tinta quase preta, um único acento mineral.
+   Tudo que muda entre claro e escuro mora aqui. */
+
+:root {
+  color-scheme: light;
+
+  /* cor */
+  --paper: #f3f0e9;
+  --paper-2: #ebe7dd;
+  --paper-3: #e1dccf;
+  --panel: #f7f4ed;
+  --ink: #15160f;
+  --ink-2: #3d4034;
+  --ink-3: #6d7061;
+  --rule: rgba(21, 22, 15, 0.16);
+  --rule-strong: rgba(21, 22, 15, 0.34);
+  --accent: #2e5b45;
+  --accent-ink: #f4f1e9;
+  --accent-2: #1f3f30;
+  --accent-soft: #dfe9e1;
+  --danger: #8a3b2e;
+  --warn: #7c5a1f;
+  --ok: #2e5b45;
+  --focus: #2e5b45;
+
+  /* tipografia */
+  --f-display: "Fraunces", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --f-text: "Archivo", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-mono: ui-monospace, "SFMono-Regular", "Cascadia Mono", Consolas, monospace;
+
+  --step--1: clamp(0.78rem, 0.755rem + 0.12vw, 0.85rem);
+  --step-0: clamp(0.95rem, 0.92rem + 0.16vw, 1.04rem);
+  --step-1: clamp(1.1rem, 1.04rem + 0.32vw, 1.28rem);
+  --step-2: clamp(1.34rem, 1.2rem + 0.7vw, 1.72rem);
+  --step-3: clamp(1.68rem, 1.4rem + 1.4vw, 2.42rem);
+  --step-4: clamp(2.15rem, 1.62rem + 2.7vw, 3.75rem);
+  --step-5: clamp(2.75rem, 1.8rem + 4.8vw, 5.4rem);
+
+  --lh-tight: 1.04;
+  --lh-snug: 1.2;
+  --lh-body: 1.62;
+
+  --track-wide: 0.16em;
+  --track-mid: 0.08em;
+
+  /* espaço */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+  --s-10: 128px;
+
+  /* grade */
+  --shell: 1440px;
+  --gutter: clamp(20px, 4.4vw, 72px);
+  --measure: 62ch;
+  --measure-tight: 46ch;
+
+  /* forma */
+  --r-1: 2px;
+  --r-2: 4px;
+  --r-pill: 999px;
+  --header-h: 68px;
+  --bar-h: 64px;
+
+  /* movimento */
+  --t-fast: 140ms;
+  --t-mid: 240ms;
+  --t-slow: 420ms;
+  --ease: cubic-bezier(0.2, 0.7, 0.25, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* arte */
+  --art-line: rgba(21, 22, 15, 0.42);
+  --art-faint: rgba(21, 22, 15, 0.14);
+  --art-accent: #2e5b45;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --paper: #0f110e;
+  --paper-2: #161914;
+  --paper-3: #1f231c;
+  --panel: #141712;
+  --ink: #ece9e0;
+  --ink-2: #c1c4b6;
+  --ink-3: #8e9284;
+  --rule: rgba(236, 233, 224, 0.16);
+  --rule-strong: rgba(236, 233, 224, 0.34);
+  --accent: #9cc9ae;
+  --accent-ink: #101a14;
+  --accent-2: #c6e3d2;
+  --accent-soft: #1a2a20;
+  --danger: #d99a8a;
+  --warn: #d4b483;
+  --ok: #9cc9ae;
+  --focus: #9cc9ae;
+
+  --art-line: rgba(236, 233, 224, 0.4);
+  --art-faint: rgba(236, 233, 224, 0.13);
+  --art-accent: #9cc9ae;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --header-h: 60px;
+    --bar-h: 58px;
+  }
+}

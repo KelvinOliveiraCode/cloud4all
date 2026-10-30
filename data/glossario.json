@@ -1,0 +1,603 @@
+{
+  "atualizado_em": "2026-10-29",
+  "categorias": {
+    "fundamentos": {
+      "nome": "Fundamentos",
+      "resumo": "O vocabulário que aparece em toda conversa sobre nuvem."
+    },
+    "modelos": {
+      "nome": "Modelos",
+      "resumo": "Como o serviço é entregue e onde a infraestrutura fica."
+    },
+    "infra": {
+      "nome": "Infraestrutura",
+      "resumo": "Máquinas, rede e distribuição geográfica."
+    },
+    "dados": {
+      "nome": "Dados",
+      "resumo": "Onde a informação mora e como ela é consultada."
+    },
+    "custos": {
+      "nome": "Custos",
+      "resumo": "Como a fatura nasce e o que fazer para não se assustar."
+    },
+    "seguranca": {
+      "nome": "Segurança",
+      "resumo": "Contas, permissões e proteção do que está guardado."
+    },
+    "operacao": {
+      "nome": "Operação",
+      "resumo": "O que mantém o serviço de pé depois que ele entra no ar."
+    },
+    "governanca": {
+      "nome": "Governança",
+      "resumo": "Leis, políticas e responsabilidade sobre os dados."
+    }
+  },
+  "termos": [
+    {
+      "t": "Nuvem",
+      "cat": "fundamentos",
+      "alias": ["computação em nuvem", "cloud"],
+      "d": "Aluguel de capacidade de computação em data centers de outra empresa. Você paga pelo que usa e deixa a manutenção física com o provedor."
+    },
+    {
+      "t": "Data center",
+      "cat": "fundamentos",
+      "alias": ["centro de dados", "datacenter"],
+      "d": "Prédio com servidores, energia redundante, refrigeração e rede. É onde a capacidade alugada realmente existe."
+    },
+    {
+      "t": "Virtualização",
+      "cat": "fundamentos",
+      "d": "Dividir um servidor físico em várias máquinas lógicas isoladas. Cada uma roda o próprio sistema operacional."
+    },
+    {
+      "t": "Hipervisor",
+      "cat": "fundamentos",
+      "d": "Software que cria e separa as máquinas virtuais em um servidor físico. Distribui processador, memória e disco entre elas."
+    },
+    {
+      "t": "Instância",
+      "cat": "fundamentos",
+      "alias": ["vm", "servidor virtual"],
+      "d": "Uma máquina virtual em execução, com sistema operacional e recursos definidos. Ligar, desligar e redimensionar são ações sobre a instância."
+    },
+    {
+      "t": "Contêiner",
+      "cat": "fundamentos",
+      "alias": ["container", "docker"],
+      "d": "Pacote com aplicação e dependências que roda isolado no mesmo sistema operacional do hospedeiro. Sobe rápido e ocupa menos que uma máquina virtual."
+    },
+    {
+      "t": "Orquestração de contêineres",
+      "cat": "fundamentos",
+      "alias": ["kubernetes", "k8s"],
+      "d": "Automatizar onde e como os contêineres rodam, incluindo réplicas, rede e reinício. Kubernetes é o exemplo mais conhecido."
+    },
+    {
+      "t": "Serverless",
+      "cat": "fundamentos",
+      "alias": ["sem servidor"],
+      "d": "Modelo em que você envia o código e o provedor liga a capacidade só quando há chamada. Você não administra servidor, mas paga por execução e tempo."
+    },
+    {
+      "t": "Latência",
+      "cat": "fundamentos",
+      "d": "Tempo entre o pedido e a resposta. Depende de distância, rede e processamento."
+    },
+    {
+      "t": "Largura de banda",
+      "cat": "fundamentos",
+      "alias": ["banda"],
+      "d": "Volume de dados que uma conexão consegue transportar por segundo. Não é a mesma coisa que latência."
+    },
+    {
+      "t": "Disponibilidade",
+      "cat": "fundamentos",
+      "alias": ["uptime"],
+      "d": "Parcela do tempo em que o serviço responde como esperado. Costuma ser escrita em porcentagem e ligada a um SLA."
+    },
+    {
+      "t": "Elasticidade",
+      "cat": "fundamentos",
+      "d": "Capacidade de crescer e encolher conforme a demanda, de preferência sem intervenção manual. Escalar é mudar de tamanho; elástico é fazer isso sozinho."
+    },
+
+    {
+      "t": "IaaS",
+      "cat": "modelos",
+      "alias": ["infraestrutura como serviço"],
+      "d": "Infraestrutura como serviço. Você aluga máquina, rede e disco e administra o sistema operacional e o que roda nele."
+    },
+    {
+      "t": "PaaS",
+      "cat": "modelos",
+      "alias": ["plataforma como serviço"],
+      "d": "Plataforma como serviço. O provedor cuida do sistema operacional e do runtime, e você entrega o código e a configuração."
+    },
+    {
+      "t": "SaaS",
+      "cat": "modelos",
+      "alias": ["software como serviço"],
+      "d": "Software como serviço. O aplicativo já vem pronto e é usado pelo navegador ou por um cliente, sem instalação própria."
+    },
+    {
+      "t": "FaaS",
+      "cat": "modelos",
+      "alias": ["função como serviço", "function as a service"],
+      "d": "Função como serviço. Um trecho de código responde a eventos e o provedor escala sozinho, com cobrança por execução."
+    },
+    {
+      "t": "Nuvem pública",
+      "cat": "modelos",
+      "d": "Recursos compartilhados entre clientes, oferecidos por um provedor externo. A separação é lógica, não física."
+    },
+    {
+      "t": "Nuvem privada",
+      "cat": "modelos",
+      "d": "Infraestrutura dedicada a uma única organização, operada por ela ou por terceiros. Pode ficar no próprio prédio ou em um data center alugado."
+    },
+    {
+      "t": "Nuvem híbrida",
+      "cat": "modelos",
+      "d": "Combinação de nuvem privada com nuvem pública, com integração entre as duas. Serve para manter parte dos dados perto e escalar o resto fora."
+    },
+    {
+      "t": "Multicloud",
+      "cat": "modelos",
+      "alias": ["multi nuvem"],
+      "d": "Uso de mais de um provedor de nuvem ao mesmo tempo. Pode reduzir dependência, mas aumenta a complexidade de operação."
+    },
+    {
+      "t": "Nuvem comunitária",
+      "cat": "modelos",
+      "d": "Infraestrutura compartilhada por organizações com interesses comuns, como universidades ou órgãos públicos. Não é aberta ao público em geral."
+    },
+    {
+      "t": "On-premises",
+      "cat": "modelos",
+      "alias": ["on prem", "local"],
+      "d": "Infraestrutura instalada e mantida nas dependências da própria organização. Você cuida de energia, hardware e atualização."
+    },
+    {
+      "t": "Provedor de nuvem",
+      "cat": "modelos",
+      "alias": ["fornecedor", "provider"],
+      "d": "Empresa que oferece infraestrutura e serviços de nuvem. No catálogo deste atlas aparecem AWS, Azure, Google Cloud, Oracle Cloud, Cloudflare, DigitalOcean, Firebase e Google."
+    },
+    {
+      "t": "Nuvem soberana",
+      "cat": "modelos",
+      "d": "Infraestrutura que segue as regras locais de um país e mantém o controle dentro daquelas fronteiras. Ganha força quando a lei exige que os dados fiquem no território."
+    },
+
+    {
+      "t": "Região",
+      "cat": "infra",
+      "alias": ["region"],
+      "d": "Área geográfica onde o provedor mantém um conjunto de data centers. Muda latência, preço e regras de localização dos dados."
+    },
+    {
+      "t": "Zona de disponibilidade",
+      "cat": "infra",
+      "alias": ["zona", "availability zone", "az"],
+      "d": "Data center isolado dentro de uma região, com energia e rede próprias. Distribuir cargas entre zonas reduz o efeito de uma falha local."
+    },
+    {
+      "t": "Computação de borda",
+      "cat": "infra",
+      "alias": ["edge", "edge computing"],
+      "d": "Processamento feito perto de quem acessa, em vez de só no data center central. Reduz atraso em vídeo, jogos e dispositivos."
+    },
+    {
+      "t": "CDN",
+      "cat": "infra",
+      "alias": ["rede de entrega de conteúdo"],
+      "d": "Rede de servidores que guarda cópias do conteúdo em vários lugares. Entrega arquivos e páginas a partir do ponto mais próximo."
+    },
+    {
+      "t": "Balanceador de carga",
+      "cat": "infra",
+      "alias": ["load balancer"],
+      "d": "Distribui pedidos entre várias instâncias. Evita que uma máquina receba todo o tráfego e permite tirar uma do ar sem derrubar o serviço."
+    },
+    {
+      "t": "Autoescalonamento",
+      "cat": "infra",
+      "alias": ["autoscaling", "escalonamento automático"],
+      "d": "Regra que aumenta ou reduz a quantidade de instâncias conforme a demanda. Ajuda a manter o serviço estável sem pagar capacidade parada."
+    },
+    {
+      "t": "Máquina virtual",
+      "cat": "infra",
+      "alias": ["vm"],
+      "d": "Computador lógico com processador, memória e disco próprios, rodando sobre um servidor físico. É a unidade básica do IaaS."
+    },
+    {
+      "t": "Bare metal",
+      "cat": "infra",
+      "d": "Servidor físico dedicado, sem camada de virtualização. Dá acesso direto ao hardware e é usado quando o desempenho importa."
+    },
+    {
+      "t": "VPC",
+      "cat": "infra",
+      "alias": ["rede virtual privada", "virtual private cloud"],
+      "d": "Rede virtual privada dentro do provedor. Define faixas de endereço, sub-redes e regras de tráfego entre os recursos."
+    },
+    {
+      "t": "Sub-rede",
+      "cat": "infra",
+      "alias": ["subnet"],
+      "d": "Divisão de uma rede com faixa de endereços própria. Costuma separar camadas, como banco de dados e servidor web."
+    },
+    {
+      "t": "DNS",
+      "cat": "infra",
+      "alias": ["domain name system"],
+      "d": "Sistema que traduz nomes em endereços de rede. É o que permite digitar um domínio em vez de um número."
+    },
+    {
+      "t": "Gateway de internet",
+      "cat": "infra",
+      "alias": ["internet gateway"],
+      "d": "Componente que liga uma rede privada à internet. Sem ele, a sub-rede fica isolada."
+    },
+
+    {
+      "t": "Armazenamento de objetos",
+      "cat": "dados",
+      "alias": ["object storage", "s3"],
+      "d": "Guarda arquivos como objetos identificados por chave, sem hierarquia de pastas real. Serve para imagens, backups e conteúdo estático."
+    },
+    {
+      "t": "Bucket",
+      "cat": "dados",
+      "d": "Contêiner lógico que agrupa objetos em um serviço de armazenamento. Tem nome único e regras próprias de acesso."
+    },
+    {
+      "t": "Armazenamento em blocos",
+      "cat": "dados",
+      "alias": ["block storage"],
+      "d": "Divide o disco em blocos e entrega como volume para uma máquina. É o formato típico do disco de uma instância."
+    },
+    {
+      "t": "Armazenamento em arquivos",
+      "cat": "dados",
+      "alias": ["file storage", "nfs"],
+      "d": "Sistema de arquivos compartilhado por várias máquinas, com pastas e permissões. Útil quando vários servidores precisam do mesmo diretório."
+    },
+    {
+      "t": "Banco relacional",
+      "cat": "dados",
+      "alias": ["sql", "banco sql"],
+      "d": "Organiza dados em tabelas com linhas, colunas e relações. Usa SQL e garante transações."
+    },
+    {
+      "t": "Banco NoSQL",
+      "cat": "dados",
+      "alias": ["nosql", "banco não relacional"],
+      "d": "Família de bancos sem o modelo de tabelas fixas. Cobre documentos, chave-valor, colunas e grafos, cada um para um tipo de acesso."
+    },
+    {
+      "t": "Banco gerenciado",
+      "cat": "dados",
+      "alias": ["managed database", "db gerenciado"],
+      "d": "Serviço em que o provedor cuida de instalação, backup e atualização do banco. Você administra o esquema e os dados."
+    },
+    {
+      "t": "Data lake",
+      "cat": "dados",
+      "alias": ["lago de dados"],
+      "d": "Repositório que guarda dados brutos em vários formatos até que alguém precise deles. Costuma vir antes da transformação."
+    },
+    {
+      "t": "Data warehouse",
+      "cat": "dados",
+      "alias": ["armazém de dados"],
+      "d": "Base organizada para consulta analítica, com dados já modelados. Serve para relatórios e indicadores."
+    },
+    {
+      "t": "ETL",
+      "cat": "dados",
+      "alias": ["extração transformação carga"],
+      "d": "Extrair, transformar e carregar. É o fluxo que leva dados de uma origem até um destino tratado."
+    },
+    {
+      "t": "Índice",
+      "cat": "dados",
+      "alias": ["index"],
+      "d": "Estrutura que acelera a busca em uma tabela, com custo de escrita e de espaço. Sem índice, a consulta varre tudo."
+    },
+    {
+      "t": "Réplica",
+      "cat": "dados",
+      "alias": ["replication", "replicação"],
+      "d": "Cópia contínua dos dados em outro lugar, usada para leitura ou para assumir em caso de falha. Acompanha alterações e também erros."
+    },
+
+    {
+      "t": "Cobrança por uso",
+      "cat": "custos",
+      "alias": ["pay as you go", "pague pelo uso"],
+      "d": "Modelo em que o valor do mês depende do que foi consumido. Tempo ligado, requisições e volume guardado entram na conta."
+    },
+    {
+      "t": "Tier gratuito",
+      "cat": "custos",
+      "alias": ["free tier", "plano gratuito"],
+      "d": "Faixa de uso sem cobrança oferecida pelo provedor. Pode ter limite mensal, prazo ou exigir conta nova."
+    },
+    {
+      "t": "Crédito inicial",
+      "cat": "custos",
+      "alias": ["créditos", "free credits"],
+      "d": "Saldo promocional para testar serviços por um período. Acaba antes do prazo ou do valor e depois a cobrança passa a valer."
+    },
+    {
+      "t": "Saída de dados",
+      "cat": "custos",
+      "alias": ["egress", "data transfer out"],
+      "d": "Cobrança para tirar dados do provedor ou de uma região. Entrada costuma ser gratuita, saída não."
+    },
+    {
+      "t": "Orçamento",
+      "cat": "custos",
+      "alias": ["budget"],
+      "d": "Valor máximo que você aceita gastar em um período. Serve de referência para alertas e para comparar serviços."
+    },
+    {
+      "t": "Alerta de orçamento",
+      "cat": "custos",
+      "alias": ["budget alert"],
+      "d": "Aviso automático quando o gasto se aproxima ou passa do valor definido. Não impede o gasto, mas dá tempo de agir."
+    },
+    {
+      "t": "Instância reservada",
+      "cat": "custos",
+      "alias": ["reserved instance", "reserva"],
+      "d": "Compromisso de uso por um período longo em troca de desconto. Vale quando a carga é previsível."
+    },
+    {
+      "t": "Instância spot",
+      "cat": "custos",
+      "alias": ["spot", "preemptible"],
+      "d": "Capacidade ociosa vendida com desconto e que pode ser interrompida pelo provedor. Serve para tarefas que toleram parada."
+    },
+    {
+      "t": "Custo total de propriedade",
+      "cat": "custos",
+      "alias": ["tco"],
+      "d": "Soma de tudo que um serviço custa, incluindo pessoas, suporte e migração. A tabela de preço é só uma parte."
+    },
+    {
+      "t": "FinOps",
+      "cat": "custos",
+      "d": "Prática de acompanhar e reduzir o gasto de nuvem com dados. Junta time técnico, financeiro e produto na mesma conversa."
+    },
+    {
+      "t": "Calculadora de preços",
+      "cat": "custos",
+      "alias": ["pricing calculator"],
+      "d": "Ferramenta do provedor que estima o custo de uma configuração. A estimativa ajuda, mas não substitui a fatura real."
+    },
+    {
+      "t": "Recurso ocioso",
+      "cat": "custos",
+      "alias": ["idle", "desperdício"],
+      "d": "Serviço ligado sem uso, como máquina parada ou disco órfão. É a origem mais comum de fatura acima do previsto."
+    },
+
+    {
+      "t": "Responsabilidade compartilhada",
+      "cat": "seguranca",
+      "alias": ["shared responsibility"],
+      "d": "Divisão entre o que o provedor protege e o que fica com você. A estrutura física é dele; contas, permissões, código e dados são seus."
+    },
+    {
+      "t": "IAM",
+      "cat": "seguranca",
+      "alias": ["gestão de identidade e acesso", "identity and access management"],
+      "d": "Conjunto de regras que define quem pode fazer o quê em cada recurso. É o centro da segurança em nuvem."
+    },
+    {
+      "t": "MFA",
+      "cat": "seguranca",
+      "alias": ["autenticação multifator", "dois fatores", "2fa"],
+      "d": "Segunda prova de identidade além da senha, como código no celular. Bloqueia boa parte dos acessos com senha vazada."
+    },
+    {
+      "t": "Menor privilégio",
+      "cat": "seguranca",
+      "alias": ["least privilege"],
+      "d": "Dar apenas a permissão necessária para a tarefa. Quanto menor o acesso, menor o estrago de um erro."
+    },
+    {
+      "t": "Criptografia em repouso",
+      "cat": "seguranca",
+      "alias": ["encryption at rest"],
+      "d": "Protege o arquivo enquanto ele está guardado no disco. Sem a chave, o conteúdo não é legível."
+    },
+    {
+      "t": "Criptografia em trânsito",
+      "cat": "seguranca",
+      "alias": ["tls", "https", "encryption in transit"],
+      "d": "Protege os dados no caminho entre o cliente e o servidor. O cadeado do navegador é o sinal mais visível disso."
+    },
+    {
+      "t": "Cofre de segredos",
+      "cat": "seguranca",
+      "alias": ["secret manager", "vault"],
+      "d": "Serviço que guarda senhas e chaves fora do código. Entrega o valor só para quem tem permissão."
+    },
+    {
+      "t": "Chave de acesso",
+      "cat": "seguranca",
+      "alias": ["api key", "access key"],
+      "d": "Credencial que identifica uma aplicação ou pessoa. Se vazar, dá acesso ao recurso até ser trocada."
+    },
+    {
+      "t": "Grupo de segurança",
+      "cat": "seguranca",
+      "alias": ["security group"],
+      "d": "Conjunto de regras de entrada e saída aplicado a recursos de rede. Funciona como um firewall por instância."
+    },
+    {
+      "t": "Firewall",
+      "cat": "seguranca",
+      "d": "Regra que libera ou bloqueia tráfego por porta, protocolo e origem. No provedor costuma aparecer como grupo de segurança ou política de rede."
+    },
+    {
+      "t": "WAF",
+      "cat": "seguranca",
+      "alias": ["web application firewall"],
+      "d": "Filtro que analisa pedidos HTTP e barra padrões de ataque conhecidos. Fica na frente da aplicação web."
+    },
+    {
+      "t": "Trilha de auditoria",
+      "cat": "seguranca",
+      "alias": ["audit trail", "cloudtrail"],
+      "d": "Registro de quem fez o quê e quando. Serve para investigar incidentes e provar conformidade."
+    },
+
+    {
+      "t": "SLA",
+      "cat": "operacao",
+      "alias": ["acordo de nível de serviço"],
+      "d": "Compromisso formal de disponibilidade e suporte. Define o que o provedor garante e o que acontece se não cumprir."
+    },
+    {
+      "t": "SLO",
+      "cat": "operacao",
+      "alias": ["objetivo de nível de serviço"],
+      "d": "Meta interna de qualidade, como responder em menos de 300 ms. É mais rigorosa que o SLA e guia o trabalho do time."
+    },
+    {
+      "t": "Incidente",
+      "cat": "operacao",
+      "d": "Evento que degrada ou derruba o serviço para quem usa. Tem dono, registro e revisão depois que passa."
+    },
+    {
+      "t": "Observabilidade",
+      "cat": "operacao",
+      "d": "Capacidade de entender o que acontece dentro do sistema a partir de sinais externos. Junta logs, métricas e traços."
+    },
+    {
+      "t": "Log",
+      "cat": "operacao",
+      "alias": ["registro"],
+      "d": "Registro textual de um evento com data e contexto. Ajuda a reconstruir o que aconteceu em uma falha."
+    },
+    {
+      "t": "Métrica",
+      "cat": "operacao",
+      "d": "Número medido ao longo do tempo, como uso de CPU ou tempo de resposta. Serve para gráficos e alertas."
+    },
+    {
+      "t": "Traço",
+      "cat": "operacao",
+      "alias": ["trace", "rastreamento distribuído"],
+      "d": "Caminho completo de um pedido entre vários serviços. Mostra onde o tempo foi gasto."
+    },
+    {
+      "t": "Alerta",
+      "cat": "operacao",
+      "alias": ["alert"],
+      "d": "Aviso automático quando uma métrica sai do esperado. Alerta demais cansa o time; alerta de menos deixa passar falha."
+    },
+    {
+      "t": "Runbook",
+      "cat": "operacao",
+      "d": "Passo a passo para resolver um problema conhecido. Reduz o tempo de reação e depende menos de quem está de plantão."
+    },
+    {
+      "t": "Implantação",
+      "cat": "operacao",
+      "alias": ["deploy", "deployment"],
+      "d": "Ato de colocar uma versão nova no ar. Pode ser manual, automática ou gradual."
+    },
+    {
+      "t": "Rollback",
+      "cat": "operacao",
+      "alias": ["reverter"],
+      "d": "Voltar para a versão anterior quando a nova dá problema. Só funciona se a versão antiga ainda estiver disponível."
+    },
+    {
+      "t": "Backup",
+      "cat": "operacao",
+      "alias": ["cópia de segurança"],
+      "d": "Cópia separada dos dados, guardada para recuperação. Só conta como backup se a restauração tiver sido testada."
+    },
+
+    {
+      "t": "LGPD",
+      "cat": "governanca",
+      "alias": ["lei geral de proteção de dados"],
+      "d": "Lei brasileira que regula o tratamento de dados pessoais. Define bases legais, direitos do titular e dever de informar incidentes."
+    },
+    {
+      "t": "GDPR",
+      "cat": "governanca",
+      "alias": ["regulamento geral de proteção de dados"],
+      "d": "Regra europeia de proteção de dados pessoais. Alcança empresas que tratam dados de pessoas na União Europeia."
+    },
+    {
+      "t": "Soberania de dados",
+      "cat": "governanca",
+      "alias": ["data sovereignty"],
+      "d": "Ideia de que os dados estão sujeitos às leis do país onde ficam. Muda a escolha da região e do provedor."
+    },
+    {
+      "t": "Residência de dados",
+      "cat": "governanca",
+      "alias": ["data residency"],
+      "d": "Exigência de manter os dados fisicamente em um território. É diferente de soberania, que trata também de quem manda sobre eles."
+    },
+    {
+      "t": "Conformidade",
+      "cat": "governanca",
+      "alias": ["compliance"],
+      "d": "Estar de acordo com leis, normas e políticas aplicáveis. Precisa de evidência, não só de intenção."
+    },
+    {
+      "t": "Retenção",
+      "cat": "governanca",
+      "alias": ["retenção de dados"],
+      "d": "Prazo durante o qual um registro ou cópia fica guardado. Define custo, risco e o que pode ser recuperado depois."
+    },
+    {
+      "t": "Etiqueta",
+      "cat": "governanca",
+      "alias": ["tag", "tags"],
+      "d": "Par de chave e valor preso a um recurso, como time ou projeto. Serve para filtrar custo e aplicar política."
+    },
+    {
+      "t": "Showback",
+      "cat": "governanca",
+      "alias": ["mostrar custo"],
+      "d": "Mostrar o custo de nuvem para cada time sem cobrar de fato. Serve para criar consciência antes de mudar o processo."
+    },
+    {
+      "t": "Chargeback",
+      "cat": "governanca",
+      "alias": ["cobrança interna"],
+      "d": "Transferir o custo de nuvem para o orçamento de quem consumiu. Exige etiqueta e rateio bem definidos."
+    },
+    {
+      "t": "Lock-in",
+      "cat": "governanca",
+      "alias": ["dependência de fornecedor", "vendor lock-in"],
+      "d": "Dependência de um provedor a ponto de trocar de ambiente ficar caro ou lento. Cresce com serviços proprietários e formatos fechados."
+    },
+    {
+      "t": "Portabilidade",
+      "cat": "governanca",
+      "d": "Capacidade de levar dados e aplicação para outro ambiente. Depende de formatos abertos e de pouca amarração proprietária."
+    },
+    {
+      "t": "Inventário de dados",
+      "cat": "governanca",
+      "d": "Registro do que existe, onde está e quem responde por cada conjunto de dados. Sem inventário, nenhuma política de privacidade funciona."
+    }
+  ]
+}
