@@ -10,204 +10,250 @@ export function art(name) {
 const ART = {
   orbit: () =>
     OPEN(
-      "Órbitas concêntricas com pontos de rede",
+      "Mapa do site com nuvem central e serviços ligados",
       `
-      <ellipse class="art-faint" cx="200" cy="150" rx="164" ry="66" transform="rotate(-16 200 150)"/>
-      <ellipse class="art-faint" cx="200" cy="150" rx="118" ry="118"/>
       <g class="art-orbit">
-        <ellipse class="art-line art-dash" cx="200" cy="150" rx="88" ry="134" transform="rotate(38 200 150)"/>
-        <circle class="art-dot" cx="200" cy="16" r="3.2"/>
-        <circle class="art-dot" cx="288" cy="150" r="2.4"/>
-        <circle class="art-dot" cx="200" cy="284" r="2.8"/>
+        <ellipse class="art-faint" cx="200" cy="142" rx="152" ry="84" transform="rotate(-8 200 142)"/>
       </g>
-      <g class="art-orbit art-orbit--reverse">
-        <ellipse class="art-line" cx="200" cy="150" rx="150" ry="54" transform="rotate(-16 200 150)"/>
-        <circle class="art-dot-soft" cx="50" cy="150" r="2.6"/>
-        <circle class="art-dot-soft" cx="350" cy="150" r="2.6"/>
+      <path class="art-faint" d="M156 150C132 156 104 168 78 188"/>
+      <path class="art-faint" d="M256 120c24-16 46-38 64-52"/>
+      <path class="art-faint" d="M242 162c28 18 58 46 86 76"/>
+      <g class="art-float art-float--slow">
+        <circle class="art-line" cx="62" cy="196" r="14"/>
+        <circle class="art-dot" cx="62" cy="196" r="3"/>
       </g>
-      <circle class="art-fill" cx="200" cy="150" r="44"/>
-      <circle class="art-line" cx="200" cy="150" r="44"/>
-      <circle class="art-dot art-pulse" cx="200" cy="150" r="4.6"/>
-      <path class="art-accent art-draw" d="M58 214C118 254 282 254 342 210"/>
-      <path class="art-faint" d="M200 106v-18M200 194v18M156 150h-18M244 150h18"/>
+      <g class="art-float">
+        <rect class="art-line" x="316" y="228" width="26" height="22" rx="2"/>
+        <path class="art-line" d="M320 232h18"/>
+      </g>
+      <circle class="art-dot-soft" cx="322" cy="66" r="8"/>
+      <circle class="art-dot art-pulse" cx="322" cy="66" r="3.6"/>
+      <path class="art-accent art-draw" d="M154 168a28 28 0 0 1 2-55 38 38 0 0 1 72-10 30 30 0 0 1 28 30 24 24 0 0 1-18 35Z"/>
+      <path class="art-faint" d="M62 262h84M62 272h56"/>
     `
     ),
 
   layers: () =>
     OPEN(
-      "Camadas empilhadas em perspectiva",
+      "Três camadas empilhadas: banco de dados, servidor e rede",
       `
       <g class="art-float art-float--slow">
-        <path class="art-faint" d="M200 58L346 132L200 206L54 132Z"/>
-        <path class="art-line" d="M200 92L320 152L200 212L80 152Z"/>
-        <path class="art-accent" d="M200 126L294 172L200 218L106 172Z"/>
+        <path class="art-accent art-soft" d="M200 66L330 120L200 174L70 120Z"/>
+        <ellipse class="art-line" cx="200" cy="114" rx="14" ry="5"/>
+        <path class="art-line" d="M186 114v10a14 5 0 0 0 28 0v-10"/>
       </g>
+      <path class="art-line" d="M304 98l-44 20M78 128l30 14"/>
       <g class="art-float">
-        <path class="art-faint" d="M200 26L302 77L200 128L98 77Z"/>
-        <path class="art-faint" d="M200 186L302 237L200 288L98 237Z"/>
+        <path class="art-line art-paper" d="M200 114L330 168L200 222L70 168Z"/>
+        <rect class="art-line" x="184" y="156" width="32" height="24" rx="2"/>
+        <path class="art-line" d="M190 164h20"/>
+        <circle class="art-dot-soft" cx="190" cy="172" r="1.6"/>
       </g>
-      <path class="art-dash" d="M200 26V288" stroke="currentColor" fill="none" stroke-width="1"/>
-      <circle class="art-dot art-pulse" cx="200" cy="172" r="3.6"/>
-      <circle class="art-dot art-pulse art-pulse--2" cx="106" cy="172" r="2.6"/>
-      <circle class="art-dot art-pulse art-pulse--3" cx="294" cy="172" r="2.6"/>
+      <g>
+        <path class="art-line art-paper" d="M200 162L330 216L200 270L70 216Z"/>
+        <circle class="art-line" cx="200" cy="212" r="17"/>
+        <ellipse class="art-line" cx="200" cy="212" rx="7" ry="17"/>
+        <path class="art-line" d="M183 212h34"/>
+      </g>
+      <circle class="art-dot art-pulse" cx="200" cy="212" r="3.4"/>
     `
     ),
 
   index: () =>
     OPEN(
-      "Fichas de índice organizadas em leque",
+      "Livro aberto com lupa sobre palavra em destaque",
       `
-      <g transform="rotate(-9 200 150)">
-        <rect class="art-faint" x="92" y="66" width="150" height="192" rx="2"/>
+      <path class="art-line art-paper" d="M84 88C134 68 178 80 200 96 222 80 266 68 316 88L316 218C266 198 222 210 200 226 178 210 134 198 84 218Z"/>
+      <path class="art-line" d="M200 96V226"/>
+      <path class="art-faint" d="M292 78v32l-9-9-9 9V82"/>
+      <g class="art-line">
+        <path d="M104 112h84M104 160h84M104 176h64M226 112h62M226 128h74M226 144h52M226 160h66"/>
       </g>
-      <g transform="rotate(7 200 150)">
-        <rect class="art-faint" x="158" y="58" width="150" height="192" rx="2"/>
+      <g class="art-float art-float--slow">
+        <path class="art-accent" d="M104 130h52"/>
+        <path class="art-line art-paper" d="M118 124h56v14h-56Z"/>
+        <path class="art-accent" d="M124 131h40"/>
+        <circle class="art-line" cx="140" cy="131" r="17"/>
+        <path class="art-accent" d="M152 143l16 16"/>
+        <circle class="art-dot art-pulse" cx="140" cy="131" r="2.6"/>
       </g>
-      <rect class="art-line art-paper" x="124" y="50" width="152" height="200" rx="2"/>
-      <path class="art-accent" d="M148 82h104"/>
-      <path class="art-line" d="M148 104h78M148 120h96M148 136h64"/>
-      <path class="art-faint" d="M148 168h104M148 184h104M148 200h72"/>
-      <circle class="art-dot art-pulse" cx="252" cy="82" r="3.2"/>
-      <path class="art-dash" d="M60 250C120 268 280 268 340 248" stroke="currentColor" fill="none" stroke-width="1"/>
+      <path class="art-dash" d="M52 258C140 276 260 276 348 256" stroke="currentColor" fill="none" stroke-width="1"/>
     `
     ),
 
   clouds: () =>
     OPEN(
-      "Três contornos de nuvem sobrepostos",
+      "Nuvens pública, privada e híbrida",
       `
       <g class="art-float art-float--slow">
-        <path class="art-faint" d="M70 206a30 30 0 0 1 5-59 44 44 0 0 1 84-12 34 34 0 0 1 32 34 26 26 0 0 1-7 37Z"/>
+        <path class="art-line art-paper" d="M48 134a22 22 0 0 1 4-43 32 32 0 0 1 60-9 24 24 0 0 1 23 24 19 19 0 0 1-5 28Z"/>
+        <path class="art-accent" d="M81 110v-7a9 9 0 0 1 18 0v7"/>
+        <rect class="art-accent" x="75" y="110" width="30" height="20" rx="2"/>
+        <circle class="art-dot-soft" cx="90" cy="120" r="2.6"/>
       </g>
       <g class="art-float">
-        <path class="art-line" d="M132 196a34 34 0 0 1 6-67 50 50 0 0 1 95-14 38 38 0 0 1 36 38 30 30 0 0 1-8 43Z"/>
+        <path class="art-line" d="M243 124a22 22 0 0 1 4-43 32 32 0 0 1 60-9 24 24 0 0 1 23 24 19 19 0 0 1-5 28Z"/>
+        <circle class="art-dot-soft" cx="272" cy="102" r="2.6"/>
+        <circle class="art-dot" cx="292" cy="94" r="3"/>
+        <circle class="art-dot-soft" cx="310" cy="106" r="2.6"/>
+        <circle class="art-dot art-pulse" cx="292" cy="94" r="4.6"/>
       </g>
-      <path class="art-accent" d="M190 186a38 38 0 0 1 7-74 55 55 0 0 1 104-15 42 42 0 0 1 40 42 33 33 0 0 1-9 47Z"/>
-      <circle class="art-dot art-pulse" cx="250" cy="132" r="3.4"/>
-      <path class="art-dash" d="M84 236h232" stroke="currentColor" fill="none" stroke-width="1"/>
-      <path class="art-faint" d="M118 252h164"/>
+      <path class="art-line" d="M86 250a16 16 0 0 1 3-30 22 22 0 0 1 42-6 17 17 0 0 1 16 16 13 13 0 0 1-4 20Z"/>
+      <path class="art-line" d="M216 250a16 16 0 0 1 3-30 22 22 0 0 1 42-6 17 17 0 0 1 16 16 13 13 0 0 1-4 20Z"/>
+      <path class="art-accent art-draw" d="M166 226h34m0 0l-8-8M200 226l-8 8"/>
+      <path class="art-accent art-dash" d="M206 238h-34m0 0l8-8M172 238l8 8" fill="none"/>
     `
     ),
 
   tiles: () =>
     OPEN(
-      "Grade de serviços com um item em destaque",
+      "Prateleira de provedores como cartões dobrados",
       `
       <g class="art-faint">
-        <rect x="62" y="52" width="58" height="58" rx="2"/>
-        <rect x="134" y="52" width="58" height="58" rx="2"/>
-        <rect x="206" y="52" width="58" height="58" rx="2"/>
-        <rect x="278" y="52" width="58" height="58" rx="2"/>
-        <rect x="62" y="124" width="58" height="58" rx="2"/>
-        <rect x="206" y="124" width="58" height="58" rx="2"/>
-        <rect x="278" y="124" width="58" height="58" rx="2"/>
-        <rect x="62" y="196" width="58" height="58" rx="2"/>
-        <rect x="134" y="196" width="58" height="58" rx="2"/>
-        <rect x="206" y="196" width="58" height="58" rx="2"/>
-        <rect x="278" y="196" width="58" height="58" rx="2"/>
+        <rect x="60" y="64" width="66" height="44" rx="3"/>
+        <rect x="142" y="64" width="66" height="44" rx="3"/>
+        <rect x="224" y="64" width="66" height="44" rx="3"/>
+        <rect x="60" y="132" width="66" height="44" rx="3"/>
+        <rect x="224" y="132" width="66" height="44" rx="3"/>
+        <rect x="60" y="200" width="66" height="44" rx="3"/>
+        <rect x="142" y="200" width="66" height="44" rx="3"/>
+        <rect x="224" y="200" width="66" height="44" rx="3"/>
+        <path d="M114 64l12 12M196 64l12 12M278 64l12 12M114 132l12 12M278 132l12 12M114 200l12 12M196 200l12 12M278 200l12 12"/>
       </g>
-      <rect class="art-accent art-soft" x="134" y="124" width="58" height="58" rx="2"/>
-      <path class="art-accent" d="M150 153l8 8 16-18"/>
-      <path class="art-dash" d="M192 153h66" stroke="currentColor" fill="none" stroke-width="1"/>
-      <circle class="art-dot art-pulse" cx="266" cy="153" r="3.4"/>
-      <path class="art-line" d="M62 272h274"/>
+      <g class="art-float">
+        <rect class="art-accent art-soft" x="142" y="132" width="66" height="44" rx="3"/>
+        <path class="art-accent" d="M158 154l10 10 22-22"/>
+        <circle class="art-dot art-pulse" cx="242" cy="154" r="3.4"/>
+      </g>
+      <path class="art-line" d="M52 116h296M52 184h296M52 252h296"/>
+      <path class="art-dash" d="M300 154h34" stroke="currentColor" fill="none" stroke-width="1"/>
+      <circle class="art-dot-soft" cx="340" cy="154" r="3"/>
     `
     ),
 
   path: () =>
     OPEN(
-      "Caminho pontilhado com pontos de decisão",
+      "Trilha de decisão com balões de pergunta e pino de mapa",
       `
-      <path class="art-faint" d="M54 250C120 250 96 196 160 188S250 214 288 160 312 82 350 66"/>
-      <path class="art-dash" d="M54 250C120 250 96 196 160 188S250 214 288 160 312 82 350 66" stroke="currentColor" fill="none" stroke-width="1.2"/>
-      <path class="art-accent" d="M288 160C312 126 326 96 350 66"/>
+      <path class="art-faint" d="M112 170l-1-46M112 170h80M197 175h76M197 175l4-40M210 226h58M149 250h58"/>
       <g>
-        <circle class="art-dot" cx="54" cy="250" r="4"/>
-        <circle class="art-dot" cx="160" cy="188" r="4"/>
-        <circle class="art-dot" cx="288" cy="160" r="4"/>
-        <circle class="art-dot art-pulse" cx="350" cy="66" r="5"/>
+        <path class="art-line art-paper" d="M96 148h32v22h-20l-10 9V170a11 11 0 0 1 0-22Z"/>
+        <text class="art-fill" x="112" y="165" font-size="15" text-anchor="middle" font-family="Georgia, serif">?</text>
+        <circle class="art-dot" cx="112" cy="159" r="3.4"/>
       </g>
+      <g>
+        <path class="art-line art-paper" d="M180 148h32a11 11 0 0 1 0 22h-22l-8 9 1-9a11 11 0 0 1 0-22Z"/>
+        <text class="art-fill" x="196" y="165" font-size="15" text-anchor="middle" font-family="Georgia, serif">?</text>
+        <circle class="art-dot" cx="196" cy="159" r="3.4"/>
+      </g>
+      <g>
+        <path class="art-line art-paper" d="M254 196h32a11 11 0 0 1 0 22h-24l-6 9V218a11 11 0 0 1 0-22Z"/>
+        <text class="art-fill" x="270" y="213" font-size="15" text-anchor="middle" font-family="Georgia, serif">?</text>
+        <circle class="art-dot" cx="270" cy="207" r="3.4"/>
+      </g>
+      <path class="art-dash" d="M90 142C60 164 62 196 92 210c34 16 42 22 66 24 28 2 66-2 88-20 28-24 44-32 62-40" stroke="currentColor" fill="none" stroke-width="1.2"/>
+      <circle class="art-line" cx="90" cy="142" r="15"/>
+      <path class="art-line art-paper" d="M90 152v15M82 167h16"/>
+      <path class="art-accent art-draw" d="M254 218c34 0 70-14 86-48"/>
       <g class="art-float">
-        <circle class="art-line" cx="350" cy="66" r="22"/>
-        <path class="art-line" d="M350 50v10M350 72v10M334 66h10M356 66h10"/>
+        <path class="art-accent" d="M352 82c-10-12-18-20-18-30a18 18 0 1 1 36 0c0 10-8 18-18 30Z"/>
+        <circle class="art-dot art-pulse" cx="352" cy="52" r="4.6"/>
       </g>
-      <path class="art-faint" d="M54 274h128M54 284h84"/>
     `
     ),
 
   steps: () =>
     OPEN(
-      "Degraus ascendentes com selo de conclusão",
+      "Escada de progressão com bandeira, selo e diploma",
       `
-      <path class="art-faint" d="M62 250h62v-52h62v-52h62v-52h62"/>
-      <path class="art-accent" d="M62 250h62v-52h62"/>
-      <path class="art-dash" d="M186 198v-52h62v-52" stroke="currentColor" fill="none" stroke-width="1"/>
-      <g class="art-float">
-        <circle class="art-line" cx="310" cy="94" r="34"/>
-        <path class="art-accent" d="M296 94l10 10 20-22"/>
+      <path class="art-faint" d="M56 214H106M56 250v-36"/>
+      <g class="art-float art-float--slow">
+        <path class="art-accent" d="M158 178h46"/>
+        <circle class="art-dot art-pulse" cx="181" cy="178" r="3"/>
       </g>
-      <circle class="art-dot art-pulse" cx="124" cy="250" r="3"/>
-      <circle class="art-dot art-pulse art-pulse--2" cx="186" cy="198" r="3"/>
-      <circle class="art-dot art-pulse art-pulse--3" cx="248" cy="146" r="3"/>
-      <path class="art-faint" d="M62 274h276"/>
+      <path class="art-faint" d="M180 144v-2M160 170v-30"/>
+      <path class="art-float art-line" d="M240 106V70"/>
+      <g class="art-float">
+        <circle class="art-line art-paper" cx="310" cy="86" r="34"/>
+        <path class="art-accent" d="M298 88l9 9 17-20"/>
+        <path class="art-faint" d="M292 56l14-12M312 52l12-10"/>
+      </g>
+      <circle class="art-dot art-pulse art-pulse--2" cx="292" cy="92" r="2.6"/>
+      <circle class="art-dot art-pulse art-pulse--3" cx="330" cy="66" r="2.6"/>
+      <path class="art-faint" d="M56 274h286"/>
     `
     ),
 
   prompt: () =>
     OPEN(
-      "Linhas de texto convergindo para um nó",
+      "Janela de chat com balões de pergunta e resposta",
       `
-      <g class="art-line">
-        <path d="M48 78h150M48 102h118M48 126h164M48 150h96M48 174h138"/>
+      <rect class="art-line art-paper" x="48" y="54" width="304" height="196" rx="6"/>
+      <path class="art-faint" d="M48 82h304"/>
+      <circle class="art-dot-soft" cx="66" cy="68" r="3"/>
+      <rect class="art-faint" x="86" y="64" width="126" height="9" rx="2"/>
+      <g class="art-line art-paper">
+        <path d="M76 110h96a16 16 0 0 1 0 32H92l-16 14 4-14h-4a16 16 0 0 1 0-32Z"/>
       </g>
-      <path class="art-faint" d="M48 198h84"/>
-      <path class="art-accent art-draw" d="M210 78C270 78 250 132 300 142"/>
-      <path class="art-accent art-draw" d="M210 126C262 126 258 138 300 142"/>
-      <path class="art-accent art-draw" d="M210 174C266 174 258 152 300 142"/>
-      <g class="art-float">
-        <path class="art-line art-paper" d="M320 118l28 24-28 24-28-24Z"/>
-        <circle class="art-dot art-pulse" cx="320" cy="142" r="4"/>
+      <circle class="art-dot" cx="98" cy="126" r="3"/>
+      <circle class="art-dot art-pulse" cx="120" cy="126" r="3.4"/>
+      <circle class="art-dot-soft" cx="142" cy="126" r="3"/>
+      <g class="art-line art-paper">
+        <path d="M214 170h100a16 16 0 0 1 0 32H246l12 12-2-12h-42a16 16 0 0 1 0-32Z"/>
       </g>
-      <path class="art-dash" d="M348 142h24" stroke="currentColor" fill="none" stroke-width="1"/>
-      <circle class="art-dot-soft" cx="384" cy="142" r="3"/>
-      <path class="art-faint" d="M48 236h108M48 252h72"/>
+      <path class="art-accent" d="M232 182l10 8-10 8"/>
+      <path class="art-line art-dash" d="M252 180v20" stroke="currentColor" fill="none" stroke-width="1.4"/>
+      <path class="art-faint" d="M70 226h120"/>
+      <circle class="art-line" cx="322" cy="226" r="9"/>
+      <path class="art-line" d="M318 219l10 7-10 7"/>
     `
     ),
 
   contours: () =>
     OPEN(
-      "Curvas de nível com um ponto marcado",
+      "Curvas de nível com régua e lupa sobre o mapa",
       `
-      <g class="art-faint">
-        <path d="M36 188c30-54 90-84 156-80s118 40 172 22"/>
-        <path d="M28 216c36-62 100-96 172-92s124 46 180 24"/>
-        <path d="M20 244c42-70 112-108 190-104s130 52 188 28"/>
-        <path d="M44 160c26-46 80-72 140-68s106 34 154 18"/>
+      <g class="art-float art-float--slow">
+        <path class="art-faint" d="M96 150c0-34 38-58 84-58s84 24 84 58-38 58-84 58-84-24-84-58Z"/>
+        <path class="art-line" d="M128 150c0-22 24-38 52-38s52 16 52 38-24 38-52 38-52-16-52-38Z"/>
+        <path class="art-line" d="M158 150c0-11 12-19 22-19s22 8 22 19-12 19-22 19-22-8-22-19Z"/>
+        <circle class="art-dot art-pulse" cx="180" cy="150" r="3.4"/>
       </g>
-      <path class="art-accent" d="M68 132c22-38 68-60 118-56s90 28 130 14"/>
+      <path class="art-faint" d="M252 96c26-8 54 0 62 18 8 18-8 34-34 32-10-18-10-38-28-50Z"/>
       <g class="art-float">
-        <circle class="art-line" cx="236" cy="126" r="18"/>
-        <circle class="art-dot" cx="236" cy="126" r="4"/>
-        <path class="art-line" d="M236 144v34"/>
+        <circle class="art-accent" cx="268" cy="128" r="22"/>
+        <path class="art-accent" d="M284 144l22 22"/>
+        <circle class="art-dot-soft" cx="268" cy="128" r="3"/>
       </g>
-      <path class="art-dash" d="M236 178c0 22-18 34-44 38" stroke="currentColor" fill="none" stroke-width="1"/>
-      <circle class="art-dot-soft" cx="192" cy="216" r="3"/>
-      <path class="art-faint" d="M54 274h180"/>
+      <g class="art-line art-paper">
+        <path d="M50 252l100 30"/>
+        <path d="M52 258l100 30"/>
+      </g>
+      <g class="art-line">
+        <path d="M64 250l-6 8M84 256l-6 8M104 262l-6 8M124 268l-6 8M144 274l-6 8"/>
+      </g>
+      <g class="art-float">
+        <circle class="art-dot" cx="117" cy="54" r="3.4"/>
+        <path class="art-line" d="M117 57l-14 36M117 57l14 34"/>
+      </g>
+      <circle class="art-dot-soft" cx="70" cy="210" r="3"/>
+      <path class="art-faint" d="M52 96h44M52 108h60"/>
     `
     ),
 
   broken: () =>
     OPEN(
-      "Órbita interrompida",
+      "Janela de navegador rasgada com ponto de interrogação",
       `
-      <path class="art-faint" d="M88 224a136 136 0 1 1 224 0" fill="none"/>
-      <path class="art-dash" d="M74 214a146 146 0 0 1 252-4" stroke="currentColor" fill="none" stroke-width="1"/>
-      <circle class="art-line" cx="200" cy="150" r="58"/>
-      <path class="art-accent" d="M200 118v44M200 180v2"/>
-      <circle class="art-dot art-pulse" cx="200" cy="200" r="3.4"/>
-      <circle class="art-dot-soft" cx="88" cy="224" r="3"/>
-      <circle class="art-dot-soft" cx="312" cy="224" r="3"/>
-      <path class="art-faint" d="M140 250h120"/>
+      <path class="art-line art-paper" d="M70 56h260v180l-16 8-16-10-16 8-16-8-16 8-16-10-16 8-16-8-16 10-16-10-16 8-16-8-16 8-16-10-16 8-20-14Z"/>
+      <path class="art-faint" d="M70 84h260"/>
+      <circle class="art-dot-soft" cx="86" cy="70" r="2.6"/>
+      <circle class="art-dot-soft" cx="102" cy="70" r="2.6"/>
+      <path class="art-faint" d="M98 126h60M96 144h44M96 160h54"/>
+      <path class="art-faint" d="M126 96l28 22-12 10 26 18"/>
+      <path class="art-accent art-draw" d="M180 138a25 22 0 1 1 42 14c-8 10-20 12-20 26"/>
+      <circle class="art-dot art-pulse" cx="202" cy="192" r="3.2"/>
+      <path class="art-dash" d="M120 262h160" stroke="currentColor" fill="none" stroke-width="1"/>
     `
     ),
 };
