@@ -190,7 +190,6 @@ async function renderRoute() {
 function openMenu() {
   if (!menu) return;
   menu.hidden = false;
-  document.body.classList.add("is-locked");
   for (const button of menuOpenButtons) button.setAttribute("aria-expanded", "true");
   menuClose?.focus();
 }
@@ -257,6 +256,12 @@ function boot() {
   menu?.addEventListener("keydown", trapMenuFocus);
   menu?.addEventListener("click", (event) => {
     if (event.target.closest("a")) closeMenu();
+  });
+
+  document.addEventListener("click", (event) => {
+    if (menu?.hidden) return;
+    if (event.target.closest("#menu") || event.target.closest("[data-menu-open]")) return;
+    closeMenu();
   });
 
   document.addEventListener("keydown", (event) => {

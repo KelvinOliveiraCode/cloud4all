@@ -177,15 +177,21 @@ html[data-theme="dark"] .theme-button .icon-moon {
   height: 18px;
 }
 
-/* menu de tela cheia */
+/* menu — painel dropdown flutuante ancorado no header */
 .menu {
   position: fixed;
-  inset: 0;
+  top: calc(var(--header-h) + 10px);
+  left: var(--gutter);
+  right: var(--gutter);
   z-index: 130;
   background: var(--paper);
+  border: 1px solid var(--rule-strong);
+  border-radius: 16px;
+  box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.55);
   display: grid;
-  grid-template-rows: var(--header-h) 1fr auto;
-  overscroll-behavior: contain;
+  grid-template-rows: auto 1fr auto;
+  max-height: min(540px, calc(100svh - var(--header-h) - 28px));
+  overflow: hidden;
 }
 
 .menu[hidden] {
@@ -196,17 +202,34 @@ html[data-theme="dark"] .theme-button .icon-moon {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--rule);
+  gap: var(--s-4);
+  padding: var(--s-3) var(--s-4) var(--s-2);
+}
+
+.menu-head .brand-word,
+.menu-head .brand-mark {
+  display: none;
+}
+
+.menu-head::before {
+  content: "Navegação";
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  color: var(--ink-3);
 }
 
 .menu-body {
   overflow-y: auto;
-  padding-block: var(--s-6) var(--s-5);
+  overscroll-behavior: contain;
+  padding: 0 var(--s-3) var(--s-3);
 }
 
 .menu-list {
   display: grid;
-  gap: 2px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
   counter-reset: menu;
 }
 
@@ -214,34 +237,40 @@ html[data-theme="dark"] .theme-button .icon-moon {
   counter-increment: menu;
   display: flex;
   align-items: baseline;
-  gap: 18px;
-  padding-block: 12px;
-  border-bottom: 1px solid var(--rule);
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
   font-family: var(--f-display);
-  font-size: clamp(1.7rem, 6vw, 2.4rem);
+  font-size: 1.06rem;
   line-height: 1.1;
+  letter-spacing: -0.01em;
   text-decoration: none;
-  letter-spacing: -0.02em;
+  transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
+}
+
+.menu-list a:hover {
+  background: color-mix(in srgb, var(--paper) 62%, transparent);
 }
 
 .menu-list a::before {
   content: counter(menu, decimal-leading-zero);
   font-family: var(--f-mono);
-  font-size: 0.72rem;
+  font-size: 0.66rem;
   color: var(--ink-3);
   letter-spacing: 0.04em;
 }
 
 .menu-list a[aria-current="page"] {
   color: var(--accent);
+  background: color-mix(in srgb, var(--paper) 62%, transparent);
 }
 
 .menu-foot {
   border-top: 1px solid var(--rule);
-  padding-block: var(--s-4) calc(var(--s-4) + env(safe-area-inset-bottom));
+  padding: var(--s-3) var(--s-4) calc(var(--s-3) + env(safe-area-inset-bottom));
   display: flex;
   flex-wrap: wrap;
-  gap: var(--s-4);
+  gap: var(--s-3) var(--s-5);
   justify-content: space-between;
   font-size: var(--step--1);
   color: var(--ink-3);
@@ -471,5 +500,19 @@ html[data-theme="dark"] .theme-button .icon-moon {
 
   .footer-top {
     grid-template-columns: 1fr;
+  }
+
+  .menu-list {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .menu-list a {
+    padding: 12px 12px;
+  }
+
+  .menu {
+    left: 10px;
+    right: 10px;
   }
 }
