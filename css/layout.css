@@ -334,7 +334,6 @@ html[data-theme="dark"] .theme-button .icon-moon {
 
 .section {
   padding-block: clamp(40px, 6vw, 80px);
-  border-top: 1px solid var(--rule);
 }
 
 .section:first-child {
@@ -415,21 +414,6 @@ html[data-theme="dark"] .theme-button .icon-moon {
 
 .footer-col a:hover {
   color: var(--accent);
-}
-
-.footer-bottom {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--s-3) var(--s-5);
-  justify-content: space-between;
-  align-items: center;
-  padding-top: var(--s-5);
-  font-size: 0.76rem;
-  color: var(--ink-3);
-}
-
-.footer-bottom p {
-  max-width: 60ch;
 }
 
 @media (max-width: 1080px) {

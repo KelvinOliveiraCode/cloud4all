@@ -319,30 +319,22 @@
   flex-direction: column;
   gap: var(--s-3);
   padding: var(--s-5);
-  border-top: 1px solid var(--rule-strong);
-  background: transparent;
-  transition: background var(--t-mid) var(--ease);
+  background: color-mix(in srgb, var(--paper) 62%, transparent);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02), 0 8px 24px -18px rgba(0, 0, 0, 0.4);
+  transition: background var(--t-mid) var(--ease), transform var(--t-mid) var(--ease),
+    box-shadow var(--t-mid) var(--ease);
 }
 
 .card::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -1px;
-  height: 1px;
-  background: var(--accent);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--t-slow) var(--ease-out);
+  content: none;
 }
 
 .card:hover {
-  background: color-mix(in srgb, var(--paper-2) 55%, transparent);
-}
-
-.card:hover::after {
-  transform: scaleX(1);
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02), 0 20px 44px -20px rgba(0, 0, 0, 0.5);
 }
 
 .card h3 {

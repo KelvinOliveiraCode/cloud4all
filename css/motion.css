@@ -11,7 +11,6 @@
   opacity: 0.55;
 }
 
-.site-header,
 .site-main,
 .site-footer,
 .mobile-bar,
@@ -22,6 +21,7 @@
 
 .site-header {
   position: fixed;
+  z-index: 100;
 }
 
 .menu {
