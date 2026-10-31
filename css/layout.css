@@ -447,8 +447,6 @@ html[data-theme="dark"] .theme-button .icon-moon {
 
 .footer-credit {
   margin-top: 24px;
-  padding-top: 16px;
-  border-top: 1px solid var(--rule);
   display: flex;
   flex-wrap: wrap;
   gap: 8px 20px;
