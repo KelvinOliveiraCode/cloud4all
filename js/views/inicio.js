@@ -57,7 +57,7 @@ export default async function inicioView() {
       "section",
       { class: "section" },
       sectionHead({
-        folio: "01 / Comece",
+        folio: "Comece",
         title: "Três portas, nenhuma obrigatória.",
         text: "Dá para estudar do zero, filtrar o catálogo ou responder quatro perguntas e receber um ponto de partida.",
       }),
@@ -65,26 +65,23 @@ export default async function inicioView() {
         "div",
         { class: "doors reveal-group" },
         door(
-          "01",
-          "Aprender",
-          "Seis módulos curtos explicam o que é nuvem, quanto custa, onde ficam os dados e como não deixar a conta aberta.",
-          "#/aprender",
-          "Começar pelos fundamentos"
-        ),
-        door(
-          "02",
-          "Encontrar",
-          "Você diz o que quer fazer, quanto pode gastar e quanto aceita configurar. A recomendação mostra a trilha inteira.",
-          "#/encontrar",
-          "Responder quatro perguntas"
-        ),
-        door(
-          "03",
-          "Catálogo",
-          `Filtre ${formatNumber(index.total)} serviços por área, provedor, preço e complexidade. Compare até três lado a lado.`,
-          "#/catalogo",
-          "Explorar o catálogo"
-        )
+                  "Aprender",
+                  "Seis módulos curtos explicam o que é nuvem, quanto custa, onde ficam os dados e como não deixar a conta aberta.",
+                  "#/aprender",
+                  "Começar pelos fundamentos"
+                ),
+                door(
+                  "Encontrar",
+                  "Você diz o que quer fazer, quanto pode gastar e quanto aceita configurar. A recomendação mostra a trilha inteira.",
+                  "#/encontrar",
+                  "Responder quatro perguntas"
+                ),
+                door(
+                  "Catálogo",
+                  `Filtre ${formatNumber(index.total)} serviços por área, provedor, preço e complexidade. Compare até três lado a lado.`,
+                  "#/catalogo",
+                  "Explorar o catálogo"
+                )
       )
     ),
 
@@ -92,7 +89,7 @@ export default async function inicioView() {
       "section",
       { class: "section" },
       sectionHead({
-        folio: "02 / Módulos",
+        folio: "Módulos",
         title: "Um caminho de seis passos.",
         text: "Cada módulo cabe em uma leitura curta e termina com três perguntas para fixar o que importa.",
         aside: h("a", { class: "text-link", href: "#/aprender" }, "Ver todos", icon("arrow", 15)),
@@ -121,7 +118,7 @@ export default async function inicioView() {
       "section",
       { class: "section" },
       sectionHead({
-        folio: "03 / O mapa",
+        folio: "O mapa",
         title: "Oito áreas, um catálogo só.",
         text: "A área é o primeiro filtro porque elimina metade das opções erradas antes de você olhar preço.",
       }),
@@ -197,11 +194,10 @@ export default async function inicioView() {
   return { node, title: "Entender e escolher nuvem" };
 }
 
-function door(num, title, text, href, cta) {
+function door(title, text, href, cta) {
   return h(
     "a",
     { class: "door", href },
-    h("span", { class: "door-num" }, num),
     h("h3", {}, title),
     h("p", {}, text),
     h("span", { class: "door-arrow" }, cta, icon("arrow", 15))

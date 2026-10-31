@@ -260,7 +260,7 @@ export async function glossarioView(ctx) {
     "div",
     { class: "view" },
     viewHead({
-      folio: "03 / Glossário",
+      folio: "Glossário",
       title: h("span", {}, "O vocabulário inteiro, ", h("em", {}, "em uma página"), "."),
       lede: `${terms.length} termos em ${Object.keys(categories).length} categorias. Busca sem acento, índice A a Z e definições curtas, sem jargão escondido.`,
       art: art("index"),

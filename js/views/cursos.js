@@ -197,7 +197,7 @@ export default async function cursosView() {
     "div",
     { class: "view" },
     viewHead({
-      folio: "07 / Cursos",
+      folio: "Cursos",
       title: h("span", {}, "Estudar de graça, ", h("em", {}, "pagar só o exame"), "."),
       lede: `${items.length} caminhos em ${platforms.length} plataformas oficiais. Trilhas e cursos abertos ficam separados das certificações pagas, para você não confundir uma coisa com a outra.`,
       art: art("steps"),

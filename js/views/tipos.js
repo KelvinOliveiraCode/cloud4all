@@ -13,7 +13,7 @@ export default async function tiposView() {
         "div",
         { class: "col-7" },
         viewHead({
-          folio: "04 / Tipos de nuvem",
+          folio: "Tipos de nuvem",
           title: h("span", {}, "Não existe nuvem melhor. Existe ", h("em", {}, "decisão mais honesta"), "."),
           lede: "Pública, privada e híbrida não são níveis de qualidade. São arranjos diferentes de controle, custo e responsabilidade.",
         })
@@ -40,7 +40,7 @@ export default async function tiposView() {
       "section",
       { class: "section" },
       sectionHead({
-        folio: "Modelo 01",
+        folio: "Modelo Pública",
         title: "Nuvem pública",
         text: "Capacidade compartilhada, contratada por uso e operada por um provedor externo.",
       }),
@@ -84,7 +84,7 @@ export default async function tiposView() {
       "section",
       { class: "section" },
       sectionHead({
-        folio: "Modelo 02",
+        folio: "Modelo Privada",
         title: "Nuvem privada",
         text: "Infraestrutura dedicada a uma organização, no próprio prédio ou em um data center alugado.",
       }),
@@ -128,7 +128,7 @@ export default async function tiposView() {
       "section",
       { class: "section" },
       sectionHead({
-        folio: "Modelo 03",
+        folio: "Modelo Híbrida",
         title: "Nuvem híbrida",
         text: "Parte dentro, parte fora, com integração entre os dois lados.",
       }),

@@ -14,12 +14,10 @@ const ART = {
     OPEN(
       "Mapa do site: nuvem central ligada a três serviços",
       `
-      <g class="art-float art-float--slow">
-        <g transform="translate(9.5 -137) scale(1.5)">
-          <path class="art-line" d="${CLOUD}"/>
-        </g>
-        <circle class="art-dot art-pulse" cx="200" cy="106" r="4"/>
+      <g transform="translate(9.5 -137) scale(1.5)">
+        <path class="art-line" d="${CLOUD}"/>
       </g>
+      <circle class="art-dot art-pulse" cx="200" cy="106" r="4"/>
       <path class="art-faint" d="M116 162 80 222m120 -52v66m124 -66 34 56"/>
       <circle class="art-line" cx="72" cy="232" r="11"/>
       <circle class="art-dot" cx="72" cy="232" r="3"/>

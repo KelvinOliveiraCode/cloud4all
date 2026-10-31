@@ -186,7 +186,7 @@ export default async function iaView() {
     "div",
     { class: "view" },
     viewHead({
-      folio: "08 / Minha IA",
+      folio: "Minha IA",
       title: h("span", {}, "Um prompt melhor, ", h("em", {}, "sem cadastro"), "."),
       lede: "Monte a pergunta certa e leve para a IA que você já usa. O texto sai daqui com preço, gratuidade e complexidade do catálogo, e com a instrução de não inventar número.",
       art: art("prompt"),

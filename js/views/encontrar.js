@@ -402,7 +402,7 @@ export default async function encontrarView() {
     "div",
     { class: "view" },
     viewHead({
-      folio: "06 / Encontrar",
+      folio: "Encontrar",
       title: h("span", {}, "Quatro perguntas. ", h("em", {}, "Uma trilha aberta"), "."),
       lede: "A recomendação não é uma caixa-preta. Cada filtro mostra quantos serviços sobraram e por quê.",
       art: art("path"),

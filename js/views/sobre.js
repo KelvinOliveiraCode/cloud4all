@@ -32,7 +32,7 @@ export default async function sobreView() {
         "div",
         { class: "col-7" },
         viewHead({
-          folio: "09 / Sobre",
+          folio: "Sobre",
           title: h("span", {}, "Um atlas para ser ", h("em", {}, "conferido"), ", não para ser acreditado."),
           lede: "O Cloud4All Brasil organiza o que existe de nuvem em português claro. Não vende serviço, não recebe comissão e não ranqueia provedor por dinheiro.",
         })

@@ -24,7 +24,7 @@ export async function aprenderView() {
     "div",
     { class: "view" },
     viewHead({
-      folio: "02 / Aprender",
+      folio: "Aprender",
       title: h("span", {}, "Seis módulos para ", h("em", {}, "parar de adivinhar"), "."),
       lede: "Cada módulo tem uma leitura curta, cartões independentes e três perguntas. O progresso fica salvo neste navegador.",
       art: art("layers"),
@@ -350,7 +350,7 @@ export async function moduloView(ctx) {
       h(
         "div",
         {},
-        h("p", { class: "folio" }, `Aprender / Módulo ${String(module.numero).padStart(2, "0")}`),
+        h("p", { class: "folio" }, `Aprender / ${module.titulo}`),
         h("h1", { class: "display" }, module.titulo),
         h("p", { class: "lede" }, module.chamada)
       ),

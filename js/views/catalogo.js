@@ -534,7 +534,7 @@ export default async function catalogoView(ctx) {
       "div",
       { class: "catalog-head" },
       viewHead({
-        folio: "05 / Catálogo",
+        folio: "Catálogo",
         title: h("span", {}, "Todo o catálogo, ", h("em", {}, "sem vitrine paga"), "."),
         lede: `${index.total} serviços de ${index.providers.length} provedores. Filtre por área, preço, gratuidade e complexidade. Compare até três.`,
         art: art("tiles"),
