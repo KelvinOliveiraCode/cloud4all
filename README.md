@@ -1,5 +1,7 @@
 # Cloud4All Brasil — atlas aberto da nuvem
 
+[English](README.en.md) · **Português (Brasil)**
+
 Um mapa em português para quem precisa entender, comparar e escolher nuvem. Site 100% estático (HTML + CSS + JS + JSON), sem conta, sem rastreamento, sem build e sem backend.
 
 **Acesse:** abra `index.html` via um servidor local (o conteúdo é montado a partir de JSON por `fetch`, então não funciona como `file://`).
