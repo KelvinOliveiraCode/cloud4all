@@ -1,10 +1,16 @@
-# Cloud4All Brasil — atlas aberto da nuvem
+# Cloud4All Brasil, atlas aberto da nuvem
 
 [English](README.en.md) · **Português (Brasil)**
 
 Um mapa em português para quem precisa entender, comparar e escolher nuvem. Site 100% estático (HTML + CSS + JS + JSON), sem conta, sem rastreamento, sem build e sem backend.
 
 **Acesse:** abra `index.html` via um servidor local (o conteúdo é montado a partir de JSON por `fetch`, então não funciona como `file://`).
+
+## Stack
+
+- HTML, CSS e JavaScript puros, sem framework e sem etapa de build.
+- Dados em arquivos JSON consumidos em tempo de execução.
+- Node.js apenas nas ferramentas de verificação (`npm run audit`, `npm test`, `npm run verify`).
 
 ## O que tem dentro
 
@@ -21,7 +27,7 @@ Um mapa em português para quem precisa entender, comparar e escolher nuvem. Sit
 
 - **O seletor de orçamento tem prioridade absoluta.** Orçamento zero só devolve serviço grátis para sempre, nunca teste ou crédito.
 - **Gratuidade em três estados:** `sempre` (GRÁTIS SEMPRE), `temporario` (GRÁTIS NO COMEÇO), `nao` (PAGO). Nunca maquiar trial/crédito como "grátis".
-- **Empty-state honesto:** se nada passar nos filtros, o site diz isso — não força recomendação.
+- **Empty-state honesto:** se nada passar nos filtros, o site diz isso, não força recomendação.
 - **Preços vêm do catálogo**, com data de snapshot e conversão declarada (USD ≈ R$ 5,50). O site nunca inventa número.
 
 ## Dados
@@ -37,7 +43,7 @@ Todos os dados vivem em `data/*.json` (fonte única de verdade). O catálogo dec
 
 ## Como rodar
 
-Sem dependências — só um servidor HTTP estático:
+Sem dependências, só um servidor HTTP estático:
 
 ```bash
 # opção 1
@@ -60,7 +66,7 @@ O `npm run verify` roda também no GitHub Actions (`.github/workflows/ci.yml`).
 
 ## Estrutura
 
-```
+```text
 .
 ├── index.html              # shell do SPA (roteador por hash)
 ├── css/                    # tokens, primitives, base, layout, components, views, motion
@@ -78,5 +84,5 @@ O `npm run verify` roda também no GitHub Actions (`.github/workflows/ci.yml`).
 
 ## Licença
 
-MIT — ver [LICENSE](LICENSE).
+MIT. Ver [LICENSE](LICENSE).
 Desenvolvido por [Kelvin Oliveira](https://github.com/kelvinoliveiracode). As marcas citadas pertencem aos seus donos.

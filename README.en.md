@@ -1,4 +1,4 @@
-# Cloud4All Brasil — open cloud atlas
+# Cloud4All Brasil, open cloud atlas
 
 **English** · [Português (Brasil)](README.md)
 
@@ -21,7 +21,7 @@ A map in Portuguese for anyone who needs to understand, compare and choose a clo
 
 - **The budget selector has absolute priority.** A zero budget only returns permanently-free services, never trials or credits.
 - **Freemium in three states:** `sempre` (ALWAYS FREE), `temporario` (FREE AT THE START), `nao` (PAID). Never dress up a trial/credit as "free".
-- **Honest empty state:** if nothing passes the filters, the site says so — it does not force a recommendation.
+- **Honest empty state:** if nothing passes the filters, the site says so, it does not force a recommendation.
 - **Prices come from the catalog**, with a snapshot date and a declared conversion (USD ≈ R$ 5.50). The site never invents a number.
 
 ## Data
@@ -37,7 +37,7 @@ All data lives in `data/*.json` (single source of truth). The catalog declares t
 
 ## How to run
 
-No dependencies — just a static HTTP server:
+No dependencies, just a static HTTP server:
 
 ```bash
 # option 1
@@ -60,7 +60,7 @@ npm run verify  # audit + test
 
 ## Structure
 
-```
+```text
 .
 ├── index.html              # SPA shell (hash router)
 ├── css/                    # tokens, primitives, base, layout, components, views, motion
@@ -78,5 +78,5 @@ npm run verify  # audit + test
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).
 Developed by [Kelvin Oliveira](https://github.com/kelvinoliveiracode). Mentioned brands belong to their owners.
